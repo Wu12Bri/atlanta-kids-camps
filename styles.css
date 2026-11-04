@@ -25,3 +25,13 @@ dl{margin:.6em 0;font-size:.9rem}dt{font-weight:700;color:var(--muted);font-size
 .prose{max-width:760px}.plans{display:grid;gap:16px}@media(min-width:700px){.plans{grid-template-columns:1fr 1fr}}.plan{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}.plan.hi{border:2px solid var(--sun)}.price{font-size:1.6rem;font-weight:700}
 .aff{background:#fff;border:1px dashed var(--line);padding:12px;border-radius:12px}.empty{padding:20px}
 .foot{background:#1d2a2a;color:#d9e2e0;padding:26px 0;font-size:.9rem;margin-top:30px}.foot a{color:var(--sun)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:-6px 0 16px}.chip{font:inherit;font-size:.9rem;padding:6px 14px;border-radius:999px;border:1px solid #cfc6b6;background:#fff;color:var(--teal);cursor:pointer;font-weight:600}.chip[aria-pressed=true]{background:var(--teal);color:#fff;border-color:var(--teal)}
+.act-alert{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;background:#fff3dc;border:1px solid #f2d39c;border-radius:14px;padding:12px 16px;margin-bottom:16px}.act-alert p{margin:0}
+.btn.sm{padding:7px 14px;font-size:.9rem}.card .alert-open{margin-top:10px;align-self:flex-start}
+.dlg{border:0;border-radius:18px;padding:0;width:min(520px,94vw);max-height:92vh;color:var(--ink);box-shadow:0 20px 60px rgba(0,0,0,.25)}.dlg::backdrop{background:rgba(20,30,30,.55)}
+.dlg form{padding:18px 20px;display:flex;flex-direction:column;gap:4px}.dlg-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}.dlg-head h2{margin:0;font-size:1.3rem}
+.x{font-size:1.6rem;line-height:1;background:none;border:0;cursor:pointer;color:var(--muted);padding:2px 8px}.dlg label{font-weight:600;font-size:.9rem;margin-top:6px}.dlg fieldset{border:1px solid var(--line);border-radius:10px;margin:8px 0 0;padding:6px 12px 10px}.dlg legend{font-weight:600;font-size:.9rem}
+.dlg .chk{display:flex;gap:8px;align-items:center;font-weight:500}.dlg .consent{align-items:flex-start;font-size:.85rem}.dlg .consent input{margin-top:4px}
+.err{color:#b3261e;font-size:.82rem;margin:0;min-height:0}.soon{background:#fff3dc;border:1px solid #f2d39c;border-radius:10px;padding:8px 12px;margin:8px 0;font-size:.9rem}
+.dlg-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.btn:disabled{opacity:.6;cursor:not-allowed}.hp{position:absolute;left:-5000px}
+[hidden]{display:none!important}

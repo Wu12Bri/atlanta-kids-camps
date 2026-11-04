@@ -309,6 +309,22 @@
       "last_checked": "2026-11-04",
       "free_low_cost": false,
       "status_flag": "2026 camp sold out"
+    },
+    {
+      "name": "Cobb Library “The Basics” Storytime",
+      "provider": "Cobb County Public Library / Cobb Collaborative",
+      "area": "Marietta (Mountain View Regional Library)",
+      "category": "Free library storytime",
+      "ages": "0–5",
+      "price_week": "Free",
+      "price_low": 0,
+      "price_note": "Free library program; confirm details on the county event page.",
+      "dates": "Tue Mar 9, 2027 (announced on county events calendar)",
+      "registration": "See county event page for details",
+      "source_url": "https://www.cobbcounty.gov/events/2027-03-09basics-storytime-series-presented-cobb-collaborative-0",
+      "last_checked": "2026-11-04",
+      "free_low_cost": true,
+      "status_flag": null
     }
   ]
 }
