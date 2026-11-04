@@ -1,0 +1,55 @@
+import json, html, os
+R=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+D=json.load(open(f"{R}/data.json")); C=D["camps"]; V=D["meta"]["verified_date"]
+for c in C: c["county"]="cobb"
+open(f"{R}/camps.embedded.js","w").write("window.CAMPS="+json.dumps(C,ensure_ascii=False)+";")
+BASE="https://atlantakidscamps.com"
+def page(path,title,desc,body,extra=""):
+    depth=path.count("/"); pre="../"*depth
+    nav=f'''<header class="top"><div class="wrap nav"><a class="brand" href="{pre or './'}"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#f2a541"/><path d="M5 19 L11 10 L15 15 L18 11 L23 19Z" fill="#1f5f5b"/></svg><span>Atlanta Kids Camps</span></a>
+<nav aria-label="Main"><a href="{pre}#camps">Camps</a><a href="{pre}#deadlines">Deadlines</a><a href="{pre}#free">Free &amp; low-cost</a><a href="{pre}cobb/">Cobb</a><a href="{pre}featured/">For camps</a></nav></div></header>'''
+    foot=f'''<footer class="foot"><div class="wrap"><p><strong>Affiliate disclosure:</strong> some links may earn us a commission at no extra cost to you, and “Featured” listings are paid placements that are always labeled. Neither affects the facts we publish. <a href="{pre}privacy/">Privacy &amp; disclosures</a></p>
+<p>Facts come from each provider’s public page on the last-checked date (latest check {V}). Prices and dates change — always confirm with the provider. We have not inspected, licensed, or safety-vetted any program.</p><p>© 2026 Atlanta Kids Camps · <a href="{pre}featured/">List or feature your camp</a> · <a href="{pre}sitemap.xml">Sitemap</a></p></div></footer>'''
+    url=BASE+"/"+path.replace("index.html","")
+    doc=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{title}</title><meta name="description" content="{desc}"><link rel="canonical" href="{url}">
+<meta property="og:type" content="website"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}/og.svg"><meta name="twitter:card" content="summary">
+<link rel="icon" href="{pre}og.svg"><link rel="stylesheet" href="{pre}styles.css">{extra}</head><body><a class="skip" href="#main">Skip to content</a>{nav}<main id="main">{body}</main>{foot}</body></html>'''
+    os.makedirs(os.path.dirname(f"{R}/{path}") or R,exist_ok=True); open(f"{R}/{path}","w").write(doc)
+def itemlist(cs,name):
+    return '<script type="application/ld+json">'+json.dumps({"@context":"https://schema.org","@type":"ItemList","name":name,"numberOfItems":len(cs),"itemListElement":[{"@type":"ListItem","position":i+1,"name":c["name"],"url":c["source_url"]} for i,c in enumerate(cs)]},ensure_ascii=False)+'</script>'
+def finder(preset=""):
+    return f'''<section id="camps" class="wrap section" data-county="{preset}"><div class="sec-head"><h2>Browse camps</h2><p id="count" aria-live="polite"></p></div>
+<form class="filters" id="filters" onsubmit="return false"><label>Search<input id="q" type="search" placeholder="LEGO, horse, Smyrna…"></label>
+<label>Type<select id="cat"><option value="all">All types</option><option value="day">Day camps</option><option value="stem">LEGO / STEM</option><option value="arts">Arts &amp; theatre</option><option value="sports">Sports &amp; outdoors</option><option value="break">School-break</option><option value="after">After-school</option></select></label>
+<label>Child’s age<select id="age"><option value="">Any age</option>{"".join(f'<option value="{a}">{a}</option>' for a in range(3,19))}</select></label>
+<label>Sort<select id="sort"><option value="name">Name A–Z</option><option value="price">Lowest listed price</option></select></label>
+<label class="chk"><input id="low" type="checkbox"> Free / low-cost / aid only</label><button type="button" id="reset" class="btn ghost">Reset</button></form>
+<div id="grid" class="grid"></div><div id="aff-slot"></div></section>'''
+def deadlines():
+    rows="".join(f'<li><strong>{html.escape(c["name"])}</strong><span>{html.escape(c["registration"])}</span></li>' for c in C if any(k in c["registration"].lower() for k in ["opened","deadline","coming soon","open now","full","closes"]))
+    return f'''<section id="deadlines" class="wrap section"><div class="sec-head"><h2>Registration opens soon</h2><p>Popular Atlanta camps fill fast. What providers have published about sign-up timing:</p></div><ul class="deadlines">{rows}</ul>
+<div class="alert-box" id="alerts"><h3>Get registration-opens alerts</h3><p>One short email when a listed camp opens sign-ups. No spam; unsubscribe anytime.</p>
+<form id="signup" class="signup"><label class="sr" for="email">Email</label><input id="email" name="email" type="email" required placeholder="you@example.com"><button class="btn" type="submit">Notify me</button></form><p id="signup-msg" class="small" aria-live="polite"></p></div></section>'''
+def free():
+    cs=[c for c in C if c["free_low_cost"]]
+    cards="".join(f'<li><a href="{c["source_url"]}" rel="noopener" target="_blank">{html.escape(c["name"])}</a> <span class="small">{html.escape(c["price_week"])}</span></li>' for c in cs)
+    return f'<section id="free" class="wrap section"><div class="sec-head"><h2>Free &amp; low-cost options</h2><p>Programs with free, sliding-scale, or financial-aid options per their own pages.</p></div><ul class="freelist">{cards}</ul></section>'
+hero='''<section class="hero"><div class="wrap hero-in"><div><p class="eyebrow">Summer · school-break · after-school</p><h1>Find Atlanta kids’ camps by price, age &amp; deadline</h1>
+<p class="lede">Real prices and sign-up dates pulled from each camp’s own website, in one place. Free to use, linked to the source.</p><div class="cta"><a class="btn" href="#camps">Browse camps</a><a class="btn ghost" href="#alerts">Get deadline alerts</a></div>
+<p class="small">Now covering <a href="cobb/">Cobb County</a> · more metro counties coming as we verify them.</p></div>
+<svg class="art" viewBox="0 0 320 220" aria-hidden="true"><circle cx="250" cy="60" r="38" fill="#f2a541"/><path d="M0 200 L90 90 L150 160 L210 100 L320 200Z" fill="#1f5f5b"/><path d="M0 220 Q160 150 320 220Z" fill="#8fbf9f"/><rect x="60" y="170" width="40" height="30" fill="#e76f51"/><path d="M55 172 L80 150 L105 172Z" fill="#c4553b"/></svg></div></section>'''
+ex='<script src="config.js"></script><script src="camps.embedded.js" defer></script><script src="app.js" defer></script>'
+page("index.html","Atlanta Kids’ Camps — Compare Price, Age & Registration Deadlines","Compare Atlanta-area kids’ summer, school-break and after-school camps by price, age and sign-up deadline. Facts linked to each provider’s own page.",hero+finder()+deadlines()+free(),ex+itemlist(C,"Atlanta kids' camps"))
+ex2=ex.replace('src="','src="../')
+page("cobb/index.html","Cobb County Kids’ Camps 2027 — Marietta, Smyrna, Kennesaw, East Cobb","Cobb County summer, school-break and after-school programs for kids, with listed prices, ages and registration dates from each provider.",f'<section class="hero slim"><div class="wrap"><p class="eyebrow">County guide</p><h1>Cobb County kids’ camps</h1><p class="lede">Marietta, East Cobb, Smyrna, Kennesaw and nearby — {len(C)} programs, each linked to its source.</p></div></section>'+finder("cobb"),ex2+itemlist(C,"Cobb County kids' camps"))
+page("featured/index.html","Feature Your Camp — Atlanta Kids Camps","Camp owners: get a clearly labeled featured placement in front of Atlanta parents comparing camps.",'''<section class="wrap section prose"><h1>List or feature your camp</h1><p>Basic listings are <strong>free</strong>. We list any Atlanta-area kids’ program with a public page showing prices or dates. Corrections are free too.</p>
+<div class="plans"><div class="plan"><h2>Free listing</h2><p class="price">$0</p><ul><li>Name, ages, price, dates</li><li>Link to your site</li><li>Free corrections</li></ul></div>
+<div class="plan hi"><h2>Featured</h2><p class="price" id="feat-price"></p><ul><li>Pinned at top of your county page, labeled “Featured”</li><li>Logo-free highlighted card + extra description</li><li>Included in the registration-alert email when you open sign-ups</li></ul><p class="small">Proposed starting rate; final terms by agreement. We don’t promise any number of visitors or sign-ups.</p></div></div>
+<p><a class="btn" id="contact-btn" href="#">Email us about featuring</a></p><p class="small">Featured status never changes the facts we publish, and paid placements are always labeled.</p></section>''','<script src="../config.js"></script><script src="../app.js" defer></script>')
+page("privacy/index.html","Privacy & Disclosures — Atlanta Kids Camps","How Atlanta Kids Camps handles data, affiliate links and featured listings.",'''<section class="wrap section prose"><h1>Privacy &amp; disclosures</h1><h2>Affiliate links</h2><p>Some outbound links (for example to ActivityHero) may be affiliate links. If you book through them we may earn a commission at no extra cost to you. They are marked “affiliate”.</p>
+<h2>Featured listings</h2><p>Camps can pay for a featured placement. Featured cards are always labeled and their facts follow the same sourcing rules.</p><h2>No endorsements or safety vetting</h2><p>We have not inspected, licensed, or safety-vetted any program. Confirm licensing, staff screening and policies directly with the provider.</p>
+<h2>Data we collect</h2><p>If you sign up for alerts we store your email with our email provider only to send those alerts; you can unsubscribe anytime. We do not sell personal data. The site sets no cookies of its own.</p><h2>Contact</h2><p><a id="contact-btn" href="#">Email us</a> for corrections or removal.</p></section>''','<script src="../config.js"></script><script src="../app.js" defer></script>')
+urls=["","cobb/","featured/","privacy/"]
+open(f"{R}/sitemap.xml","w").write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+"".join(f"<url><loc>{BASE}/{u}</loc><lastmod>{V}</lastmod></url>" for u in urls)+"</urlset>\n")
+open(f"{R}/robots.txt","w").write(f"User-agent: *\nAllow: /\nSitemap: {BASE}/sitemap.xml\n")
