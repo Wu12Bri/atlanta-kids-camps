@@ -39,7 +39,7 @@ def finder(preset=""):
 <div class="chips" role="group" aria-label="Popular activities">{"".join(f'<button type="button" class="chip" data-cat="{v}">{l}</button>' for v,l in [("tennis","Tennis"),("horse","Horse"),("stem","LEGO / STEM"),("arts","Art"),("swim","Swim"),("sports","Sports"),("gym","Gymnastics"),("library","Free library")])}</div>
 <div id="act-alert" class="act-alert" hidden></div><div id="grid" class="grid"></div><div id="aff-slot"></div></section>'''
 def deadlines():
-    rows="".join(f'<li><strong>{html.escape(c["name"])}</strong><span>{html.escape(c["registration"])}</span></li>' for c in C if any(k in c["registration"].lower() for k in ["opened","deadline","coming soon","open now","full","closes"]))
+    rows="".join(f'<li><strong>{html.escape(c["name"])}</strong><span>{html.escape(c["registration"])}</span></li>' for c in C if any(k in c["registration"].lower() for k in ["opened","opens","begins","deadline","coming soon","open now","full","closes"]))
     return f'''<section id="deadlines" class="wrap section"><div class="sec-head"><h2>Registration opens soon</h2><p>Popular Atlanta camps fill fast. What providers have published about sign-up timing:</p></div><ul class="deadlines">{rows}</ul>
 <div class="alert-box" id="alerts"><h3>Get registration-opens alerts</h3><p>Pick a camp or activity (tennis, horse, STEM…) and the season you care about. We email you when it opens sign-ups. No spam; unsubscribe anytime.</p>
 <button type="button" class="btn alert-open" data-activity="Any Atlanta camp">Email me when sign-ups open</button></div></section>'''

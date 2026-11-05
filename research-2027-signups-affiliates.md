@@ -1,9 +1,15 @@
 # AtlantaKidsCamps.com: 2027 sign-up dates and affiliate programs
-Researched Nov 4, 2026 (ET). Per Bri: only dates that have been announced for 2027 are used. Every other camp is marked NOT ANNOUNCED, with notes on where and when it usually posts so it can be re-checked.
+Researched Nov 4, 2026 (ET); scan addendum Nov 5, 2026 (ET). Per Bri: only dates that have been announced for 2027 are used. Every other camp is marked NOT ANNOUNCED, with notes on where and when it usually posts so it can be re-checked.
 
 ## A. Announced 2027 dates
 | Item | 2027 date | Source |
 |---|---|---|
+| Josh Powell Camp Summer 2027 (Classic / Outpost) | Outpost registration opens Mon Nov 10, 2026 at noon; Classic opens Wed Jan 21, 2027 at noon. Sessions June 7–Aug 13 2027 from $515 / $415 | https://www.joshpowellcamp.com/summer-camp-atlanta |
+| iD Tech Summer 2027 (Emory / Georgia Tech) | Registration begins Sat Nov 8, 2026. Emory May 31–July 23; Georgia Tech opens with registration. Day camps typically $979–$1,499 | https://www.idtech.com/ , https://www.idtech.com/locations/georgia-summer-camps/emory-university |
+| Fernbank Winter Break Camp 2026 | Registration opened Tue Nov 3, 2026 at 12 p.m.; ages 5–10 | https://www.fernbankmuseum.org/camps |
+| Cobb Library Family Storytime (Vinings) | Wed Jan 20, 2027, 10:30–11:30 AM; free; no registration | https://www.cobbcounty.gov/events/2027-01-20family-storytime |
+| Cobb Library Prek Bilingual Storytime (Sibley) | Wed Jan 27, 2027, 10:30–11:15 AM; ages 3–5 | https://www.cobbcounty.gov/events/2027-01-27prek-bilingual-storytime |
+| Cobb Library Baby Storytime (Mountain View) | Wed Jan 27, 2027, 10:30–11:00 AM; birth–18 months; no registration | https://www.cobbcounty.gov/events/2027-01-27baby-storytime |
 | Zoo Atlanta Summer Safari Camp registration | Mon Jan 25, 2027 (camp runs Jun 1-Jul 30, ages 5-14) | https://zooatlanta.org/program/summer-camp/ |
 | Camp Invention (NIHF) 2027 | Registration reported open now. Early-bird code STEMFUN25 takes $25 off through Mar 31. Confirm on the page before emailing. | https://www.invent.org/programs/camp-invention , https://www.invent.org/blog/behind-nihf-scenes/camp-invention-discount |
 | Cobb schools spring break | Apr 5-9, 2027 (February break Feb 15-19, last day May 19) | https://media.cobbk12.org/media/WWWCobb/medialib/2026-27-year-at-a-glance.59da33112275.pdf |
