@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alert preferences — Atlanta Kids Camps</title><meta name="description" content="Change your Atlanta Kids Camps registration-alert preferences or unsubscribe."><link rel="canonical" href="https://atlantakidscamps.com/preferences/">
+<meta name="robots" content="noindex"><link rel="icon" href="../og.svg"><link rel="stylesheet" href="../styles.css"><script src="../config.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="top"><div class="wrap nav"><a class="brand" href="../"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#f2a541"/><path d="M5 19 L11 10 L15 15 L18 11 L23 19Z" fill="#1f5f5b"/></svg><span>Atlanta Kids Camps</span></a>
+<nav aria-label="Main"><a href="../#camps">Camps</a><a href="../#alerts">Alerts</a><a href="../privacy/">Privacy</a></nav></div></header>
+<main id="main"><section class="wrap section prose"><h1>Alert preferences</h1>
+<p>Update the area and categories you want alerts for, or ask us to stop emailing you. We apply changes to the email address you enter below. Every alert email also has a one-click unsubscribe link from our email provider.</p>
+<form id="pref-form" class="dlg" style="position:static;box-shadow:none;width:min(520px,100%);border:1px solid var(--line);padding:18px 20px;display:flex;flex-direction:column;gap:4px">
+<label for="p-email">Email on the alerts list</label><input id="p-email" name="EMAIL" type="email" required placeholder="you@example.com" autocomplete="email">
+<label for="p-area">Area</label><select id="p-area" name="AREA"><option value="">Anywhere in metro Atlanta</option><option>Cobb (Marietta, Smyrna, Kennesaw, East Cobb)</option><option>North Fulton (Roswell, Alpharetta)</option><option>Atlanta / DeKalb</option><option>Gwinnett</option></select>
+<fieldset><legend>Categories</legend>
+<label class="chk"><input type="checkbox" name="cat_opt" value="STEM / LEGO / coding"> STEM / LEGO / coding</label>
+<label class="chk"><input type="checkbox" name="cat_opt" value="Sports and outdoors"> Sports and outdoors</label>
+<label class="chk"><input type="checkbox" name="cat_opt" value="Arts and theatre"> Arts and theatre</label>
+<label class="chk"><input type="checkbox" name="cat_opt" value="Day camps"> Day camps</label>
+<label class="chk"><input type="checkbox" name="cat_opt" value="Free library and community"> Free library and community</label>
+<label class="chk"><input type="checkbox" name="cat_opt" value="School-break camps"> School-break camps</label>
+</fieldset>
+<label class="chk consent"><input type="checkbox" name="UNSUBSCRIBE" id="p-unsub" value="yes"><span>Unsubscribe me from all Atlanta Kids Camps alert emails</span></label>
+<input type="hidden" name="ACTIVITIES" id="p-activities">
+<div class="dlg-actions"><button class="btn" type="submit" id="p-submit">Save preferences</button></div>
+<p id="p-msg" class="small" role="status" aria-live="polite"></p>
+</form>
+<p class="small">Or email <a href="mailto:signup@atlantakidscamps.com">signup@atlantakidscamps.com</a> with “unsubscribe” or your new preferences.</p>
+</section></main>
+<footer class="foot"><div class="wrap"><p><a href="../privacy/">Privacy &amp; disclosures</a> · © 2026 Atlanta Kids Camps</p></div></footer>
+<script src="./prefs.js"></script>
+</body></html>

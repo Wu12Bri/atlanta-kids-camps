@@ -1,0 +1,282 @@
+{
+  "scanned_at": "2026-11-05",
+  "something_new": true,
+  "new_or_changed": [
+    {
+      "name": "Josh Powell Camp Summer 2027 (Acworth)",
+      "what_changed": "newly announced",
+      "announcement": "Summer 2027 sessions listed (Classic ages 5–9 / Outpost ages 9–12). Banner: Classic registration opens January 21st at noon; Outpost registration opens early November 10th at noon. Sessions include June 7–11 through Aug 9–13 2027 (plus July 6–9 4-day); from $515 / $415 for 4-day. Page also still shows a leftover '54th Summer 2026 Registration is now open!' heading.",
+      "source_url": "https://www.joshpowellcamp.com/summer-camp-atlanta",
+      "http_status": 200,
+      "evidence_quote": "Summer 2027 Registration open January 21st at noon! JPC Outpost (9-11 year old program) registration open early November 10th at noon!",
+      "affects_data_json": false,
+      "suggested_data_json_update": null,
+      "high_demand_flag": "Outpost opens Mon Nov 10, 2026 at noon (5 days); Classic Jan 21, 2027 — popular outdoor day camp with bus from Atlanta; watch for sell-through."
+    },
+    {
+      "name": "iD Tech Summer 2027 (Atlanta: Emory / Georgia Tech)",
+      "what_changed": "newly announced",
+      "announcement": "Registration for Summer '27 opens November 8th, 2026. Homepage: 'Registration begins Nov 8th'. Georgia Tech page: \"Registration for Summer '27 opens November 8th!\". Emory listing shows Atlanta May 31–July 23; Georgia Tech still 'Registration opens soon' until that date. Day camps typically ~$979–$1,499; Teen Academies ~$4,599–$5,299.",
+      "source_url": "https://www.idtech.com/",
+      "http_status": 200,
+      "evidence_quote": "Registration for Summer '27 opens November 8th!",
+      "affects_data_json": false,
+      "suggested_data_json_update": null,
+      "related_urls": [
+        "https://www.idtech.com/locations/georgia-summer-camps/georgia-tech",
+        "https://www.idtech.com/locations/georgia-summer-camps/emory-university",
+        "https://idtechcamps.zohodesk.com/portal/en/kb/articles/when-will-registrations-for-summer-2025-open"
+      ],
+      "high_demand_flag": "Opens Sat Nov 8, 2026 (3 days) — pricey, oversubscribed STEM/tech camps on university campuses; strong affiliate/listing opportunity."
+    },
+    {
+      "name": "Fernbank Museum 2026 Winter Break Camp",
+      "what_changed": "newly announced",
+      "announcement": "2026 Winter Break Camp for ages 5–10 announced on Fernbank Camps hub; registration opened Tuesday, November 3 at 12 p.m. Themes include Summer in December, Winter Holidays, Safari Animals. (Summer camp page still only shows 2026 dates/member reg Jan 27 2026 — no 2027 summer open date yet.) Correct camps URL is /camps (old /summer-camp path 404s).",
+      "source_url": "https://www.fernbankmuseum.org/camps",
+      "http_status": 200,
+      "evidence_quote": "Registration opens Tuesday, November 3 at 12 p.m.",
+      "affects_data_json": false,
+      "suggested_data_json_update": null
+    },
+    {
+      "name": "Cobb Library Family Storytime (Vinings)",
+      "what_changed": "newly announced",
+      "announcement": "Free Family Storytime Wed Jan 20, 2027, 10:30–11:30 AM at Vinings Library; no registration.",
+      "source_url": "https://www.cobbcounty.gov/events/2027-01-20family-storytime",
+      "http_status": 200,
+      "evidence_quote": "Wednesday, January 20, 2027 10:30 AM – 11:30 AM Location: Vinings Library",
+      "affects_data_json": true,
+      "suggested_data_json_update": {
+        "action": "add_camp_or_extend_library_entry",
+        "name": "Cobb Library Family Storytime (Vinings)",
+        "dates": "Wed Jan 20, 2027, 10:30–11:30 AM",
+        "price_week": "Free",
+        "free_low_cost": true,
+        "source_url": "https://www.cobbcounty.gov/events/2027-01-20family-storytime",
+        "last_checked": "2026-11-05"
+      }
+    },
+    {
+      "name": "Cobb Library Prek Bilingual Storytime (Sibley)",
+      "what_changed": "newly announced",
+      "announcement": "Free Prek Bilingual Storytime (English/Spanish) Wed Jan 27, 2027, 10:30–11:15 AM at Sibley Library; ages 3–5 with participating adult.",
+      "source_url": "https://www.cobbcounty.gov/events/2027-01-27prek-bilingual-storytime",
+      "http_status": 200,
+      "evidence_quote": "Wednesday, January 27, 2027 10:30 AM – 11:15 AM Location: Sibley Library",
+      "affects_data_json": true,
+      "suggested_data_json_update": {
+        "action": "add_camp_or_extend_library_entry",
+        "name": "Cobb Library Prek Bilingual Storytime (Sibley)",
+        "dates": "Wed Jan 27, 2027, 10:30–11:15 AM",
+        "ages": "3–5",
+        "price_week": "Free",
+        "free_low_cost": true,
+        "source_url": "https://www.cobbcounty.gov/events/2027-01-27prek-bilingual-storytime",
+        "last_checked": "2026-11-05"
+      }
+    },
+    {
+      "name": "Cobb Library Baby Storytime (Mountain View)",
+      "what_changed": "newly announced",
+      "announcement": "Free Baby Storytime Wed Jan 27, 2027, 10:30–11:00 AM at Mountain View Regional Library; birth–18 months with adult; no registration; Stay and Play after. Not held Mar 10 or Mar 17.",
+      "source_url": "https://www.cobbcounty.gov/events/2027-01-27baby-storytime",
+      "http_status": 200,
+      "evidence_quote": "Wednesday, January 27, 2027 10:30 AM – 11:00 AM Location: Mountain View Regional Library … No registration is required.",
+      "affects_data_json": true,
+      "suggested_data_json_update": {
+        "action": "add_camp_or_extend_library_entry",
+        "name": "Cobb Library Baby Storytime (Mountain View)",
+        "dates": "Wed Jan 27, 2027, 10:30–11:00 AM",
+        "ages": "birth–18 months",
+        "price_week": "Free",
+        "free_low_cost": true,
+        "source_url": "https://www.cobbcounty.gov/events/2027-01-27baby-storytime",
+        "last_checked": "2026-11-05"
+      }
+    }
+  ],
+  "still_not_announced": [
+    {
+      "name": "Cobb PARKS summer / spring-break camps 2027 registration",
+      "url": "https://www.cobbcounty.gov/parks/programs/school-break-camps",
+      "note": "Generic program descriptions only; no 2027 open date. News hub has no camp registration post (latest sampled Mobility 2055 Nov 4). Prior-year notice was Feb 25, 2026 for Mar 4 open."
+    },
+    {
+      "name": "YMCA Metro Atlanta Day Camp 2027 on-sale",
+      "url": "https://www.ymcaatlanta.org/camp/day-camp",
+      "note": "Exact quote: 'The on-sale date for 2027 Y Day Camp is coming soon.' McCleskey / NE Cobb / NW Cobb overview pages still titled/contented as 2026 Summer Day Camp."
+    },
+    {
+      "name": "Northwest Family YMCA (Kennesaw) Day Camp 2027",
+      "url": "https://www.ymcaatlanta.org/northwest-cobb-y-camp-overview",
+      "note": "Page is 'Northwest Family Y 2026 Summer Day Camp'; FA due April 15, 2026. No 2027 open date."
+    },
+    {
+      "name": "Camp Smyrna Summer 2027 registration",
+      "url": "https://www.smyrnaga.gov/departments/departments/parks-recreation/camps",
+      "note": "Winter Feb 15–19 2027 and Spring Apr 5–9 2027 weeks already listed (price TBA); summer still 2026 catalog / 'Registration now open!' refers to 2026 summer. No 2027 summer open date."
+    },
+    {
+      "name": "Kennesaw Camp Venture Summer 2027",
+      "url": "https://www.kennesaw-ga.gov/parks-and-recreation/summer-day-camp/",
+      "note": "Still 'summer of 2026' / June 1–July 30 2026 only. CivicRec mentioned; no 2027 open date."
+    },
+    {
+      "name": "Marietta PAL Summer 2027",
+      "url": "https://mariettapal.org/pal-summer-camp-2",
+      "note": "Still PAL's 2026 Summer Camp June 1–July 10, 2026."
+    },
+    {
+      "name": "Salvation Army Cobb Summer 2027 dates",
+      "url": "https://www.salvationarmyusa.org/ga/marietta/waterman-st-se-corps/family-services/",
+      "note": "General summer camp / after-school fees ($35 reg + $80/wk); no 2027 calendar."
+    },
+    {
+      "name": "Girls Inc. Break Camps 2027",
+      "url": "https://www.girlsincatl.org/programs/break-camps",
+      "note": "Only Sept 21–25, 2026 fall break STEM camp ($80) listed."
+    },
+    {
+      "name": "Bricks 4 Kidz Marietta–Smyrna 2027 summer open date",
+      "url": "https://bricks4kidz.us/georgia-marietta-smyrna/our-programs/camps/",
+      "note": "School-break dates through 2025–26 calendar; no dated 2027 summer registration announcement."
+    },
+    {
+      "name": "Snapology Kennesaw 2027 summer open date",
+      "url": "https://www.snapology.com/georgia-kennesaw/camps/",
+      "note": "Generic year-round camps copy; no concrete 2027 open date."
+    },
+    {
+      "name": "East Cobb Stables Summer 2027",
+      "url": "https://eastcobbstables.com/summer-camp/",
+      "note": "Still 'Summer Camp 2026 [FULL]'; weeks May–July 2026 sold out as of May 7, 2026."
+    },
+    {
+      "name": "Fernbank Summer Camp 2027 registration",
+      "url": "https://www.fernbankmuseum.org/learn/community-programs/fernbank-camps/summer-camp/",
+      "note": "Page is still 2026 Summer Camps June 1–July 31, 2026 (member reg Jan 27 / nonmember Feb 3, 2026). No 2027 summer open date."
+    },
+    {
+      "name": "Atlanta History Center History Summer Camp 2027",
+      "url": "https://www.atlantahistorycenter.com/history-summer-camp",
+      "note": "Still 2026 content / 'Summer Camp - SOLD OUT' with June 2026 weeks."
+    },
+    {
+      "name": "Woodward Academy Summer 2027",
+      "url": "https://www.woodward.edu/summer",
+      "note": "General summer camps page; no explicit 2027 registration open date found."
+    },
+    {
+      "name": "Galloway Summer Camp 2027",
+      "url": "https://www.gallowayschool.org/community/summer-camp",
+      "note": "Still 'Register for Summer Camps 2026' / Summer 2026 Policies."
+    },
+    {
+      "name": "Camp Sparkles Smyrna Spring/Summer 2027 registration",
+      "url": "https://sparklesatlanta.com/smyrna/s-camp-sparkles/",
+      "note": "Winter 2027 still Opens 12/4/26; Spring 2027 Opens TBA; Summer 2027 Open TBA. Winter week Feb 15–19 listed."
+    },
+    {
+      "name": "Trees Atlanta Summer Camp 2027",
+      "url": "https://www.treesatlanta.org/camp/",
+      "note": "School-break winter/spring 2027 already open; page says summer schedules/registration update in December with Early Bird in December — no concrete 2027 summer open date yet."
+    },
+    {
+      "name": "Library summer reading 2027 (Cobb/Fulton/Gwinnett/DeKalb)",
+      "url": "https://www.fulcolibrary.org/srp/",
+      "note": "Fulton still 'Summer Reading starts June 1, 2026'. Gwinnett/DeKalb hubs show no 2027 SRP open date. Cobb /libraries path 404."
+    },
+    {
+      "name": "Gwinnett Parks day camps 2027 registration",
+      "url": "https://www.gwinnettcounty.com/government/departments/parks-recreation/recreation/camps",
+      "note": "General day-camp description and locations; no 2027 weeks or open date posted."
+    }
+  ],
+  "fetch_failures": [
+    {
+      "url": "https://www.smyrnaga.gov/departments/departments/parks-recreation/camps",
+      "error": "curl HTTP 403 (bot block); recovered via WebFetch 200"
+    },
+    {
+      "url": "https://www.kennesaw-ga.gov/parks-and-recreation/summer-day-camp/",
+      "error": "curl HTTP 202 challenge page; recovered via WebFetch 200"
+    },
+    {
+      "url": "https://eastcobbstables.com/summer-camp/",
+      "error": "curl HTTP 202/000 intermittent; recovered via WebFetch 200"
+    },
+    {
+      "url": "https://www.fernbankmuseum.org/summer-camp",
+      "error": "HTTP 404; use https://www.fernbankmuseum.org/camps and …/fernbank-camps/summer-camp/"
+    },
+    {
+      "url": "https://www.cobbcounty.gov/libraries",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://www.ymcaatlanta.org/northwest-family-ymca",
+      "error": "HTTP 404 on that path; use https://www.ymcaatlanta.org/locations/northwest-family-ymca and northwest-cobb-y-camp-overview"
+    },
+    {
+      "url": "https://www.idtech.com/locations/georgia-summer-camps/georgia-tech",
+      "error": "WebFetch 403 once; curl with browser UA returned 200"
+    }
+  ],
+  "baseline_reconfirmed": [
+    {
+      "name": "Zoo Atlanta Summer Safari Camp registration",
+      "url": "https://zooatlanta.org/program/summer-camp/",
+      "status": "unchanged",
+      "note": "Registration for 2027 opens Monday, January 25, 2027"
+    },
+    {
+      "name": "Camp Invention 2027",
+      "url": "https://www.invent.org/programs/camp-invention",
+      "status": "unchanged",
+      "note": "2027 program Gear Up live; early-bird STEMFUN25 $25 off through Mar 31 on https://www.invent.org/blog/behind-nihf-scenes/camp-invention-discount"
+    },
+    {
+      "name": "Marietta Cobb Museum of Art Art Camps 2027",
+      "url": "https://mariettacobbartmuseum.org/learn/camps",
+      "status": "unchanged",
+      "note": "Winter Feb 15–19, Spring Apr 5–9, Summer weeks June–July 2027 still Enroll Now (already in data.json)"
+    },
+    {
+      "name": "Trees Atlanta school-break camps",
+      "url": "https://www.treesatlanta.org/camp/",
+      "status": "unchanged",
+      "note": "Winter Feb 15–19 2027; Spring Apr 5–9 2027; $295/wk"
+    },
+    {
+      "name": "Josh Powell Spring Break Camp",
+      "url": "https://www.joshpowellcamp.com/spring-break-camp-atlanta",
+      "status": "unchanged",
+      "note": "Apr 5–9 2027 registration open, from $200"
+    },
+    {
+      "name": "Camp Sparkles Smyrna Winter 2027",
+      "url": "https://sparklesatlanta.com/smyrna/s-camp-sparkles/",
+      "status": "unchanged",
+      "note": "Winter 2027: Opens 12/4/26; week Feb 15–19"
+    },
+    {
+      "name": "YMCA Camp High Harbour overnight",
+      "url": "https://www.ymcaatlanta.org/camp/ymca-camp-high-harbour",
+      "status": "unchanged",
+      "note": "Registration is OPEN at both locations"
+    },
+    {
+      "name": "Cobb Library The Basics Storytime",
+      "url": "https://www.cobbcounty.gov/events/2027-03-09basics-storytime-series-presented-cobb-collaborative-0",
+      "status": "unchanged",
+      "note": "Tue Mar 9, 2027 Mountain View Regional"
+    },
+    {
+      "name": "Camp Smyrna Winter/Spring 2027 weeks",
+      "url": "https://www.smyrnaga.gov/departments/departments/parks-recreation/camps",
+      "status": "unchanged",
+      "note": "Feb 15–19 and Apr 5–9 2027 already in data.json; price TBA; no new reg-open date"
+    }
+  ]
+}

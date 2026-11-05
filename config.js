@@ -1,12 +1,21 @@
 /* EDIT ME — site config. Empty values keep the feature hidden/disabled (nothing fake goes live). */
 window.SITE_CONFIG = {
   activityHeroAffiliateUrl: "",   // TODO(Bri): your ActivityHero affiliate link after approval
-  // Mailchimp embedded-form POST URL, e.g. "https://XXXX.us21.list-manage.com/subscribe/post?u=AAAA&id=BBBB&f_id=CCCC"
-  // The audience needs text merge fields CAMP, ACTIVITY, SEASON, AREA (Audience > Settings > Merge fields).
-  // While empty, the alert form shows "launching soon" and submits nothing.
-  signupEndpoint: "",
-  signupHoneypot: "",             // Mailchimp anti-bot field name from the embed code, e.g. "b_AAAA_BBBB"
-  signupTags: "",                 // optional: Mailchimp numeric tag ID(s) from the embed code, e.g. "1234567"
+  // Cloudflare Worker → Resend Contacts (segment + topics). Free-tier Workers.
+  signupEndpoint: "https://atlanta-kids-camps-signup.atlantakidscamps.workers.dev",
+  signupMode: "ajax",
+  signupHoneypot: "_honey",
+  signupTags: "",
   contactEmail: "",               // TODO(Bri): e.g. hello@atlantakidscamps.com
-  featuredStartingRate: "$49/month (proposed, editable)" // TODO(Bri): set or confirm
+  featuredStartingRate: "$49/month (proposed, editable)", // TODO(Bri): set or confirm
+  preferencesUrl: "https://atlantakidscamps.com/preferences/",
+  // Topic keys parents can pick; mapped to Resend topics by the signup processor.
+  activityChoices: [
+    { id: "stem", label: "STEM / LEGO / coding" },
+    { id: "sports", label: "Sports and outdoors" },
+    { id: "arts", label: "Arts and theatre" },
+    { id: "day", label: "Day camps" },
+    { id: "library", label: "Free library and community" },
+    { id: "break", label: "School-break camps" }
+  ]
 };
