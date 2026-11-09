@@ -1,5 +1,8 @@
 /* EDIT ME — site config. Empty values keep the feature hidden/disabled (nothing fake goes live). */
 window.SITE_CONFIG = {
+  // Cookieless visit counts (Cloudflare Worker → Analytics Engine). No cookies; internal browsers use ?internal=1 once.
+  statsEndpoint: "https://mogul-stats.atlantakidscamps.workers.dev",
+  statsSite: "kids-camps",
   activityHeroAffiliateUrl: "",   // TODO(Bri): your ActivityHero affiliate link after approval
   // Cloudflare Worker → Resend Contacts (segment + topics). Free-tier Workers.
   signupEndpoint: "https://atlanta-kids-camps-signup.atlantakidscamps.workers.dev",

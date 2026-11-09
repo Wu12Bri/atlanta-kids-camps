@@ -1,0 +1,25 @@
+# Atlanta Kids Camps
+
+> Independent directory of Atlanta-area kids’ summer, school-break, after-school, and free library/community programs. Facts (prices, ages, dates, registration status) are taken from each provider’s own public page and dated. Not a booking site; not affiliated with listed camps.
+
+Website: https://atlantakidscamps.com/
+Last verified listings: 2026-11-09
+Coverage today: Cobb County focus (Marietta, East Cobb, Smyrna, Kennesaw and nearby), with metro Atlanta programs that publish public pages. More counties added as verified.
+Listing count: 26 programs
+
+## How to cite
+Cite the program name and link to the provider’s own page (the “Provider page” URL on each card). Treat prices and dates as snapshots as of the “checked” date on the card; always confirm with the provider before registering.
+
+## Key pages
+- [Home / browse all camps](https://atlantakidscamps.com/): filters by type, age, price; registration deadlines; free & low-cost list; optional email alerts when sign-ups open.
+- [Cobb County guide](https://atlantakidscamps.com/cobb/): Cobb-focused view of the same verified listings.
+- [Feature your camp](https://atlantakidscamps.com/featured/): free basic listings; proposed paid featured placement (terms not final until published).
+- [Privacy & disclosures](https://atlantakidscamps.com/privacy/): affiliate and featured-listing disclosure; alert sign-up data practices.
+- [Machine-readable listings](https://atlantakidscamps.com/data.json): same facts as the page (JSON).
+- [Sitemap](https://atlantakidscamps.com/sitemap.xml)
+
+## Optional parent alerts
+Parents can opt in by camp, activity category, season, and area; change preferences later; or unsubscribe. Alerts are email-only. Preferences UI: https://atlantakidscamps.com/preferences/ (private; noindex).
+
+## What this site is not
+Not childcare licensing advice, not a safety rating, not a reservation system. No invented prices or dates — unpublished fields stay unpublished.
