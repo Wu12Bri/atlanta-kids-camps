@@ -10,7 +10,7 @@ Researched Nov 4, 2026 (ET); scan addendum Nov 5, 2026 (ET). Per Bri: only dates
 | Cobb Library Family Storytime (Vinings) | Wed Jan 20, 2027, 10:30–11:30 AM; free; no registration | https://www.cobbcounty.gov/events/2027-01-20family-storytime |
 | Cobb Library Prek Bilingual Storytime (Sibley) | Wed Jan 27, 2027, 10:30–11:15 AM; ages 3–5 | https://www.cobbcounty.gov/events/2027-01-27prek-bilingual-storytime |
 | Cobb Library Baby Storytime (Mountain View) | Wed Jan 27, 2027, 10:30–11:00 AM; birth–18 months; no registration | https://www.cobbcounty.gov/events/2027-01-27baby-storytime |
-| Zoo Atlanta Summer Safari Camp registration | Mon Jan 25, 2027 (camp runs Jun 1-Jul 30, ages 5-14) | https://zooatlanta.org/program/summer-camp/ |
+| Zoo Atlanta Summer Safari Camp registration | Fri Jan 22, 2027 (corrected 11/10 from official page; camp runs Jun 1-Jul 30, ages 5-14) | https://zooatlanta.org/program/summer-camp/ |
 | Camp Invention (NIHF) 2027 | Registration reported open now. Early-bird code STEMFUN25 takes $25 off through Mar 31. Confirm on the page before emailing. | https://www.invent.org/programs/camp-invention , https://www.invent.org/blog/behind-nihf-scenes/camp-invention-discount |
 | Cobb schools spring break | Apr 5-9, 2027 (February break Feb 15-19, last day May 19) | https://media.cobbk12.org/media/WWWCobb/medialib/2026-27-year-at-a-glance.59da33112275.pdf |
 | Gwinnett schools spring break | Apr 5-9, 2027 | https://peachtreecornersdaily.com/spring-break/ |
@@ -40,8 +40,8 @@ Researched Nov 4, 2026 (ET); scan addendum Nov 5, 2026 (ET). Per Bri: only dates
 
 ## C. Email calendar (announced dates only)
 1. **Late Nov 2026: "Winter break and spring break camps you can book now."** Features Camp Sparkles winter registration (opens Dec 4), Trees Atlanta winter/spring, MCMA Spring Break Art Camp, Josh Powell spring break, and Camp Invention early-bird. Free tie-in: the library storytime calendars.
-2. **Mon Jan 18, 2027 (a week ahead): "Zoo Atlanta camp sign-ups open Jan 25."** Also covers Camp Invention early-bird (through Mar 31). Before sending, re-check Fernbank, AHC, YMCA, and Woodward and add any that have announced.
-3. **Jan 25, 2027: "Zoo camp registration is open today."**
+2. **Fri Jan 15, 2027 (a week ahead): "Zoo Atlanta camp sign-ups open Jan 22."** Also covers Camp Invention early-bird (through Mar 31). Before sending, re-check Fernbank, AHC, YMCA, and Woodward and add any that have announced.
+3. **Jan 22, 2027: "Zoo camp registration is open today."**
 4. **Mid-Feb 2027:** held for Cobb PARKS summer, sent only once the county posts its date (last year's post was Feb 25).
 5. **Early Mar 2027: "Spring break Apr 5-9: last spots."** Covers MCMA, Trees Atlanta, Josh Powell, plus Cobb PARKS and Gwinnett break camps if they've been posted. Also the free library events that week. Last call for the Camp Invention early-bird (Mar 31).
 6. **Apr 2027:** held for Camp Smyrna, Kennesaw, and library summer reading, sent only once those are announced.
