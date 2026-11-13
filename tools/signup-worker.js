@@ -174,16 +174,25 @@ export default {
       return json(req, { success: true, unsubscribed: true }, 200);
     }
 
+    const intent = clip(body.INTENT) || "signup";
+    const properties = {
+      preferred_area: clip(body.AREA),
+      watched_camp: clip(body.CAMP),
+      preferred_seasons: clip(body.SEASON),
+      preferred_activities: activities.join(", "),
+    };
+    // The preferences page has no camp field and seasons are optional there:
+    // don't wipe a parent's saved camp/seasons when those fields are left blank.
+    if (intent === "preference_update") {
+      if (!properties.watched_camp) delete properties.watched_camp;
+      if (!properties.preferred_seasons) delete properties.preferred_seasons;
+    }
+
     const payload = {
       email,
       unsubscribed: false,
       segments: [{ id: SEGMENT }],
-      properties: {
-        preferred_area: clip(body.AREA),
-        watched_camp: clip(body.CAMP),
-        preferred_seasons: clip(body.SEASON),
-        preferred_activities: activities.join(", "),
-      },
+      properties,
       topics: buildTopics(activities),
     };
 
@@ -199,7 +208,7 @@ export default {
       {
         success: true,
         id: data.id,
-        intent: clip(body.INTENT) || "signup",
+        intent,
       },
       200
     );

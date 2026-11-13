@@ -1,3 +1,7 @@
+# DEPRECATED (2026-11-13): this older full-page template overwrites index/cobb/featured/privacy
+# and robots.txt and would strip the stats beacon, AI-friendly robots rules and the new alert dialog.
+# Edit data.json, then run tools/sync_pages.py instead.
+import sys; sys.exit("build.py is deprecated: use tools/sync_pages.py")
 import json, html, os
 R=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 D=json.load(open(f"{R}/data.json")); C=D["camps"]; V=D["meta"]["verified_date"]

@@ -19,6 +19,7 @@
       EMAIL: em,
       AREA: document.getElementById("p-area").value,
       ACTIVITIES: cats.join(", "),
+      SEASON: [].map.call(form.querySelectorAll("input[name=season_opt]:checked"), function (b) { return b.value; }).join(", "),
       UNSUBSCRIBE: unsub,
       _subject: "Alert preference update — Atlanta Kids Camps",
       _template: "table",

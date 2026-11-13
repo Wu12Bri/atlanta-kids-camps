@@ -35,3 +35,10 @@ dl{margin:.6em 0;font-size:.9rem}dt{font-weight:700;color:var(--muted);font-size
 .err{color:#b3261e;font-size:.82rem;margin:0;min-height:0}.soon{background:#fff3dc;border:1px solid #f2d39c;border-radius:10px;padding:8px 12px;margin:8px 0;font-size:.9rem}
 .dlg-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.btn:disabled{opacity:.6;cursor:not-allowed}.hp{position:absolute;left:-5000px}
 [hidden]{display:none!important}
+
+/* 2026-11-13: interest/age/area filters + tags */
+.filters{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.filters select,.filters input[type=search]{font-size:16px;min-height:40px;width:100%;min-width:0;max-width:100%;box-sizing:border-box}
+@media(min-width:900px){.filters{grid-template-columns:2fr repeat(4,minmax(120px,1fr));align-items:end}.filters .chk{grid-column:span 2}}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 6px}.tag{font-size:.75rem;padding:2px 8px;border-radius:999px;background:#eef5f1;color:var(--teal);font-weight:600}
+.badge.odd{background:#fde7d9;color:#9a3d1f}
+.chips{overflow-x:auto;-webkit-overflow-scrolling:touch}

@@ -25,22 +25,28 @@
       target: (extra && extra.target) || ""
     };
     var payload = JSON.stringify(body);
+    // text/plain keeps this a CORS "simple" request: no preflight, no credentials.
+    // (sendBeacon always sends credentials, and an application/json beacon needs a
+    // credentialed preflight the Worker never allowed, so Chrome silently dropped it.)
+    var sent = false;
     try {
-      if (navigator.sendBeacon) {
-        var blob = new Blob([payload], { type: "application/json" });
-        if (navigator.sendBeacon(endpoint, blob)) return;
+      if (typeof fetch === "function") {
+        fetch(endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=UTF-8" },
+          body: payload,
+          mode: "cors",
+          keepalive: true,
+          credentials: "omit"
+        }).catch(function () {});
+        sent = true;
       }
     } catch (e) {}
-    try {
-      fetch(endpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: payload,
-        mode: "cors",
-        keepalive: true,
-        credentials: "omit"
-      }).catch(function () {});
-    } catch (e) {}
+    if (!sent) {
+      try {
+        if (navigator.sendBeacon) navigator.sendBeacon(endpoint, new Blob([payload], { type: "text/plain;charset=UTF-8" }));
+      } catch (e) {}
+    }
   }
 
   var fired = false;
@@ -72,27 +78,8 @@
     true
   );
 
-  // Completed alert sign-ups on kids camps: wrap fetch once.
-  if (site === "kids-camps" && typeof window.fetch === "function") {
-    var orig = window.fetch;
-    window.fetch = function () {
-      var args = arguments;
-      var input = args[0];
-      var init = args[1] || {};
-      var url = typeof input === "string" ? input : (input && input.url) || "";
-      var method = (init.method || (input && input.method) || "GET").toUpperCase();
-      var p = orig.apply(this, args);
-      try {
-        var signup = (window.SITE_CONFIG && window.SITE_CONFIG.signupEndpoint) || "";
-        if (method === "POST" && signup && url.indexOf(signup) === 0) {
-          p.then(function (res) {
-            if (res && res.ok) send("signup");
-          }).catch(function () {});
-        }
-      } catch (e) {}
-      return p;
-    };
-  }
+  // Completed alert sign-ups are tracked explicitly by app.js on the success path
+  // (window.mogulStats.track("signup")), so preference changes/unsubscribes are not counted.
 
   window.mogulStats = { track: send, isInternal: isInternal };
 })();

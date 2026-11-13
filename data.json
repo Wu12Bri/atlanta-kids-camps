@@ -1,9 +1,39 @@
 {
  "meta": {
-  "title": "Cobb County Kids' Summer, School-Break & After-School Camps",
-  "verified_date": "2026-11-10",
+  "title": "Atlanta-Area Kids' Camps, Classes & Free Programs",
+  "verified_date": "2026-11-13",
   "disclaimer": "Facts come from each provider's own public page on the last-checked date. Prices, dates and availability change, and some entries show the prior season's published rate. Always confirm with the provider. Listing here is not an endorsement, and we have not inspected, licensed, or safety-vetted any program.",
-  "geography_focus": "Cobb County, GA: Marietta, East Cobb, Smyrna, Kennesaw and nearby"
+  "geography_focus": "Metro Atlanta, Cobb County first (Marietta, East Cobb, Smyrna, Kennesaw, Acworth, Powder Springs), plus North Fulton, Atlanta/DeKalb and Gwinnett",
+  "interest_tags": {
+   "tennis": "Tennis",
+   "farm": "Farm & animals",
+   "horse": "Horses",
+   "nature": "Nature & outdoors",
+   "garden": "Gardening",
+   "survival": "Survival skills",
+   "trades": "Blacksmithing & maker",
+   "art": "Art",
+   "theatre": "Theatre",
+   "dance": "Dance",
+   "swim": "Swim",
+   "sports": "Sports",
+   "gym": "Gymnastics",
+   "stem": "STEM / LEGO / coding",
+   "day": "Day camps",
+   "break": "School-break",
+   "after": "After-school",
+   "library": "Library",
+   "free": "Free",
+   "unusual": "Unusual & offbeat"
+  },
+  "county_codes": {
+   "cobb": "Cobb",
+   "north-fulton": "North Fulton",
+   "atlanta": "Atlanta / DeKalb",
+   "gwinnett": "Gwinnett",
+   "metro": "Metro-wide"
+  },
+  "age_fields": "age_min/age_max are numeric years taken from the provider's published ages or grades (grade + 5); null when the provider publishes no range."
  },
  "camps": [
   {
@@ -20,7 +50,14 @@
    "source_url": "https://www.cobbcounty.gov/parks/programs/school-break-camps",
    "last_checked": "2026-11-05",
    "free_low_cost": true,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "day",
+    "break"
+   ],
+   "age_min": 6,
+   "age_max": 12
   },
   {
    "name": "Cobb PARKS Creative Art Camps",
@@ -36,7 +73,14 @@
    "source_url": "https://www.cobbcounty.gov/parks/programs/school-break-camps",
    "last_checked": "2026-11-05",
    "free_low_cost": false,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "art",
+    "break"
+   ],
+   "age_min": 6,
+   "age_max": 15
   },
   {
    "name": "Cobb PARKS Performing Arts Camps (Jennie T. Anderson Theatre)",
@@ -52,7 +96,13 @@
    "source_url": "https://www.cobbcounty.gov/parks/programs/school-break-camps",
    "last_checked": "2026-11-05",
    "free_low_cost": false,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "theatre"
+   ],
+   "age_min": 6,
+   "age_max": 15
   },
   {
    "name": "Cobb PARKS Tennis Camps",
@@ -68,7 +118,14 @@
    "source_url": "https://www.cobbcounty.gov/parks/programs/school-break-camps",
    "last_checked": "2026-11-05",
    "free_low_cost": false,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "tennis",
+    "sports"
+   ],
+   "age_min": 4,
+   "age_max": 18
   },
   {
    "name": "Cobb PARKS Unlimited Gymnastics Camp",
@@ -84,7 +141,14 @@
    "source_url": "https://www.cobbcounty.gov/parks/programs/school-break-camps",
    "last_checked": "2026-11-05",
    "free_low_cost": false,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "gym",
+    "sports"
+   ],
+   "age_min": 3,
+   "age_max": 10
   },
   {
    "name": "Cobb PARKS Nature Camps (Green Meadows)",
@@ -100,7 +164,13 @@
    "source_url": "https://www.cobbcounty.gov/parks/programs/school-break-camps",
    "last_checked": "2026-11-05",
    "free_low_cost": false,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "nature"
+   ],
+   "age_min": 8,
+   "age_max": 11
   },
   {
    "name": "McCleskey-East Cobb Family YMCA Day Camp",
@@ -116,7 +186,16 @@
    "source_url": "https://www.ymcaatlanta.org/mccleskey-east-cobb-y-camp-overview",
    "last_checked": "2026-11-10",
    "free_low_cost": true,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "day",
+    "sports",
+    "stem",
+    "garden"
+   ],
+   "age_min": 3,
+   "age_max": 12
   },
   {
    "name": "Northeast Cobb Family YMCA Day Camp",
@@ -132,7 +211,16 @@
    "source_url": "https://www.ymcaatlanta.org/northeast-cobb-y-camp-overview",
    "last_checked": "2026-11-10",
    "free_low_cost": true,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "day",
+    "sports",
+    "stem",
+    "art"
+   ],
+   "age_min": null,
+   "age_max": null
   },
   {
    "name": "Camp Smyrna Summer Camp",
@@ -148,7 +236,14 @@
    "source_url": "https://www.smyrnaga.gov/departments/departments/parks-recreation/camps",
    "last_checked": "2026-11-05",
    "free_low_cost": true,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "day",
+    "break"
+   ],
+   "age_min": 5,
+   "age_max": 12
   },
   {
    "name": "Kennesaw Camp Venture Summer Day Camp",
@@ -164,7 +259,13 @@
    "source_url": "https://www.kennesaw-ga.gov/parks-and-recreation/summer-day-camp/",
    "last_checked": "2026-11-10",
    "free_low_cost": false,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "day"
+   ],
+   "age_min": 6,
+   "age_max": 12
   },
   {
    "name": "Marietta PAL Summer Camp",
@@ -180,7 +281,15 @@
    "source_url": "https://mariettapal.org/pal-summer-camp-2",
    "last_checked": "2026-11-05",
    "free_low_cost": true,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "day",
+    "stem",
+    "sports"
+   ],
+   "age_min": 6,
+   "age_max": 18
   },
   {
    "name": "Salvation Army of Cobb Summer Day Camp",
@@ -196,7 +305,13 @@
    "source_url": "https://www.salvationarmyusa.org/ga/marietta/waterman-st-se-corps/family-services/",
    "last_checked": "2026-11-05",
    "free_low_cost": true,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "day"
+   ],
+   "age_min": 5,
+   "age_max": 14
   },
   {
    "name": "Salvation Army of Cobb After School Program",
@@ -212,7 +327,14 @@
    "source_url": "https://www.salvationarmyusa.org/ga/marietta/waterman-st-se-corps/family-services/",
    "last_checked": "2026-11-05",
    "free_low_cost": true,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "after",
+    "free"
+   ],
+   "age_min": 5,
+   "age_max": 14
   },
   {
    "name": "Cobb County School District After School Program (ASP)",
@@ -228,7 +350,13 @@
    "source_url": "https://cobbk12.ce.eleyo.com/",
    "last_checked": "2026-11-05",
    "free_low_cost": true,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "after"
+   ],
+   "age_min": 5,
+   "age_max": 11
   },
   {
    "name": "Girls Inc. of Greater Atlanta Break Camp",
@@ -244,7 +372,14 @@
    "source_url": "https://www.girlsincatl.org/programs/break-camps",
    "last_checked": "2026-11-05",
    "free_low_cost": true,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "break",
+    "stem"
+   ],
+   "age_min": 5,
+   "age_max": 14
   },
   {
    "name": "Bricks 4 Kidz Marietta–Smyrna LEGO Robotics STEAM Camps",
@@ -260,7 +395,13 @@
    "source_url": "https://bricks4kidz.us/georgia-marietta-smyrna/our-programs/camps/",
    "last_checked": "2026-11-05",
    "free_low_cost": false,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "stem"
+   ],
+   "age_min": 5,
+   "age_max": 13
   },
   {
    "name": "Snapology of Kennesaw STEM & Robotics Camps",
@@ -276,7 +417,13 @@
    "source_url": "https://www.snapology.com/georgia-kennesaw/camps/",
    "last_checked": "2026-11-10",
    "free_low_cost": false,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "stem"
+   ],
+   "age_min": 5,
+   "age_max": 12
   },
   {
    "name": "Marietta Cobb Museum of Art Youth Art Camps",
@@ -292,7 +439,13 @@
    "source_url": "https://mariettacobbartmuseum.org/learn/camps",
    "last_checked": "2026-11-10",
    "free_low_cost": false,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "art"
+   ],
+   "age_min": 4,
+   "age_max": 17
   },
   {
    "name": "East Cobb Stables Summer Horse Camp",
@@ -308,7 +461,15 @@
    "source_url": "https://eastcobbstables.com/summer-camp/",
    "last_checked": "2026-11-05",
    "free_low_cost": false,
-   "status_flag": "2026 camp sold out"
+   "status_flag": "2026 camp sold out",
+   "county": "cobb",
+   "interests": [
+    "horse",
+    "farm",
+    "unusual"
+   ],
+   "age_min": 5,
+   "age_max": 18
   },
   {
    "name": "Cobb Library “The Basics” Storytime",
@@ -324,7 +485,14 @@
    "source_url": "https://www.cobbcounty.gov/events/2027-03-09basics-storytime-series-presented-cobb-collaborative-0",
    "last_checked": "2026-11-05",
    "free_low_cost": true,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "library",
+    "free"
+   ],
+   "age_min": 0,
+   "age_max": 5
   },
   {
    "name": "Josh Powell Camp Summer Day Camp",
@@ -340,7 +508,14 @@
    "source_url": "https://www.joshpowellcamp.com/summer-camp-atlanta",
    "last_checked": "2026-11-10",
    "free_low_cost": false,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "day",
+    "nature"
+   ],
+   "age_min": 5,
+   "age_max": 12
   },
   {
    "name": "iD Tech Summer Camps (Emory & Georgia Tech)",
@@ -356,7 +531,13 @@
    "source_url": "https://www.idtech.com/",
    "last_checked": "2026-11-09",
    "free_low_cost": false,
-   "status_flag": null
+   "status_flag": null,
+   "county": "atlanta",
+   "interests": [
+    "stem"
+   ],
+   "age_min": 7,
+   "age_max": 18
   },
   {
    "name": "Fernbank Museum Winter Break Camp",
@@ -372,7 +553,15 @@
    "source_url": "https://www.fernbankmuseum.org/camps",
    "last_checked": "2026-11-10",
    "free_low_cost": false,
-   "status_flag": null
+   "status_flag": null,
+   "county": "atlanta",
+   "interests": [
+    "break",
+    "stem",
+    "nature"
+   ],
+   "age_min": 5,
+   "age_max": 10
   },
   {
    "name": "Cobb Library Family Storytime (Vinings)",
@@ -388,7 +577,14 @@
    "source_url": "https://www.cobbcounty.gov/events/2027-01-20family-storytime",
    "last_checked": "2026-11-05",
    "free_low_cost": true,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "library",
+    "free"
+   ],
+   "age_min": null,
+   "age_max": null
   },
   {
    "name": "Cobb Library Prek Bilingual Storytime (Sibley)",
@@ -404,7 +600,14 @@
    "source_url": "https://www.cobbcounty.gov/events/2027-01-27prek-bilingual-storytime",
    "last_checked": "2026-11-05",
    "free_low_cost": true,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "library",
+    "free"
+   ],
+   "age_min": 3,
+   "age_max": 5
   },
   {
    "name": "Cobb Library Baby Storytime (Mountain View)",
@@ -420,7 +623,14 @@
    "source_url": "https://www.cobbcounty.gov/events/2027-01-27baby-storytime",
    "last_checked": "2026-11-05",
    "free_low_cost": true,
-   "status_flag": null
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "library",
+    "free"
+   ],
+   "age_min": 0,
+   "age_max": 1
   },
   {
    "name": "Zoo Atlanta Summer Safari Camp",
@@ -436,7 +646,464 @@
    "source_url": "https://zooatlanta.org/program/summer-camp/",
    "last_checked": "2026-11-10",
    "free_low_cost": false,
-   "status_flag": null
+   "status_flag": null,
+   "county": "atlanta",
+   "interests": [
+    "day",
+    "farm",
+    "stem"
+   ],
+   "age_min": 5,
+   "age_max": 14
+  },
+  {
+   "name": "AYTEF Community Summer Tennis Camp (Fair Oaks Tennis Center)",
+   "provider": "Atlanta Youth Tennis & Education Foundation (AYTEF)",
+   "area": "Fair Oaks Tennis Center, 1460 West Booth Road Ext. SW, Marietta",
+   "category": "Tennis camp (beginner, with academic enrichment)",
+   "ages": "6–12 (beginners)",
+   "price_week": "$125 for the week (2026)",
+   "price_low": 125,
+   "price_note": "2026 fee; racquets provided. Families commit to the whole week.",
+   "dates": "2026: June 22–26, 9 a.m.–noon. 2027 dates not yet announced.",
+   "registration": "2027 not yet announced (2026 registration was through AYTEF's site)",
+   "source_url": "https://www.aytef.org/summercamp",
+   "last_checked": "2026-11-13",
+   "free_low_cost": true,
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "tennis",
+    "sports"
+   ],
+   "age_min": 6,
+   "age_max": 12
+  },
+  {
+   "name": "ALTA Junior Tennis Leagues (Spring 2027)",
+   "provider": "Atlanta Lawn Tennis Association (ALTA)",
+   "area": "Metro Atlanta (teams play at member facilities)",
+   "category": "Junior tennis league (team play)",
+   "ages": "7–18",
+   "price_week": "ALTA membership dues required (amount on ALTA site)",
+   "price_low": null,
+   "price_note": "Teams need at least 6 players and a team manager (often a parent or pro); every player must have paid ALTA dues.",
+   "dates": "Spring 2027: play begins Sat Mar 6, 2027 (1:30 p.m. Saturdays); regular season ends Apr 17; City Finals May 1 and 8",
+   "registration": "Spring 2027 roster registration Jan 1 – Jan 26, 2027; late roster deadline Jan 29",
+   "source_url": "https://www.altatennis.org/PlayersAndLeagues/League.aspx?league=Junior+Girls",
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "status_flag": null,
+   "county": "metro",
+   "interests": [
+    "tennis",
+    "sports"
+   ],
+   "age_min": 7,
+   "age_max": 18
+  },
+  {
+   "name": "Sandy Springs Racquet Center Junior Tennis Summer Camp",
+   "provider": "Sandy Springs Racquet Center (Tennis Academy of the South)",
+   "area": "Sandy Springs",
+   "category": "Tennis camp (recreational / beginner) plus pickleball and ping pong",
+   "ages": "5–14",
+   "price_week": "See camp brochure",
+   "price_low": null,
+   "price_note": "Weekly price is in the downloadable brochure, not on the page. Separate junior pickleball camps for ages 8–14.",
+   "dates": "Week-long sessions late May to end of July (2026 schedule); 2027 dates not yet announced",
+   "registration": "2027 not yet announced",
+   "source_url": "http://sandyspringstennis.com/summer-camps",
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "status_flag": null,
+   "county": "north-fulton",
+   "interests": [
+    "tennis",
+    "sports"
+   ],
+   "age_min": 5,
+   "age_max": 14
+  },
+  {
+   "name": "Gwinnett Parks RNB Tennis",
+   "provider": "Gwinnett County Parks & Recreation",
+   "area": "Mountain Park Park (Lilburn) and Rhodes Jordan Park (Lawrenceville)",
+   "category": "Youth tennis clinic (county parks)",
+   "ages": "5–17",
+   "price_week": "$81 per session (summer 2026)",
+   "price_low": 81,
+   "price_note": "Summer 2026: Wednesdays June 3–24 (Mountain Park) or Fridays June 5–26 (Rhodes Jordan), 6 p.m.",
+   "dates": "Summer 2026 sessions ran in June; 2027 dates not yet announced",
+   "registration": "2027 not yet announced (listed in the county's inGwinnett activity guide)",
+   "source_url": "https://www.gwinnettcounty.com/documents/d/gwinnett-county/ingwinnett-june-august-2026-pdf",
+   "last_checked": "2026-11-13",
+   "free_low_cost": true,
+   "status_flag": null,
+   "county": "gwinnett",
+   "interests": [
+    "tennis",
+    "sports"
+   ],
+   "age_min": 5,
+   "age_max": 17
+  },
+  {
+   "name": "Hand, Hoof and Heart Summer Farm & Horse Camps",
+   "provider": "Hand, Hoof and Heart",
+   "area": "Acworth",
+   "category": "Farm & horse camp (horse care, goats/sheep/chickens, gardening; one inclusive week)",
+   "ages": "5–15 depending on week (Own A Pone 7–12; farm week 3rd grade and up)",
+   "price_week": "$150 non-refundable deposit per week (2026)",
+   "price_low": 150,
+   "price_note": "Camps are made financially accessible through a camp scholarship fundraiser. 'Camp All For One' is inclusive of campers with special needs (meet-and-greet required).",
+   "dates": "2026 weeks: June 1–5, June 8–12, June 22–26 (9 a.m.–2 p.m.); 2027 dates not yet announced",
+   "registration": "All 2026 camps full. Pre-registration/waitlist form open for 2027",
+   "source_url": "https://www.handhoofheart.org/summercamps",
+   "last_checked": "2026-11-13",
+   "free_low_cost": true,
+   "status_flag": "All 2026 weeks FULL — join the 2027 pre-registration list",
+   "county": "cobb",
+   "interests": [
+    "farm",
+    "horse",
+    "garden",
+    "unusual"
+   ],
+   "age_min": 5,
+   "age_max": 15
+  },
+  {
+   "name": "Camp Kingfisher at the Chattahoochee Nature Center",
+   "provider": "Chattahoochee Nature Center",
+   "area": "Roswell (9135 Willeo Rd)",
+   "category": "Nature camp: hiking, live animals, canoeing, archery, swimming",
+   "ages": "4 (half-day Owlets) through rising 9th grade; full day needs age 5 by camp start",
+   "price_week": "2027: $516–$700 per 5-day week non-member (K–5th); Owlets half-day $410",
+   "price_low": 328,
+   "price_note": "2027 non-member rates; members ~10% less. 4-day weeks cost less ($328 Owlets). Two-week sessions and a travel program for rising 8th–9th also offered.",
+   "dates": "Summer 2027: Tue June 1 – Fri July 30, 2027",
+   "registration": "Members: opens Tue Jan 5, 2027 at 10 a.m. General: opens Tue Jan 19, 2027 at 10 a.m.",
+   "source_url": "https://chattnaturecenter.org/education/camp/summer-camp/",
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "status_flag": "Several 2026 sessions went to waitlist",
+   "county": "north-fulton",
+   "interests": [
+    "nature",
+    "farm",
+    "swim"
+   ],
+   "age_min": 4,
+   "age_max": 14
+  },
+  {
+   "name": "Camp Kingfisher Survival & Grow Specialty Camps",
+   "provider": "Chattahoochee Nature Center",
+   "area": "Roswell (9135 Willeo Rd)",
+   "category": "Outdoor survival skills / gardening specialty camp",
+   "ages": "Rising 4th–7th grade",
+   "price_week": "2027: $600–$750 per week non-member (Survival); 2-week GHO Survival $1,233–$1,370",
+   "price_low": 600,
+   "price_note": "Specialty tracks inside Camp Kingfisher: Survival (rising 4th–7th) and Grow (gardening). Member and returning-member prices are lower.",
+   "dates": "Summer 2027 weeks between June 1 and July 30, 2027 (see Sessions, Rates and Dates)",
+   "registration": "Members: Jan 5, 2027 at 10 a.m.; general: Jan 19, 2027 at 10 a.m.",
+   "source_url": "https://chattnaturecenter.org/wp-content/uploads/2026/11/Camp-Kingfisher-Summer-2027-Dates-and-Rates.pdf",
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "status_flag": "2026 Survival weeks hit waitlist",
+   "county": "north-fulton",
+   "interests": [
+    "survival",
+    "nature",
+    "garden",
+    "unusual"
+   ],
+   "age_min": 9,
+   "age_max": 13
+  },
+  {
+   "name": "Chastain Horse Park Horseback Basics Summer Camp",
+   "provider": "Chastain Horse Park",
+   "area": "4371 Powers Ferry Rd NW, Atlanta (Chastain Park)",
+   "category": "Horseback riding camp (riding, grooming, tacking, horse care)",
+   "ages": "7–11",
+   "price_week": "$900 per session (2026)",
+   "price_low": 900,
+   "price_note": "Limited to 10 campers per session. Other 2026 weeks: Ponies, Phonics & Fun (ages 6–10, $650) and a Girl Scout horsemanship badge camp ($650).",
+   "dates": "2026: June 15–19 and July 6–10, 10 a.m.–3 p.m.; 2027 dates not yet announced",
+   "registration": "2027 not yet announced (2026 registration was by form, emailed or delivered to the barn)",
+   "source_url": "https://www.chastainhorsepark.org/services-5",
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "status_flag": null,
+   "county": "atlanta",
+   "interests": [
+    "horse",
+    "farm",
+    "unusual"
+   ],
+   "age_min": 7,
+   "age_max": 11
+  },
+  {
+   "name": "Dunwoody Nature Center Summer Camp",
+   "provider": "Dunwoody Nature Center",
+   "area": "Dunwoody Park (5343 Roberts Dr); ages 9–13 at Island Ford (Chattahoochee NRA)",
+   "category": "Nature day camp (creek days, hiking; canoeing for 9–13)",
+   "ages": "4–13 (half day for 4-year-olds)",
+   "price_week": "$400/week full day; $280/week half day (as currently posted)",
+   "price_low": 280,
+   "price_note": "Members get 10% off. 4-day weeks are prorated ($320 full / $224 half). Confirm 2027 rates when registration opens.",
+   "dates": "Summer 2027 themes and dates: not yet posted (2026 themes shown)",
+   "registration": "2027 summer registration opens Mon Feb 1, 2027",
+   "source_url": "https://dunwoodynature.org/education/summer-camp/",
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "status_flag": null,
+   "county": "atlanta",
+   "interests": [
+    "nature"
+   ],
+   "age_min": 4,
+   "age_max": 13
+  },
+  {
+   "name": "Camp Autrey Mill (nature, history & live animals)",
+   "provider": "Autrey Mill Nature Preserve",
+   "area": "9770 Autrey Mill Rd, Johns Creek",
+   "category": "Nature camp with live animals, farm museum and creek play",
+   "ages": "5–11 (Junior Counselor 12–13)",
+   "price_week": "$385/week non-member; $365 member (2026)",
+   "price_low": 365,
+   "price_note": "2026 rates. Junior Counselors (12–13) $190–$210/week. Camp financial assistance fund available.",
+   "dates": "2026 ran May 26 – July 31 (follows Fulton County Schools calendar); 2027 dates not yet announced",
+   "registration": "2027 not yet announced",
+   "source_url": "https://autreymill.org/programs/summer-camp/",
+   "last_checked": "2026-11-13",
+   "free_low_cost": true,
+   "status_flag": null,
+   "county": "north-fulton",
+   "interests": [
+    "nature",
+    "farm"
+   ],
+   "age_min": 5,
+   "age_max": 13
+  },
+  {
+   "name": "Wylde Center Thanksgiving Week Nature Day Camp",
+   "provider": "Wylde Center",
+   "area": "Oakhurst Garden, 435 Oakview Rd, Decatur",
+   "category": "Garden & nature school-break camp (creek, pumpkin cooking, crafts)",
+   "ages": "4–10",
+   "price_week": "$125 for the day",
+   "price_low": 125,
+   "price_note": "Snacks provided. Wylde Center also runs summer garden camps (2027 not yet posted).",
+   "dates": "Mon Nov 23, 2026, 8:30 a.m.–5 p.m.",
+   "registration": "SOLD OUT",
+   "source_url": "https://www.wyldecenter.org/camps/",
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "status_flag": "Sold out",
+   "county": "atlanta",
+   "interests": [
+    "garden",
+    "nature",
+    "break",
+    "unusual"
+   ],
+   "age_min": 4,
+   "age_max": 10
+  },
+  {
+   "name": "Atlanta Botanical Garden Winter Break Garden Camps",
+   "provider": "Atlanta Botanical Garden",
+   "area": "1345 Piedmont Ave, Midtown Atlanta",
+   "category": "Garden school-break day camps (plants, nature crafts)",
+   "ages": "6–8",
+   "price_week": "$85 per day ($75 members)",
+   "price_low": 75,
+   "price_note": "Max 12 campers per day with 2 teachers. Fall break camps (Oct 12–14, Nov 23–24) sold out.",
+   "dates": "Dec 21, 22, 23, 28, 29, 2026 and Jan 4, 2027 (9 a.m.–4 p.m.)",
+   "registration": "Open now; registration deadline Mon Dec 7, 2026",
+   "source_url": "https://atlantabg.org/classes-education/garden-camps/",
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "status_flag": null,
+   "county": "atlanta",
+   "interests": [
+    "garden",
+    "nature",
+    "break"
+   ],
+   "age_min": 6,
+   "age_max": 8
+  },
+  {
+   "name": "Callanwolde Intro/Intermediate Blacksmithing (Teens & Adults)",
+   "provider": "Callanwolde Fine Arts Center",
+   "area": "980 Briarcliff Rd NE, Atlanta",
+   "category": "Blacksmithing class (forging, forge welding, tool steel)",
+   "ages": "13 and up",
+   "price_week": "$359 for the 7-week course",
+   "price_low": 359,
+   "price_note": "Fuel and steel provided. Natural-fiber clothing required. Callanwolde offers financial aid for youth classes.",
+   "dates": "Winter 2027: several weekly sections between Jan 21 and Mar 9, 2027 (e.g., Mondays Jan 25 – Mar 8, 6–9 p.m.)",
+   "registration": "Winter registration opens Mon Nov 16, 2026 at 9 a.m.",
+   "source_url": "https://www.activekids.com/atlanta-ga/photography/classes/bla-01-introduction-intermediate-blacksmithing-teens-and-adults-2027",
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "status_flag": null,
+   "county": "atlanta",
+   "interests": [
+    "trades",
+    "art",
+    "unusual"
+   ],
+   "age_min": 13,
+   "age_max": 18
+  },
+  {
+   "name": "Cobb PARKS Swim Lessons",
+   "provider": "Cobb County PARKS Aquatics",
+   "area": "Mountain View, Central (Marietta), West Cobb (Powder Springs), South Cobb (Austell) aquatic centers",
+   "category": "Swim lessons (parent-tot through pre-competitive)",
+   "ages": "6 months–15 (Parent Tot 6 mo–3; preschool 3–5; learn-to-swim 5–15)",
+   "price_week": "See Cobb PARKS activity guide",
+   "price_low": null,
+   "price_note": "Session fees are in the activity guide; resident registration opens a day before non-residents.",
+   "dates": "Seasonal sessions (winter, spring, summer, fall)",
+   "registration": "Posted registration dates: residents Jan 8, Feb 26, May 14 and Aug 6 at 7 p.m.; non-residents the next day at 9 a.m. (2027 dates not separately announced)",
+   "source_url": "https://www.cobbcounty.gov/parks/centers-facilities/aquatics",
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "swim",
+    "sports"
+   ],
+   "age_min": 0,
+   "age_max": 15
+  },
+  {
+   "name": "YMCA of Metro Atlanta Swim Lessons",
+   "provider": "YMCA of Metro Atlanta",
+   "area": "Metro Atlanta YMCA branches (incl. McCleskey-East Cobb, Northeast Cobb)",
+   "category": "Swim lessons (group, private, adaptive)",
+   "ages": "All ages",
+   "price_week": "See your YMCA branch",
+   "price_low": null,
+   "price_note": "Y Family Memberships include free Parent & Tot swim lessons; non-members can take lessons as Program members.",
+   "dates": "Ongoing sessions by branch",
+   "registration": "Open by branch",
+   "source_url": "https://www.ymcaatlanta.org/swim/swim-lessons",
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "status_flag": null,
+   "county": "metro",
+   "interests": [
+    "swim",
+    "sports"
+   ],
+   "age_min": null,
+   "age_max": null
+  },
+  {
+   "name": "Camp Acworth Summer Day Camp",
+   "provider": "City of Acworth Parks, Recreation & Community Resources",
+   "area": "Acworth Community Center (Overlook Adventure Camp) and Cauble Park (Lake Acworth Adventure Camp)",
+   "category": "Day camp (lake and community-center camps)",
+   "ages": "Rising 1st–8th grade (age 6–14)",
+   "price_week": "$150/week Cobb residents; $175/week non-Cobb (2026)",
+   "price_low": 150,
+   "price_note": "Includes a $25 non-refundable weekly deposit.",
+   "dates": "Summer 2026 weekly sessions; 2027 dates not yet announced",
+   "registration": "2026 registration opened Feb 2 (Cobb residents) and Feb 9 (non-Cobb); 2027 not yet announced",
+   "source_url": "https://acworth-ga.gov/parks-recreation-and-community-resources/programs-and-camps/camp-acworth/",
+   "last_checked": "2026-11-13",
+   "free_low_cost": true,
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "day",
+    "swim"
+   ],
+   "age_min": 6,
+   "age_max": 14
+  },
+  {
+   "name": "Smyrna Parks & Recreation Youth Classes",
+   "provider": "City of Smyrna Parks & Recreation",
+   "area": "Smyrna Community Center, 1250 Powder Springs St",
+   "category": "Youth classes (yoga, ballet, gymnastics and more)",
+   "ages": "Varies by class",
+   "price_week": "See Smyrna class catalog",
+   "price_low": null,
+   "price_note": "City page lists yoga, ballet and gymnastics classes; ages, dates and fees are in the registration catalog.",
+   "dates": "Ongoing seasonal classes",
+   "registration": "Through Smyrna's online registration",
+   "source_url": "https://www.smyrnaga.gov/departments/departments/parks-recreation/youth-programs",
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "dance",
+    "gym",
+    "sports"
+   ],
+   "age_min": null,
+   "age_max": null
+  },
+  {
+   "name": "Cobb Library LEGO Club (Sewell Mill)",
+   "provider": "Cobb County Public Library",
+   "area": "Sewell Mill Library, 2051 Lower Roswell Rd, Marietta (East Cobb)",
+   "category": "Free library LEGO / STEM club",
+   "ages": "5–12",
+   "price_week": "Free",
+   "price_low": 0,
+   "price_note": "No registration required.",
+   "dates": "Tuesdays 4–5 p.m. (e.g., Nov 17, 2026)",
+   "registration": "Drop in",
+   "source_url": "https://www.cobbcounty.gov/events/2026-11-17lego-club-0",
+   "last_checked": "2026-11-13",
+   "free_low_cost": true,
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "library",
+    "free",
+    "stem"
+   ],
+   "age_min": 5,
+   "age_max": 12
+  },
+  {
+   "name": "Cobb Library LEGO Club (Powder Springs)",
+   "provider": "Cobb County Public Library",
+   "area": "Powder Springs Library, 4181 Atlanta St, Powder Springs",
+   "category": "Free library LEGO / STEM club",
+   "ages": "5 and up",
+   "price_week": "Free",
+   "price_low": 0,
+   "price_note": "Supplies provided; new building challenge each week.",
+   "dates": "Tuesdays 4–5 p.m. (e.g., Dec 8, 2026)",
+   "registration": "Free; see event page",
+   "source_url": "https://www.cobbcounty.gov/events/2026-12-08lego-club",
+   "last_checked": "2026-11-13",
+   "free_low_cost": true,
+   "status_flag": null,
+   "county": "cobb",
+   "interests": [
+    "library",
+    "free",
+    "stem"
+   ],
+   "age_min": 5,
+   "age_max": 18
   }
  ]
 }
