@@ -3,13 +3,13 @@ var cfg=window.SITE_CONFIG||{};
 function $(i){return document.getElementById(i)}
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(m){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]})}
 document.querySelectorAll("#contact-btn").forEach(function(a){if(cfg.contactEmail){a.href="mailto:"+cfg.contactEmail+"?subject=Featured%20listing"}else{a.removeAttribute("href");a.setAttribute("aria-disabled","true");a.textContent+=" (contact email coming soon)"}});
-var fp=$("feat-price");if(fp)fp.textContent=cfg.featuredStartingRate||"Ask us";
+var fp=$("feat-price");if(fp)fp.textContent=cfg.featuredStartingRate||"Pricing coming January 2027";
 
 /* ---- Sign-up alerts ---- */
 var dlg=$("alert-dlg"),af=$("alert-form"),live=!!cfg.signupEndpoint,lastFocus=null;
-var LABELS={tennis:"Tennis",farm:"Farm & animals",horse:"Horses",nature:"Nature & outdoors",garden:"Gardening",survival:"Survival skills",trades:"Blacksmithing & maker",art:"Art",theatre:"Theatre",dance:"Dance",swim:"Swim",sports:"Sports",gym:"Gymnastics",stem:"STEM / LEGO / coding",day:"Day camps","break":"School-break",after:"After-school",library:"Library",free:"Free programs",unusual:"Unusual & offbeat"};
-var CAT_MAP={stem:"STEM / LEGO / coding",art:"Arts and theatre",theatre:"Arts and theatre",dance:"Arts and theatre",trades:"Arts and theatre",sports:"Sports and outdoors",tennis:"Sports and outdoors",horse:"Sports and outdoors",swim:"Sports and outdoors",gym:"Sports and outdoors",nature:"Sports and outdoors",farm:"Sports and outdoors",garden:"Sports and outdoors",survival:"Sports and outdoors",unusual:"Sports and outdoors",day:"Day camps",after:"Day camps",library:"Free library and community",free:"Free library and community","break":"School-break camps"};
-var COUNTY={cobb:"Cobb","north-fulton":"North Fulton",atlanta:"Atlanta / DeKalb",gwinnett:"Gwinnett",metro:"Metro-wide"};
+var LABELS={tennis:"Tennis",farm:"Farm & animals",horse:"Horses",nature:"Nature & outdoors",garden:"Gardening",survival:"Survival skills",trades:"Blacksmithing & maker",art:"Art",theatre:"Theatre",dance:"Dance",swim:"Swim",sports:"Sports",gym:"Gymnastics",stem:"STEM / LEGO / coding",day:"Day camps","break":"School-break",after:"After-school",library:"Library",free:"Free programs",unusual:"Unusual & offbeat",outdoor:"Outdoor & adventure"};
+var CAT_MAP={stem:"STEM / LEGO / coding",art:"Arts and theatre",theatre:"Arts and theatre",dance:"Arts and theatre",trades:"Arts and theatre",sports:"Sports and outdoors",tennis:"Sports and outdoors",horse:"Sports and outdoors",swim:"Sports and outdoors",gym:"Sports and outdoors",nature:"Sports and outdoors",farm:"Sports and outdoors",garden:"Sports and outdoors",survival:"Sports and outdoors",unusual:"Sports and outdoors",day:"Day camps",after:"Day camps",library:"Free library and community",free:"Free library and community","break":"School-break camps",outdoor:"Sports and outdoors"};
+var COUNTY={cobb:"Cobb","north-fulton":"North Fulton",atlanta:"Atlanta / DeKalb",gwinnett:"Gwinnett",metro:"Metro-wide","day-trip":"Day trip / overnight"};
 function seasonGuess(c){var t=(c.category+" "+c.dates).toLowerCase(),o=[];if(/spring|break/.test(t))o.push("Spring break");if(/summer|weeks|may|june|july/.test(t))o.push("Summer");if(/fall|winter|break/.test(t))o.push("Fall/Winter break");return o}
 function err(id,m){var e=$(id);if(e)e.textContent=m||""}
 function openAlert(o){if(!dlg)return;lastFocus=document.activeElement;af.reset();["a-email-err","a-what-err","a-season-err","a-consent-err"].forEach(function(i){err(i)});$("a-msg").textContent="";
@@ -21,6 +21,7 @@ if(o.area){var sel=$("a-area");for(var i=0;i<sel.options.length;i++){if(sel.opti
 $("alert-title").textContent="Email me when "+(o.camp||o.activity||"camp")+" sign-ups open";
 $("alert-soon").hidden=live;$("a-submit").disabled=!live;$("a-submit").textContent=live?"Email me":"Alerts launching soon";
 if(dlg.showModal)dlg.showModal();else dlg.setAttribute("open","");$("a-email").focus()}
+window.openCampAlert=function(o){openAlert(o||{})};
 function closeAlert(){if(dlg.close)dlg.close();else dlg.removeAttribute("open");if(lastFocus&&lastFocus.focus)lastFocus.focus()}
 function isAjaxEndpoint(u){return /\/ajax\//.test(u||"")||(cfg.signupMode==="ajax")}
 if(dlg){$("alert-close").onclick=closeAlert;$("alert-cancel").onclick=closeAlert;dlg.addEventListener("click",function(e){if(e.target===dlg)closeAlert()});

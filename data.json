@@ -24,16 +24,19 @@
    "after": "After-school",
    "library": "Library",
    "free": "Free",
-   "unusual": "Unusual & offbeat"
+   "unusual": "Unusual & offbeat",
+   "outdoor": "Outdoor & adventure"
   },
   "county_codes": {
    "cobb": "Cobb",
    "north-fulton": "North Fulton",
    "atlanta": "Atlanta / DeKalb",
    "gwinnett": "Gwinnett",
-   "metro": "Metro-wide"
+   "metro": "Metro-wide",
+   "day-trip": "Day trip / overnight (outside metro)"
   },
-  "age_fields": "age_min/age_max are numeric years taken from the provider's published ages or grades (grade + 5); null when the provider publishes no range."
+  "age_fields": "age_min/age_max are numeric years taken from the provider's published ages or grades (grade + 5); null when the provider publishes no range.",
+  "planner_fields": "hours_start/hours_end/before_care/after_care are 24h 'HH:MM' strings copied from the provider page only when unambiguous, else null; hours_year says which season those hours were published for (null = general). sessions is a list of {start,end} ISO dates for announced 2027 summer sessions only (null when not announced). summer=true for summer camps; overnight=true for sleepaway camps."
  },
  "camps": [
   {
@@ -57,7 +60,15 @@
     "break"
    ],
    "age_min": 6,
-   "age_max": 12
+   "age_max": 12,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Cobb PARKS Creative Art Camps",
@@ -80,7 +91,15 @@
     "break"
    ],
    "age_min": 6,
-   "age_max": 15
+   "age_max": 15,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Cobb PARKS Performing Arts Camps (Jennie T. Anderson Theatre)",
@@ -102,7 +121,15 @@
     "theatre"
    ],
    "age_min": 6,
-   "age_max": 15
+   "age_max": 15,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Cobb PARKS Tennis Camps",
@@ -125,7 +152,15 @@
     "sports"
    ],
    "age_min": 4,
-   "age_max": 18
+   "age_max": 18,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Cobb PARKS Unlimited Gymnastics Camp",
@@ -148,7 +183,15 @@
     "sports"
    ],
    "age_min": 3,
-   "age_max": 10
+   "age_max": 10,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Cobb PARKS Nature Camps (Green Meadows)",
@@ -167,10 +210,19 @@
    "status_flag": null,
    "county": "cobb",
    "interests": [
-    "nature"
+    "nature",
+    "outdoor"
    ],
    "age_min": 8,
-   "age_max": 11
+   "age_max": 11,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "McCleskey-East Cobb Family YMCA Day Camp",
@@ -195,7 +247,15 @@
     "garden"
    ],
    "age_min": 3,
-   "age_max": 12
+   "age_max": 12,
+   "hours_start": "09:00",
+   "hours_end": "16:00",
+   "before_care": "07:00",
+   "after_care": "18:00",
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Northeast Cobb Family YMCA Day Camp",
@@ -220,7 +280,15 @@
     "art"
    ],
    "age_min": null,
-   "age_max": null
+   "age_max": null,
+   "hours_start": "09:00",
+   "hours_end": "16:00",
+   "before_care": "07:00",
+   "after_care": "18:30",
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Camp Smyrna Summer Camp",
@@ -243,7 +311,15 @@
     "break"
    ],
    "age_min": 5,
-   "age_max": 12
+   "age_max": 12,
+   "hours_start": "09:00",
+   "hours_end": "16:00",
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Kennesaw Camp Venture Summer Day Camp",
@@ -265,7 +341,15 @@
     "day"
    ],
    "age_min": 6,
-   "age_max": 12
+   "age_max": 12,
+   "hours_start": "09:00",
+   "hours_end": "16:00",
+   "before_care": "07:30",
+   "after_care": "18:00",
+   "hours_year": 2026,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Marietta PAL Summer Camp",
@@ -289,7 +373,15 @@
     "sports"
    ],
    "age_min": 6,
-   "age_max": 18
+   "age_max": 18,
+   "hours_start": "08:00",
+   "hours_end": "18:00",
+   "before_care": null,
+   "after_care": null,
+   "hours_year": 2026,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Salvation Army of Cobb Summer Day Camp",
@@ -311,7 +403,15 @@
     "day"
    ],
    "age_min": 5,
-   "age_max": 14
+   "age_max": 14,
+   "hours_start": "07:30",
+   "hours_end": "18:30",
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Salvation Army of Cobb After School Program",
@@ -334,7 +434,15 @@
     "free"
    ],
    "age_min": 5,
-   "age_max": 14
+   "age_max": 14,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false
   },
   {
    "name": "Cobb County School District After School Program (ASP)",
@@ -356,7 +464,15 @@
     "after"
    ],
    "age_min": 5,
-   "age_max": 11
+   "age_max": 11,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false
   },
   {
    "name": "Girls Inc. of Greater Atlanta Break Camp",
@@ -379,7 +495,15 @@
     "stem"
    ],
    "age_min": 5,
-   "age_max": 14
+   "age_max": 14,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false
   },
   {
    "name": "Bricks 4 Kidz Marietta–Smyrna LEGO Robotics STEAM Camps",
@@ -401,7 +525,15 @@
     "stem"
    ],
    "age_min": 5,
-   "age_max": 13
+   "age_max": 13,
+   "hours_start": "08:30",
+   "hours_end": "17:00",
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Snapology of Kennesaw STEM & Robotics Camps",
@@ -423,7 +555,15 @@
     "stem"
    ],
    "age_min": 5,
-   "age_max": 12
+   "age_max": 12,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Marietta Cobb Museum of Art Youth Art Camps",
@@ -445,7 +585,20 @@
     "art"
    ],
    "age_min": 4,
-   "age_max": 17
+   "age_max": 17,
+   "hours_start": "09:00",
+   "hours_end": "15:00",
+   "before_care": null,
+   "after_care": null,
+   "hours_year": 2027,
+   "sessions": [
+    {
+     "start": "2027-06-14",
+     "end": "2027-07-23"
+    }
+   ],
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "East Cobb Stables Summer Horse Camp",
@@ -469,7 +622,15 @@
     "unusual"
    ],
    "age_min": 5,
-   "age_max": 18
+   "age_max": 18,
+   "hours_start": "08:30",
+   "hours_end": "13:00",
+   "before_care": null,
+   "after_care": null,
+   "hours_year": 2026,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Cobb Library “The Basics” Storytime",
@@ -492,7 +653,15 @@
     "free"
    ],
    "age_min": 0,
-   "age_max": 5
+   "age_max": 5,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false
   },
   {
    "name": "Josh Powell Camp Summer Day Camp",
@@ -515,7 +684,20 @@
     "nature"
    ],
    "age_min": 5,
-   "age_max": 12
+   "age_max": 12,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": [
+    {
+     "start": "2027-06-07",
+     "end": "2027-08-13"
+    }
+   ],
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "iD Tech Summer Camps (Emory & Georgia Tech)",
@@ -537,7 +719,15 @@
     "stem"
    ],
    "age_min": 7,
-   "age_max": 18
+   "age_max": 18,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": null
   },
   {
    "name": "Fernbank Museum Winter Break Camp",
@@ -561,7 +751,15 @@
     "nature"
    ],
    "age_min": 5,
-   "age_max": 10
+   "age_max": 10,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false
   },
   {
    "name": "Cobb Library Family Storytime (Vinings)",
@@ -584,7 +782,15 @@
     "free"
    ],
    "age_min": null,
-   "age_max": null
+   "age_max": null,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false
   },
   {
    "name": "Cobb Library Prek Bilingual Storytime (Sibley)",
@@ -607,7 +813,15 @@
     "free"
    ],
    "age_min": 3,
-   "age_max": 5
+   "age_max": 5,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false
   },
   {
    "name": "Cobb Library Baby Storytime (Mountain View)",
@@ -630,7 +844,15 @@
     "free"
    ],
    "age_min": 0,
-   "age_max": 1
+   "age_max": 1,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false
   },
   {
    "name": "Zoo Atlanta Summer Safari Camp",
@@ -654,7 +876,20 @@
     "stem"
    ],
    "age_min": 5,
-   "age_max": 14
+   "age_max": 14,
+   "hours_start": "09:00",
+   "hours_end": "16:00",
+   "before_care": null,
+   "after_care": null,
+   "hours_year": 2027,
+   "sessions": [
+    {
+     "start": "2027-06-01",
+     "end": "2027-07-30"
+    }
+   ],
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "AYTEF Community Summer Tennis Camp (Fair Oaks Tennis Center)",
@@ -677,7 +912,15 @@
     "sports"
    ],
    "age_min": 6,
-   "age_max": 12
+   "age_max": 12,
+   "hours_start": "09:00",
+   "hours_end": "12:00",
+   "before_care": null,
+   "after_care": null,
+   "hours_year": 2026,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "ALTA Junior Tennis Leagues (Spring 2027)",
@@ -700,7 +943,15 @@
     "sports"
    ],
    "age_min": 7,
-   "age_max": 18
+   "age_max": 18,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false
   },
   {
    "name": "Sandy Springs Racquet Center Junior Tennis Summer Camp",
@@ -723,7 +974,15 @@
     "sports"
    ],
    "age_min": 5,
-   "age_max": 14
+   "age_max": 14,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Gwinnett Parks RNB Tennis",
@@ -746,7 +1005,15 @@
     "sports"
    ],
    "age_min": 5,
-   "age_max": 17
+   "age_max": 17,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false
   },
   {
    "name": "Hand, Hoof and Heart Summer Farm & Horse Camps",
@@ -771,7 +1038,15 @@
     "unusual"
    ],
    "age_min": 5,
-   "age_max": 15
+   "age_max": 15,
+   "hours_start": "09:00",
+   "hours_end": "14:00",
+   "before_care": null,
+   "after_care": null,
+   "hours_year": 2026,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Camp Kingfisher at the Chattahoochee Nature Center",
@@ -795,7 +1070,20 @@
     "swim"
    ],
    "age_min": 4,
-   "age_max": 14
+   "age_max": 14,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": [
+    {
+     "start": "2027-06-01",
+     "end": "2027-07-30"
+    }
+   ],
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Camp Kingfisher Survival & Grow Specialty Camps",
@@ -817,10 +1105,24 @@
     "survival",
     "nature",
     "garden",
-    "unusual"
+    "unusual",
+    "outdoor"
    ],
    "age_min": 9,
-   "age_max": 13
+   "age_max": 13,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": [
+    {
+     "start": "2027-06-01",
+     "end": "2027-07-30"
+    }
+   ],
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Chastain Horse Park Horseback Basics Summer Camp",
@@ -844,7 +1146,15 @@
     "unusual"
    ],
    "age_min": 7,
-   "age_max": 11
+   "age_max": 11,
+   "hours_start": "10:00",
+   "hours_end": "15:00",
+   "before_care": null,
+   "after_care": null,
+   "hours_year": 2026,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Dunwoody Nature Center Summer Camp",
@@ -866,7 +1176,15 @@
     "nature"
    ],
    "age_min": 4,
-   "age_max": 13
+   "age_max": 13,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Camp Autrey Mill (nature, history & live animals)",
@@ -889,7 +1207,15 @@
     "farm"
    ],
    "age_min": 5,
-   "age_max": 13
+   "age_max": 13,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Wylde Center Thanksgiving Week Nature Day Camp",
@@ -914,7 +1240,15 @@
     "unusual"
    ],
    "age_min": 4,
-   "age_max": 10
+   "age_max": 10,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false
   },
   {
    "name": "Atlanta Botanical Garden Winter Break Garden Camps",
@@ -938,7 +1272,15 @@
     "break"
    ],
    "age_min": 6,
-   "age_max": 8
+   "age_max": 8,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false
   },
   {
    "name": "Callanwolde Intro/Intermediate Blacksmithing (Teens & Adults)",
@@ -962,7 +1304,15 @@
     "unusual"
    ],
    "age_min": 13,
-   "age_max": 18
+   "age_max": 18,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false
   },
   {
    "name": "Cobb PARKS Swim Lessons",
@@ -985,7 +1335,15 @@
     "sports"
    ],
    "age_min": 0,
-   "age_max": 15
+   "age_max": 15,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false
   },
   {
    "name": "YMCA of Metro Atlanta Swim Lessons",
@@ -1008,7 +1366,15 @@
     "sports"
    ],
    "age_min": null,
-   "age_max": null
+   "age_max": null,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false
   },
   {
    "name": "Camp Acworth Summer Day Camp",
@@ -1031,7 +1397,15 @@
     "swim"
    ],
    "age_min": 6,
-   "age_max": 14
+   "age_max": 14,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false
   },
   {
    "name": "Smyrna Parks & Recreation Youth Classes",
@@ -1055,7 +1429,15 @@
     "sports"
    ],
    "age_min": null,
-   "age_max": null
+   "age_max": null,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false
   },
   {
    "name": "Cobb Library LEGO Club (Sewell Mill)",
@@ -1079,7 +1461,15 @@
     "stem"
    ],
    "age_min": 5,
-   "age_max": 12
+   "age_max": 12,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false
   },
   {
    "name": "Cobb Library LEGO Club (Powder Springs)",
@@ -1103,7 +1493,639 @@
     "stem"
    ],
    "age_min": 5,
+   "age_max": 18,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false
+  },
+  {
+   "status_flag": null,
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "hours_start": "09:00",
+   "hours_end": "16:00",
+   "before_care": "08:00",
+   "after_care": "17:00",
+   "hours_year": 2027,
+   "sessions": [
+    {
+     "start": "2027-06-14",
+     "end": "2027-06-18"
+    },
+    {
+     "start": "2027-06-21",
+     "end": "2027-06-25"
+    },
+    {
+     "start": "2027-06-28",
+     "end": "2027-07-02"
+    },
+    {
+     "start": "2027-07-12",
+     "end": "2027-07-16"
+    }
+   ],
+   "summer": true,
+   "overnight": false,
+   "name": "Georgia Bushcraft Adventure Summer Camp",
+   "provider": "Georgia Bushcraft",
+   "area": "Watkinsville (Oconee County), about 1–1.5 hrs east of Atlanta",
+   "category": "Bushcraft & wilderness-skills day camp",
+   "ages": "6–12",
+   "price_week": "$425/week founding-family price if registered by Dec 31, 2026; $475/week from Jan 1, 2027",
+   "price_low": 425,
+   "price_note": "Extended care 8–9 a.m. and 4–5 p.m., $75/week or $10/day. Firecraft, shelters, safe knife use, tracking, map & compass. 32 spots per week.",
+   "dates": "2027: June 14–18, June 21–25, June 28–July 2, July 12–16 (off July 4 week); 9 a.m.–4 p.m.",
+   "registration": "Founders pre-sale open now (price rises Jan 1, 2027)",
+   "source_url": "https://www.georgiabushcraft.com/pages/summer-camp",
+   "county": "day-trip",
+   "interests": [
+    "outdoor",
+    "survival",
+    "nature",
+    "unusual",
+    "day"
+   ],
+   "age_min": 6,
+   "age_max": 12
+  },
+  {
+   "status_flag": null,
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": [
+    {
+     "start": "2027-07-12",
+     "end": "2027-07-16"
+    }
+   ],
+   "summer": true,
+   "overnight": true,
+   "name": "Cobb 4-H Wilderness Challenge Camp at Wahsega (overnight)",
+   "provider": "UGA Extension Cobb County 4-H",
+   "area": "Wahsega 4-H Center, Dahlonega (north Georgia mountains)",
+   "category": "Overnight wilderness & rafting camp",
+   "ages": "Grades 6–8 (must turn 12 by July 12, 2027)",
+   "price_week": "Cost not yet posted",
+   "price_low": null,
+   "price_note": "Fire building, shelters & knots, campfire cooking, wilderness first aid, high ropes, waterfall hike, Ocoee River whitewater rafting. Limited partial scholarships (apply by Feb 1, 2027). For Cobb County students.",
+   "dates": "2027: July 12–16 (overnight, Mon–Fri)",
+   "registration": "Opens Feb 10, 2027",
+   "source_url": "https://extension.uga.edu/county-offices/cobb/4-h-youth-development/summer-camp.html",
+   "county": "cobb",
+   "interests": [
+    "outdoor",
+    "survival",
+    "unusual"
+   ],
+   "age_min": 12,
+   "age_max": 13
+  },
+  {
+   "status_flag": null,
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": [
+    {
+     "start": "2027-06-14",
+     "end": "2027-06-19"
+    },
+    {
+     "start": "2027-06-28",
+     "end": "2027-07-03"
+    }
+   ],
+   "summer": true,
+   "overnight": true,
+   "name": "Cobb 4-H Summer Camps (Cloverleaf, Senior Extreme, Marine, Senior)",
+   "provider": "UGA Extension Cobb County 4-H",
+   "area": "Georgia 4-H camp centers (overnight; Cobb County group)",
+   "category": "Overnight 4-H camps: swimming, archery, hiking, nature",
+   "ages": "Grades 4–12 (by camp)",
+   "price_week": "Cost not yet posted",
+   "price_low": null,
+   "price_note": "Camp details posted starting Jan 2, 2027. Cloverleaf (grades 4–6) registration opens Feb 9, 2027; specialty camps Feb 10, 2027. Limited partial scholarships (apply by Feb 1, 2027).",
+   "dates": "2027: Cloverleaf (4th–6th) June 15–19; Senior Extreme (9th–12th) June 14–18; Marine Exploration (6th–8th) June 28–July 3; Senior Camp (9th–12th) June 28–July 3",
+   "registration": "Opens Feb 9–10, 2027",
+   "source_url": "https://extension.uga.edu/county-offices/cobb/4-h-youth-development/summer-camp.html",
+   "county": "cobb",
+   "interests": [
+    "outdoor",
+    "nature",
+    "swim"
+   ],
+   "age_min": 9,
    "age_max": 18
+  },
+  {
+   "status_flag": null,
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": true,
+   "name": "Charlie Elliott Wildlife Center Overnight Camps (fishing, archery, outdoor skills)",
+   "provider": "Georgia DNR Wildlife Resources Division",
+   "area": "Charlie Elliott Wildlife Center, Mansfield (about 1 hr east of Atlanta)",
+   "category": "Overnight fishing / outdoor-skills camps",
+   "ages": "11–16 (by camp)",
+   "price_week": "$200–$350 per week (2026)",
+   "price_low": 200,
+   "price_note": "2026 lineup: Gone Fishin’ (11–13), Outdoor Team Challenge with canoeing, archery & fishing (11–13), Shooting Sports (12–16), Out Huntin’ hunter-safety camp (12–16), ACE conservation camp (12–14). Lodge rooms and meals included.",
+   "dates": "2026 ran June 8 – July 24; 2027 dates not yet announced",
+   "registration": "Registration opens Feb 1 (per DNR page)",
+   "source_url": "https://georgiawildlife.com/Camps",
+   "county": "day-trip",
+   "interests": [
+    "outdoor",
+    "nature",
+    "unusual"
+   ],
+   "age_min": 11,
+   "age_max": 16
+  },
+  {
+   "status_flag": null,
+   "last_checked": "2026-11-13",
+   "free_low_cost": true,
+   "hours_start": "09:00",
+   "hours_end": "16:00",
+   "before_care": null,
+   "after_care": null,
+   "hours_year": 2026,
+   "sessions": null,
+   "summer": true,
+   "overnight": false,
+   "name": "Charlie Elliott Wildlife Center Day Camps",
+   "provider": "Georgia DNR Wildlife Resources Division",
+   "area": "Charlie Elliott Wildlife Center, Mansfield (about 1 hr east of Atlanta)",
+   "category": "Wildlife day camp with archery, fishing & canoeing",
+   "ages": "6–10 (by camp)",
+   "price_week": "$175/week (2026)",
+   "price_low": 175,
+   "price_note": "2026: Nature Heroes (8–10; archery, fishing, canoeing) and Where the Wild Things Are (6–8). Low-cost state program.",
+   "dates": "2026 ran June 15–19 and July 6–10, 9 a.m.–4 p.m.; 2027 dates not yet announced",
+   "registration": "Registration opens Feb 1 (per DNR page)",
+   "source_url": "https://georgiawildlife.com/Camps",
+   "county": "day-trip",
+   "interests": [
+    "outdoor",
+    "nature",
+    "day"
+   ],
+   "age_min": 6,
+   "age_max": 10
+  },
+  {
+   "status_flag": null,
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": [
+    {
+     "start": "2027-06-06",
+     "end": "2027-07-24"
+    }
+   ],
+   "summer": true,
+   "overnight": true,
+   "name": "Woodruff Scout Camp Summer Camp (Scouts BSA troops)",
+   "provider": "Atlanta Area Council, Scouting America",
+   "area": "Woodruff Scout Camp, Blairsville (north Georgia mountains)",
+   "category": "Overnight Scouts BSA summer camp",
+   "ages": "Scouts BSA members (attend with a troop)",
+   "price_week": "Cost not yet posted",
+   "price_low": null,
+   "price_note": "Attendance is with a registered Scouts BSA troop, not as an individual drop-in camper.",
+   "dates": "2027 weekly sessions: June 6–12, June 13–19, June 20–26, June 27–July 3, July 4–10, July 11–17, July 18–24",
+   "registration": "Through your troop; see council event page",
+   "source_url": "https://scoutingatl.org/council_event/summer-camp-wsc/",
+   "county": "day-trip",
+   "interests": [
+    "outdoor",
+    "nature"
+   ],
+   "age_min": null,
+   "age_max": null
+  },
+  {
+   "status_flag": null,
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": [
+    {
+     "start": "2027-06-06",
+     "end": "2027-07-03"
+    }
+   ],
+   "summer": true,
+   "overnight": true,
+   "name": "Bert Adams Scout Camp Summer Camp (Scouts BSA troops)",
+   "provider": "Atlanta Area Council, Scouting America",
+   "area": "Bert Adams Scout Camp, Covington (about 45 min east of Atlanta)",
+   "category": "Overnight Scouts BSA summer camp",
+   "ages": "Scouts BSA members (attend with a troop)",
+   "price_week": "Cost not yet posted",
+   "price_low": null,
+   "price_note": "Attendance is with a registered Scouts BSA troop, not as an individual drop-in camper.",
+   "dates": "2027 weekly sessions: June 6–12, June 13–19, June 20–26, June 27–July 3",
+   "registration": "Through your troop; see council event page",
+   "source_url": "https://scoutingatl.org/council_event/summer-camp-basc/",
+   "county": "day-trip",
+   "interests": [
+    "outdoor",
+    "nature"
+   ],
+   "age_min": null,
+   "age_max": null
+  },
+  {
+   "status_flag": null,
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false,
+   "name": "NOC Chattahoochee River Explorer Youth Day Camp (Roswell)",
+   "provider": "Nantahala Outdoor Center",
+   "area": "NOC Roswell outpost on the Chattahoochee River",
+   "category": "Kayak & paddleboard day camp",
+   "ages": "9–12",
+   "price_week": "From $400/week",
+   "price_low": 400,
+   "price_note": "All skill levels; no paddling experience needed. NOC camps are day camps.",
+   "dates": "Summer weeks; 2027 dates not yet posted",
+   "registration": "See NOC youth programs page",
+   "source_url": "https://noc.com/chattahoochee-youth-programs/",
+   "county": "north-fulton",
+   "interests": [
+    "outdoor",
+    "swim",
+    "day"
+   ],
+   "age_min": 9,
+   "age_max": 12
+  },
+  {
+   "status_flag": null,
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false,
+   "name": "NOC Teen River Camps (Chattahoochee & Southeastern River Explorer)",
+   "provider": "Nantahala Outdoor Center",
+   "area": "NOC Metro (Sandy Springs) outpost; day trips to nearby rivers",
+   "category": "Teen paddling day camps",
+   "ages": "Teens (Southeastern River Explorer 13–15)",
+   "price_week": "From $450/week (Chattahoochee); from $575 (Southeastern)",
+   "price_low": 450,
+   "price_note": "Five-day camps; any skill level for the Chattahoochee teen camp.",
+   "dates": "Summer weeks; 2027 dates not yet posted",
+   "registration": "See NOC youth programs page",
+   "source_url": "https://noc.com/chattahoochee-youth-programs/",
+   "county": "north-fulton",
+   "interests": [
+    "outdoor",
+    "day",
+    "unusual"
+   ],
+   "age_min": 13,
+   "age_max": 15
+  },
+  {
+   "status_flag": null,
+   "last_checked": "2026-11-13",
+   "free_low_cost": true,
+   "hours_start": "09:00",
+   "hours_end": "16:00",
+   "before_care": "07:00",
+   "after_care": "18:30",
+   "hours_year": 2026,
+   "sessions": null,
+   "summer": true,
+   "overnight": false,
+   "name": "Cherokee Outdoor YMCA Specialty Camps (Mountain Biking, Fishing, Water Sports)",
+   "provider": "YMCA of Metro Atlanta",
+   "area": "Cherokee Outdoor YMCA, Canton (Lake Allatoona)",
+   "category": "Outdoor specialty day camps",
+   "ages": "5–15 (camp groups by age)",
+   "price_week": "See YMCA registration",
+   "price_low": null,
+   "price_note": "Mountain biking on camp trails; fishing 2 hrs/day from docks (bring your own pole); kayaking, paddleboarding & canoeing. Accepts CAPS; financial assistance available.",
+   "dates": "Summer 2026 weeks, 9 a.m.–4 p.m.; extended care 7–9 a.m. and 4–6:30 p.m.; 2027 dates not yet announced",
+   "registration": "Online or in person at the Y",
+   "source_url": "https://www.ymcaatlanta.org/cherokee-outdoor-y-camp-overview",
+   "county": "metro",
+   "interests": [
+    "outdoor",
+    "sports",
+    "day",
+    "unusual"
+   ],
+   "age_min": 5,
+   "age_max": 15
+  },
+  {
+   "status_flag": null,
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false,
+   "name": "Central Rock Gym Climbing Day Camps (Kennesaw & Atlanta)",
+   "provider": "Central Rock Gym / Team CRG Atlanta",
+   "area": "CRG Kennesaw, 2801 George Busbee Pkwy; CRG Atlanta, 3701 Presidential Pkwy",
+   "category": "Indoor rock-climbing day camp",
+   "ages": "6–14",
+   "price_week": "See CRG registration",
+   "price_low": null,
+   "price_note": "Roped climbing, bouldering and speed climbing every day, plus camp games. Also Thanksgiving and holiday-break camps.",
+   "dates": "Summer weeks; registration for spring & summer 2027 camps “opening soon”",
+   "registration": "Opening soon for 2027",
+   "source_url": "https://www.teamcentralrock.com/school-break-camps",
+   "county": "cobb",
+   "interests": [
+    "outdoor",
+    "sports",
+    "day",
+    "break"
+   ],
+   "age_min": 6,
+   "age_max": 14
+  },
+  {
+   "status_flag": null,
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "hours_start": "11:00",
+   "hours_end": "16:00",
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false,
+   "name": "Atlanta Archery Club “Way of the Bow” Summer Camp",
+   "provider": "Atlanta Archery Club",
+   "area": "North Range, 4805 Tilly Mill Rd, Dunwoody",
+   "category": "Archery camp",
+   "ages": "8 and up",
+   "price_week": "See club",
+   "price_low": null,
+   "price_note": "Drop-off 11 a.m., pick-up 4 p.m. Campers make a leather arm guard. Contact info@atlantaarchery.club.",
+   "dates": "Summer; 2027 dates not yet posted",
+   "registration": "See club page",
+   "source_url": "https://www.atlantaarchery.club/atlanta-archery-club-summer-camps",
+   "county": "atlanta",
+   "interests": [
+    "outdoor",
+    "sports",
+    "unusual"
+   ],
+   "age_min": 8,
+   "age_max": 17
+  },
+  {
+   "status_flag": null,
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": [
+    {
+     "start": "2027-06-13",
+     "end": "2027-06-18"
+    },
+    {
+     "start": "2027-06-20",
+     "end": "2027-06-25"
+    },
+    {
+     "start": "2027-07-11",
+     "end": "2027-07-16"
+    }
+   ],
+   "summer": true,
+   "overnight": false,
+   "name": "Camp Flix Filmmaking Camp (Emory)",
+   "provider": "Camp Flix",
+   "area": "Emory University (Evans Hall), Atlanta",
+   "category": "Filmmaking & acting camp",
+   "ages": "11–17",
+   "price_week": "See site",
+   "price_low": null,
+   "price_note": "Campers make a short film in one week. Contact 404-863-6778.",
+   "dates": "2027: June 13–18, June 20–25, July 11–16",
+   "registration": "See site",
+   "source_url": "https://campflix.com/",
+   "county": "atlanta",
+   "interests": [
+    "art",
+    "theatre",
+    "unusual"
+   ],
+   "age_min": 11,
+   "age_max": 17
+  },
+  {
+   "status_flag": null,
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": [
+    {
+     "start": "2027-06-21",
+     "end": "2027-06-25"
+    },
+    {
+     "start": "2027-07-12",
+     "end": "2027-07-16"
+    }
+   ],
+   "summer": true,
+   "overnight": false,
+   "name": "Camp Flix Junior (animation filmmaking)",
+   "provider": "Camp Flix",
+   "area": "Emory University, Atlanta",
+   "category": "Animation filmmaking camp",
+   "ages": "7–10",
+   "price_week": "See site",
+   "price_low": null,
+   "price_note": "One-week filmmaking program for kids interested in animation.",
+   "dates": "2027: June 21–25, July 12–16",
+   "registration": "See site",
+   "source_url": "https://campflix.com/",
+   "county": "atlanta",
+   "interests": [
+    "art",
+    "stem",
+    "unusual",
+    "day"
+   ],
+   "age_min": 7,
+   "age_max": 10
+  },
+  {
+   "status_flag": null,
+   "last_checked": "2026-11-13",
+   "free_low_cost": true,
+   "hours_start": "09:30",
+   "hours_end": "15:30",
+   "before_care": null,
+   "after_care": null,
+   "hours_year": 2027,
+   "sessions": [
+    {
+     "start": "2027-07-12",
+     "end": "2027-07-23"
+    }
+   ],
+   "summer": true,
+   "overnight": false,
+   "name": "CineCamp ATL (Atlanta Film Society)",
+   "provider": "Atlanta Film Society",
+   "area": "Atlanta Film Society offices at Georgia State University, downtown",
+   "category": "Two-week teen filmmaking camp",
+   "ages": "Rising 10th–12th graders",
+   "price_week": "See site (scholarships available)",
+   "price_low": null,
+   "price_note": "20 students; lunch provided; films screen at the Plaza Theatre on July 25. Scholarship notification April 19; registration deadline June 28.",
+   "dates": "2027: July 12–23, Mon–Fri 9:30 a.m.–3:30 p.m.",
+   "registration": "Open until June 28, 2027 or full",
+   "source_url": "https://www.atlantafilmsociety.org/upcoming-events/2026/cinecampatl-2027",
+   "county": "atlanta",
+   "interests": [
+    "art",
+    "unusual"
+   ],
+   "age_min": 15,
+   "age_max": 17
+  },
+  {
+   "status_flag": null,
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": [
+    {
+     "start": "2027-06-14",
+     "end": "2027-06-25"
+    },
+    {
+     "start": "2027-07-05",
+     "end": "2027-07-23"
+    }
+   ],
+   "summer": true,
+   "overnight": false,
+   "name": "Club SciKidz Special Effects & Filmmaking Camps",
+   "provider": "Club SciKidz Atlanta",
+   "area": "Host sites across metro Atlanta (e.g., Clairmont Presbyterian, St. James Alpharetta, St. Luke’s Presbyterian)",
+   "category": "Special effects, stop-motion & movie-making STEM camp",
+   "ages": "9–15 (by camp)",
+   "price_week": "$425/week",
+   "price_low": 425,
+   "price_note": "Special Effects / Zombie (9–11), Marvel Movie Maker (9–11), Digital Art & Animation (11–15).",
+   "dates": "2027 weeks starting June 14, June 21, July 5, July 12, July 19 (varies by site)",
+   "registration": "2027 registration open",
+   "source_url": "https://atlanta.clubscikidz.com/camp-categories/film-making-effects/",
+   "county": "metro",
+   "interests": [
+    "stem",
+    "art",
+    "unusual",
+    "day"
+   ],
+   "age_min": 9,
+   "age_max": 15
+  },
+  {
+   "status_flag": null,
+   "last_checked": "2026-11-13",
+   "free_low_cost": false,
+   "hours_start": "08:30",
+   "hours_end": "16:00",
+   "before_care": "08:00",
+   "after_care": "17:00",
+   "hours_year": 2026,
+   "sessions": null,
+   "summer": true,
+   "overnight": false,
+   "name": "Flour Power East Cobb Cooking Camps",
+   "provider": "Flour Power Cooking Studios",
+   "area": "4281 Roswell Rd, Marietta (East Cobb)",
+   "category": "Kids’ culinary day camp",
+   "ages": "5–12",
+   "price_week": "$499/week (2026 summer example)",
+   "price_low": 499,
+   "price_note": "Includes ingredients, lunch and snacks. Early drop-off 8 a.m. (+$25/wk) and late pickup to 5 p.m. (+$50/wk).",
+   "dates": "Summer 2026 weekly themes, 8:30 a.m.–4 p.m. (e.g., July 27–31, 2026); 2027 dates not yet announced",
+   "registration": "See studio schedule",
+   "source_url": "https://flourpower.duckdojo.com/eastcobb/register/event/4644E6E74959406",
+   "county": "cobb",
+   "interests": [
+    "unusual",
+    "day",
+    "break"
+   ],
+   "age_min": 5,
+   "age_max": 12
   }
  ]
 }

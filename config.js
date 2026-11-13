@@ -10,7 +10,7 @@ window.SITE_CONFIG = {
   signupHoneypot: "_honey",
   signupTags: "",
   contactEmail: "",               // TODO(Bri): e.g. hello@atlantakidscamps.com
-  featuredStartingRate: "$49/month (proposed, editable)", // TODO(Bri): set or confirm
+  featuredStartingRate: "", // TODO(Bri): e.g. "$49/month" once you confirm pricing (empty shows "Pricing coming January 2027")
   preferencesUrl: "https://atlantakidscamps.com/preferences/",
   // Topic keys parents can pick; mapped to Resend topics by the signup processor.
   activityChoices: [

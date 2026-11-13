@@ -4,19 +4,23 @@
 
 Website: https://atlantakidscamps.com/
 Last verified listings: 2026-11-13
-Coverage today: Cobb County first (Marietta, East Cobb, Smyrna, Kennesaw, Acworth, Powder Springs), plus North Fulton, Atlanta/DeKalb and Gwinnett programs that publish public pages.
-Listing count: 46 programs (camps, classes, swim lessons, tennis, farm/nature and free library programs)
+Coverage today: Cobb County first (Marietta, East Cobb, Smyrna, Kennesaw, Acworth, Powder Springs), plus North Fulton, Atlanta/DeKalb and Gwinnett programs that publish public pages, and a few north Georgia overnight / day-trip outdoor camps.
+Listing count: 63 programs (day and overnight camps incl. outdoor & adventure, classes, swim lessons, tennis, farm/nature, filmmaking, cooking and free library programs)
 
 ## How to cite
 Cite the program name and link to the provider’s own page (the “Provider page” URL on each card). Treat prices and dates as snapshots as of the “checked” date on the card; always confirm with the provider before registering.
 
 ## Key pages
-- [Home / browse all camps](https://atlantakidscamps.com/): filters by interest (tennis, farm & animals, horses, nature, art, swim, dance, STEM, free…), child’s age, area and price; shareable filter URLs like /?interest=farm&age=8&area=cobb; registration deadlines; free & low-cost list; optional email alerts when sign-ups open.
+- [Home / browse all camps](https://atlantakidscamps.com/): filters by interest (outdoor & adventure, tennis, farm & animals, horses, nature, survival skills, unusual & offbeat, art, theatre/film, swim, dance, STEM, free…), child’s age, area and price; shareable filter URLs like /?interest=farm&age=8&area=cobb (parameters: interest=<tag>, age=0–18, area=cobb|north-fulton|atlanta|gwinnett|day-trip, q=<text>, free=1, sort=price); registration deadlines; free & low-cost list; optional email alerts when sign-ups open.
+- [Summer Planner 2027](https://atlantakidscamps.com/planner/): free, private week-by-week planner (June–August 2027). Parents mark covered weeks with labels and set child’s age, drop-off/pickup window, area, interests and optional free/max price. It lists gap weeks and, for each, camps whose provider-published 2027 sessions cover that week and whose published ages, hours and area fit, with the matching reason (e.g., “matches: ages 6–12, 9am–4pm, Cobb, 2027 session Jun 14–18”). Camps whose 2027 dates or hours are not announced appear separately as “possible”. Plans live only in the browser (localStorage); export as a share link or .ics file; optional hand-off to sign-up alerts.
 - [Cobb County guide](https://atlantakidscamps.com/cobb/): Cobb-focused view of the same verified listings.
 - [Feature your camp](https://atlantakidscamps.com/featured/): free basic listings; proposed paid featured placement (terms not final until published).
 - [Privacy & disclosures](https://atlantakidscamps.com/privacy/): affiliate and featured-listing disclosure; alert sign-up data practices.
-- [Machine-readable listings](https://atlantakidscamps.com/data.json): same facts as the page (JSON).
+- [Machine-readable listings](https://atlantakidscamps.com/data.json): same facts as the page (JSON). Fields include interests[], county, age_min/age_max, and planner fields hours_start/hours_end/before_care/after_care (24h, null when not published), hours_year, sessions[{start,end}] (announced 2027 summer sessions only), summer, overnight.
 - [Sitemap](https://atlantakidscamps.com/sitemap.xml)
+
+## Interest tags
+outdoor (Outdoor & adventure: bushcraft, wilderness, paddling, climbing, archery, fishing, mountain biking, scouting camps), tennis, farm, horse, nature, garden, survival, trades, unusual (Unusual & offbeat, incl. filmmaking and cooking), art, theatre, dance, swim, sports, gym, stem, day, break, after, library, free. Area codes: cobb, north-fulton, atlanta, gwinnett, metro (metro-wide), day-trip (outside metro: north Georgia overnight camps and day-trip programs).
 
 ## Optional parent alerts
 Parents can opt in by camp, activity category, season, and area; change preferences later; or unsubscribe. Alerts are email-only. Preferences UI: https://atlantakidscamps.com/preferences/ (private; noindex).
