@@ -9,7 +9,15 @@ llms.txt and sitemap lastmod.
 """
 import json, html, os, re
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-D = json.load(open(f"{R}/data.json")); C = D["camps"]; V = D["meta"]["verified_date"]
+D = json.load(open(f"{R}/data.json")); C = D["camps"]
+# "Latest check" is computed from the listings themselves (newest last_checked), never hardcoded.
+V = max(c["last_checked"] for c in C)
+if D["meta"].get("verified_date") != V:
+    D["meta"]["verified_date"] = V
+    open(f"{R}/data.json", "w").write(json.dumps(D, ensure_ascii=False, indent=1))
+import subprocess, sys
+if subprocess.run([sys.executable, f"{R}/tools/check_weekdays.py"]).returncode:
+    sys.exit("weekday labels in data.json are wrong; fix them before syncing")
 BASE = "https://atlantakidscamps.com"
 INTERESTS = D["meta"]["interest_tags"]; COUNTY = D["meta"]["county_codes"]
 e = lambda s: html.escape(str(s if s is not None else ""), quote=True)
@@ -83,7 +91,8 @@ s = sub_once(r'<script type="application/ld\+json">\{"@context": "https://schema
 s = sub_once(GRID_RE, static_grid(cobb_items, False), s)
 s = re.sub(r'<p id="count" aria-live="polite">[^<]*</p>', f'<p id="count" aria-live="polite">{len(cobb_items)} programs</p>', s)
 s = re.sub(r'— \d+ programs, each linked to its source\.', f'— {len(cobb_items)} programs, each linked to its source.', s)
-s = re.sub(r'\(latest check \d{4}-\d{2}-\d{2}\)', f'(latest check {V})', s)
+VC = max(c["last_checked"] for c in cobb_items)
+s = re.sub(r'\(latest check \d{4}-\d{2}-\d{2}\)', f'(latest check {VC})', s)
 s = sub_once(r'<dialog id="alert-dlg".*?</dialog>', dialog.replace('href="privacy/', 'href="../privacy/'), s)
 open(p, "w").write(s)
 
@@ -91,8 +100,10 @@ p = f"{R}/planner/index.html"
 if os.path.exists(p):
     s = open(p).read(); s = sub_once(r'<dialog id="alert-dlg".*?</dialog>', dialog.replace('href="privacy/', 'href="../privacy/'), s); open(p, "w").write(s)
 
-for f in ["featured/index.html", "privacy/index.html"]:
-    p = f"{R}/{f}"; s = open(p).read(); s = re.sub(r'\(latest check \d{4}-\d{2}-\d{2}\)', f'(latest check {V})', s); open(p, "w").write(s)
+for f in ["featured/index.html", "privacy/index.html", "planner/index.html", "preferences/index.html"]:
+    p = f"{R}/{f}"
+    if not os.path.exists(p): continue
+    s = open(p).read(); s = re.sub(r'\(latest check \d{4}-\d{2}-\d{2}\)', f'(latest check {V})', s); open(p, "w").write(s)
 
 p = f"{R}/llms.txt"; s = open(p).read()
 s = re.sub(r'Last verified listings: .*', f'Last verified listings: {V}', s)

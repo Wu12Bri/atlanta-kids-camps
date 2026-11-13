@@ -1,0 +1,37 @@
+{
+ "date": "2026-11-13",
+ "tz": "America/New_York",
+ "type": "full recheck of all 63 listings + blocked-source retry",
+ "rechecked": 63,
+ "confirmed_today_last_checked_2026_11_13": 61,
+ "not_confirmed_kept_prior_date": {
+  "Cobb County School District After School Program (ASP)": "$10/day and $20 fee not shown in current page text (4.75% fee confirmed); kept 2026-11-05",
+  "Chastain Horse Park Horseback Basics Summer Camp": "page now lists only 2026 offering links; 2026 price/dates live in sub-forms; kept prior date"
+ },
+ "weekday_fixes": [
+  "Josh Powell Outpost: 'Mon Nov 10, 2026' -> Tue (now phrased 'open now')",
+  "Josh Powell Classic: 'Wed Jan 21, 2027' -> Thu Jan 21, 2027",
+  "iD Tech: 'Sat Nov 8, 2026' (a Sunday) removed"
+ ],
+ "data_fixes": [
+  "Josh Powell: 2027 sessions are ten weeks June 1-Aug 6 (was June 7-Aug 13); sessions field rebuilt",
+  "MCMA: five 2027 summer weeks, no July 5 week; sessions field split",
+  "Kingfisher: $516 is the 4-day rate; 5-day K-5th is $645-$700",
+  "Dunwoody Nature Center: only 4-day prices ($320/$224) appear in page text",
+  "Marietta PAL: $120 not in page text; price removed, early drop-off 7:30 added",
+  "Smyrna: 2026 summer weeks + early/after care hours added",
+  "Cobb PARKS: stale 'March 4' notice removed; YMCA McCleskey/Northeast: 'coming soon' no longer on page"
+ ],
+ "blocked_sources": {
+  "Camp Smyrna / Smyrna youth": "direct fetch 403; confirmed via alternate fetch of the same city pages",
+  "Marietta PAL": "direct fetch failed; confirmed via alternate fetch (2026 camp only)",
+  "Snapology Kennesaw": "reachable (From $170/wk, workshops from $35)",
+  "Zoo Atlanta": "403 to plain fetch; confirmed with browser headers (opens Fri Jan 22, 2027)",
+  "Kennesaw, East Cobb Stables, Sandy Springs Racquet Center": "confirmed via alternate fetch",
+  "Atlanta History Center (watch list)": "reachable; still 2026 info, no 2027",
+  "Galloway (watch list)": "reachable; still 2026 camps, no 2027",
+  "Camp Sparkles Smyrna (watch list)": "reachable via alternate fetch; winter 2027 registration opens Fri Dec 4, 2026"
+ },
+ "removed": [],
+ "flagged_unverified": []
+}

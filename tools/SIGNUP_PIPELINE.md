@@ -47,3 +47,30 @@ Resend has no public browser signup endpoint (no CORS; API key must stay server-
 - Secret: `RESEND_API_KEY` (Resend key name `atlanta-kids-camps-signup-worker`; value never committed)
 - CORS: `https://atlantakidscamps.com` and `https://www.atlantakidscamps.com`
 - Site `config.js` `signupEndpoint` points here with `signupMode: "ajax"`
+
+## Welcome email (added 2026-11-13)
+- Sent by the Worker itself right after a successful signup, from `Atlanta Kids Camps <signup@atlantakidscamps.com>` (reply-to the same inbox), subject "You're on the list: Atlanta Kids Camps alerts".
+- Only for a **brand-new** contact (Worker looks the address up first; 404 = new), only for `INTENT=signup` from the site form (browser `Origin` present). Preference updates, unsubscribes and repeat signups never send it. Resend `Idempotency-Key` per address blocks double sends.
+- Body (plain HTML + text) lists the parent's choices: watched camp, area, seasons, categories; links to https://atlantakidscamps.com/preferences/ and a signed one-click unsubscribe link.
+- Unsubscribe: `GET <worker>/unsubscribe?e=<email>&t=<token>` shows a confirm button; `POST` (button or RFC 8058 one-click from `List-Unsubscribe-Post`) PATCHes the Resend contact to `unsubscribed: true`. Token = HMAC-SHA256(email) keyed by SHA-256 of `RESEND_API_KEY` (no extra secret; bad tokens get 400).
+- A failed welcome send never fails the signup; the JSON response carries `welcome: true|false`.
+- Redeploy: Cloudflare `PUT /accounts/{id}/workers/scripts/atlanta-kids-camps-signup` (multipart, `main_module: signup-worker.js`, `compatibility_date: 2024-11-05`, `keep_bindings: ["secret_text"]`) so `RESEND_API_KEY` is kept.
+- Contacts that signed up before 2026-11-13 never got a welcome; there is no automatic backfill (any catch-up note goes to Bri for approval first).
+
+## Alert path and preference matching (written down 2026-11-13)
+1. **Scanner** (scheduled agent routine) rechecks provider pages, commits new official dates to `data.json` and a `scan-YYYY-MM-DD.json` log.
+2. **Match** every new/changed date against the segment's contacts (non-unsubscribed). A contact matches a camp when EITHER
+   - `watched_camp` equals the camp `name` (by-name match: always alert), OR
+   - the camp's category maps to a topic the contact opted into (STEM / LEGO / coding, Sports and outdoors, Arts and theatre, Day camps, Free library and community, School-break camps) **and** the event's season is in `preferred_seasons` (blank = any) **and** the camp's county matches `preferred_area` ("Anywhere" or blank = all; metro-wide providers match every area).
+   Interest tag → topic: stem→STEM; sports/tennis/swim/gym/outdoor/nature/horse/farm/survival→Sports and outdoors; art/theatre/dance→Arts and theatre; day→Day camps; library/free→Free library and community; break→School-break camps.
+   Area → county: "Cobb (Marietta, Smyrna, Kennesaw, East Cobb)"→cobb; "North Fulton"→north-fulton; metro and day-trip camps match every area; "Atlanta / DeKalb"→atlanta; "Gwinnett"→gwinnett.
+3. **Draft** one email per contact (or a broadcast to a filtered segment) listing only that contact's matches, with official source links.
+4. **Bri approves** the draft (no standing send permission yet).
+5. **Send** from `Atlanta Kids Camps Alerts <alerts@atlantakidscamps.com>` with `{{{RESEND_UNSUBSCRIBE_URL}}}` or List-Unsubscribe + the preferences link.
+
+Planned alerts wired to this rule:
+| Event | Date | Camp county / tags | Matches |
+|---|---|---|---|
+| Josh Powell JPC Outpost (ages 9–12) | registration open now (opened Tue Nov 10, 2026 at noon) | cobb · day, nature | by name, or Day camps / Sports and outdoors + Summer + Cobb/Anywhere |
+| Josh Powell Classic | Thu Jan 21, 2027 at noon | cobb · day, nature | same as above |
+| Zoo Atlanta Summer Safari Camp | Fri Jan 22, 2027 | atlanta · day, farm, stem | by name, or Day camps / Sports and outdoors / STEM + Summer + Atlanta/DeKalb/Anywhere |
