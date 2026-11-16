@@ -1,5 +1,6 @@
 /* Summer Planner 2027 — runs entirely in the browser. Plan is kept in localStorage (key akc_planner_v1);
-   nothing is sent anywhere unless the parent submits the separate alert sign-up form. */
+   nothing is sent anywhere unless the parent submits the separate alert sign-up form, or is signed in to the optional
+   My camp calendar account (localStorage akc_session), in which case the plan also syncs to that account. */
 (function(){"use strict";
 var C=(window.CAMPS||[]).filter(function(c){return c.summer});
 var KEY="akc_planner_v1";
@@ -23,7 +24,12 @@ function b64d(s){s=s.replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="="
 function clean(o){var n=JSON.parse(JSON.stringify(DEF));if(!o||typeof o!=="object")return n;var k;for(k in n.needs)if(o.needs&&o.needs[k]!=null)n.needs[k]=o.needs[k];
   n.needs.interests=(n.needs.interests||[]).filter(function(x){return typeof x==="string"}).slice(0,20);
   n.covered=(o.covered||[]).filter(function(c){return c&&/^\d{4}-\d\d-\d\d$/.test(c.start)&&/^\d{4}-\d\d-\d\d$/.test(c.end)}).slice(0,40).map(function(c,i){return{id:String(c.id||i+"-"+Date.now()),label:String(c.label||"Covered").slice(0,60),start:c.start,end:c.end<c.start?c.start:c.end}});return n}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
+var ACFG=window.SITE_CONFIG||{},AAPI=String(ACFG.signupEndpoint||"").replace(/\/$/,""),pushT=null;
+function sess(){try{return localStorage.getItem("akc_session")}catch(e){return null}}
+function acctPush(){var s=sess();if(!s||!/^https:/.test(AAPI))return;clearTimeout(pushT);pushT=setTimeout(function(){
+  fetch(AAPI+"/me/planner",{method:"POST",headers:{"Content-Type":"application/json","Authorization":"Bearer "+s},body:JSON.stringify({planner:st}),credentials:"omit"}).then(function(r){return r.json()}).then(function(j){if(j&&j.planner_updated){try{localStorage.setItem("akc_planner_ts",String(j.planner_updated))}catch(e){}acctNote("Synced to your account.")}}).catch(function(){})},800)}
+function acctNote(t){var n=$("acct-sync");if(n)n.textContent=t}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}acctPush()}
 try{if(/^#plan=/.test(location.hash)){st=clean(b64d(location.hash.slice(6)));save();history.replaceState(null,"",location.pathname+location.search)}else{var raw=localStorage.getItem(KEY);if(raw)st=clean(JSON.parse(raw))}}catch(e){st=clean(null)}
 
 /* ---- form wiring ---- */
@@ -103,4 +109,10 @@ $("gap-alert").onclick=function(){var cats=[];st.needs.interests.forEach(functio
   if(window.openCampAlert)window.openCampAlert({activity:"summer 2027 camp"+(g?" (gap weeks: "+g+")":""),categories:cats,seasons:["Summer"],area:COUNTY[st.needs.area]&&st.needs.area!=="metro"?COUNTY[st.needs.area]:""});
   else location.href="../#alerts"};
 toForm();render();
+(function(){var s=sess(),n=$("acct-sync");if(!n)return;if(!s||!/^https:/.test(AAPI)){n.innerHTML='Want it on every device? <a href="../account/">Sign in to My camp calendar</a> (optional, no password).';return}
+  n.textContent="Signed in: your plan syncs to your account.";
+  fetch(AAPI+"/me",{headers:{"Authorization":"Bearer "+s},credentials:"omit"}).then(function(r){if(r.status===401){try{localStorage.removeItem("akc_session")}catch(e){}throw 0}return r.json()}).then(function(j){
+    var lts=0;try{lts=+(localStorage.getItem("akc_planner_ts")||0)}catch(e){}
+    if(j.planner&&(j.planner_updated||0)>lts){st=clean(j.planner);try{localStorage.setItem(KEY,JSON.stringify(st));localStorage.setItem("akc_planner_ts",String(j.planner_updated))}catch(e){}toForm();render();acctNote("Signed in: loaded your saved plan from your account.")}
+    else if(!j.planner||lts>(j.planner_updated||0))acctPush()}).catch(function(){})})();
 })();

@@ -38,7 +38,7 @@
    "day-trip": "Day trip / overnight (outside metro)"
   },
   "age_fields": "age_min/age_max are numeric years taken from the provider's published ages or grades (grade + 5); null when the provider publishes no range.",
-  "planner_fields": "hours_start/hours_end/before_care/after_care are 24h 'HH:MM' strings copied from the provider page only when unambiguous, else null; hours_year says which season those hours were published for (null = general). sessions is a list of {start,end} ISO dates for announced 2027 summer sessions only (null when not announced). summer=true for summer camps; overnight=true for sleepaway camps."
+  "planner_fields": "hours_start/hours_end/before_care/after_care are 24h 'HH:MM' strings copied from the provider page only when unambiguous, else null; hours_year says which season those hours were published for (null = general). sessions is a list of {start,end} ISO dates for announced 2027 summer sessions only (null when not announced). summer=true for summer camps; overnight=true for sleepaway camps. reg_dates is a list of {date,label} for announced sign-up dates copied from the registration text (null when none is announced); used by My camp calendar and its .ics feed, and check_weekdays.py verifies each date appears in the registration text."
  },
  "camps": [
   {
@@ -70,7 +70,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Cobb PARKS Creative Art Camps",
@@ -101,7 +102,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Cobb PARKS Performing Arts Camps (Jennie T. Anderson Theatre)",
@@ -131,7 +133,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Cobb PARKS Tennis Camps",
@@ -162,7 +165,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Cobb PARKS Unlimited Gymnastics Camp",
@@ -193,7 +197,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Cobb PARKS Nature Camps (Green Meadows)",
@@ -224,7 +229,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "McCleskey-East Cobb Family YMCA Day Camp",
@@ -257,7 +263,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Northeast Cobb Family YMCA Day Camp",
@@ -290,7 +297,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Camp Smyrna Summer Camp",
@@ -321,7 +329,8 @@
    "hours_year": 2026,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Kennesaw Camp Venture Summer Day Camp",
@@ -351,7 +360,8 @@
    "hours_year": 2026,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Marietta PAL Summer Camp",
@@ -383,7 +393,8 @@
    "hours_year": 2026,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Salvation Army of Cobb Summer Day Camp",
@@ -413,7 +424,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Salvation Army of Cobb After School Program",
@@ -444,7 +456,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Cobb County School District After School Program (ASP)",
@@ -474,7 +487,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Girls Inc. of Greater Atlanta Break Camp",
@@ -505,7 +519,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Bricks 4 Kidz Marietta–Smyrna LEGO Robotics STEAM Camps",
@@ -535,7 +550,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Snapology of Kennesaw STEM & Robotics Camps",
@@ -565,7 +581,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Marietta Cobb Museum of Art Youth Art Camps",
@@ -616,7 +633,8 @@
     }
    ],
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "East Cobb Stables Summer Horse Camp",
@@ -648,7 +666,8 @@
    "hours_year": 2026,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Cobb Library “The Basics” Storytime",
@@ -679,7 +698,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Josh Powell Camp Summer Day Camp",
@@ -751,7 +771,13 @@
     }
    ],
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": [
+    {
+     "date": "2027-01-21",
+     "label": "Classic registration opens (noon)"
+    }
+   ]
   },
   {
    "name": "iD Tech Summer Camps (Emory & Georgia Tech)",
@@ -781,7 +807,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": null
+   "overnight": null,
+   "reg_dates": null
   },
   {
    "name": "Fernbank Museum Winter Break Camp",
@@ -813,7 +840,13 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": [
+    {
+     "date": "2026-11-03",
+     "label": "Registration opened (12 p.m.)"
+    }
+   ]
   },
   {
    "name": "Cobb Library Family Storytime (Vinings)",
@@ -844,7 +877,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Cobb Library Prek Bilingual Storytime (Sibley)",
@@ -875,7 +909,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Cobb Library Baby Storytime (Mountain View)",
@@ -906,7 +941,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Zoo Atlanta Summer Safari Camp",
@@ -943,7 +979,13 @@
     }
    ],
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": [
+    {
+     "date": "2027-01-22",
+     "label": "Registration opens"
+    }
+   ]
   },
   {
    "name": "AYTEF Community Summer Tennis Camp (Fair Oaks Tennis Center)",
@@ -974,7 +1016,8 @@
    "hours_year": 2026,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "ALTA Junior Tennis Leagues (Spring 2027)",
@@ -1005,7 +1048,17 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": [
+    {
+     "date": "2027-01-01",
+     "label": "Spring roster registration opens"
+    },
+    {
+     "date": "2027-01-26",
+     "label": "Spring roster registration closes"
+    }
+   ]
   },
   {
    "name": "Sandy Springs Racquet Center Junior Tennis Summer Camp",
@@ -1036,7 +1089,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Gwinnett Parks RNB Tennis",
@@ -1067,7 +1121,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Hand, Hoof and Heart Summer Farm & Horse Camps",
@@ -1100,7 +1155,8 @@
    "hours_year": 2026,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Camp Kingfisher at the Chattahoochee Nature Center",
@@ -1137,7 +1193,17 @@
     }
    ],
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": [
+    {
+     "date": "2027-01-05",
+     "label": "Member registration opens (10 a.m.)"
+    },
+    {
+     "date": "2027-01-19",
+     "label": "General registration opens (10 a.m.)"
+    }
+   ]
   },
   {
    "name": "Camp Kingfisher Survival & Grow Specialty Camps",
@@ -1150,8 +1216,8 @@
    "price_note": "Specialty tracks inside Camp Kingfisher: Survival (rising 4th–7th) and Grow (gardening). Member and returning-member prices are lower.",
    "dates": "Summer 2027 weeks between June 1 and July 30, 2027 (see Sessions, Rates and Dates)",
    "registration": "Members: Jan 5, 2027 at 10 a.m.; general: Jan 19, 2027 at 10 a.m.",
-   "source_url": "https://chattnaturecenter.org/wp-content/uploads/2026/11/Camp-Kingfisher-Summer-2027-Dates-and-Rates.pdf",
-   "last_checked": "2026-11-13",
+   "source_url": "https://chattnaturecenter.org/wp-content/uploads/2026/11/CampK_Summer_2027_Dates-and_Rates.pdf",
+   "last_checked": "2026-11-16",
    "free_low_cost": false,
    "status_flag": "2026 Survival weeks hit waitlist",
    "county": "north-fulton",
@@ -1176,7 +1242,17 @@
     }
    ],
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": [
+    {
+     "date": "2027-01-05",
+     "label": "Member registration opens (10 a.m.)"
+    },
+    {
+     "date": "2027-01-19",
+     "label": "General registration opens (10 a.m.)"
+    }
+   ]
   },
   {
    "name": "Chastain Horse Park Horseback Basics Summer Camp",
@@ -1208,7 +1284,8 @@
    "hours_year": 2026,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Dunwoody Nature Center Summer Camp",
@@ -1238,7 +1315,13 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": [
+    {
+     "date": "2027-02-01",
+     "label": "Summer registration opens"
+    }
+   ]
   },
   {
    "name": "Camp Autrey Mill (nature, history & live animals)",
@@ -1269,7 +1352,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Wylde Center Thanksgiving Week Nature Day Camp",
@@ -1302,7 +1386,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Atlanta Botanical Garden Winter Break Garden Camps",
@@ -1334,7 +1419,13 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": [
+    {
+     "date": "2026-12-07",
+     "label": "Registration deadline"
+    }
+   ]
   },
   {
    "name": "Callanwolde Intro/Intermediate Blacksmithing (Teens & Adults)",
@@ -1366,7 +1457,13 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": [
+    {
+     "date": "2026-11-16",
+     "label": "Winter registration opens (9 a.m.)"
+    }
+   ]
   },
   {
    "name": "Cobb PARKS Swim Lessons",
@@ -1397,7 +1494,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "YMCA of Metro Atlanta Swim Lessons",
@@ -1428,7 +1526,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Camp Acworth Summer Day Camp",
@@ -1459,7 +1558,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Smyrna Parks & Recreation Youth Classes",
@@ -1491,7 +1591,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Cobb Library LEGO Club (Sewell Mill)",
@@ -1523,7 +1624,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Cobb Library LEGO Club (Powder Springs)",
@@ -1555,7 +1657,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "status_flag": null,
@@ -1606,7 +1709,8 @@
     "day"
    ],
    "age_min": 6,
-   "age_max": 12
+   "age_max": 12,
+   "reg_dates": null
   },
   {
    "status_flag": null,
@@ -1643,7 +1747,13 @@
     "unusual"
    ],
    "age_min": 12,
-   "age_max": 13
+   "age_max": 13,
+   "reg_dates": [
+    {
+     "date": "2027-02-10",
+     "label": "Registration opens"
+    }
+   ]
   },
   {
    "status_flag": null,
@@ -1684,7 +1794,8 @@
     "swim"
    ],
    "age_min": 9,
-   "age_max": 18
+   "age_max": 18,
+   "reg_dates": null
   },
   {
    "status_flag": null,
@@ -1716,7 +1827,8 @@
     "unusual"
    ],
    "age_min": 11,
-   "age_max": 16
+   "age_max": 16,
+   "reg_dates": null
   },
   {
    "status_flag": null,
@@ -1748,7 +1860,8 @@
     "day"
    ],
    "age_min": 6,
-   "age_max": 10
+   "age_max": 10,
+   "reg_dates": null
   },
   {
    "status_flag": null,
@@ -1784,7 +1897,8 @@
     "nature"
    ],
    "age_min": null,
-   "age_max": null
+   "age_max": null,
+   "reg_dates": null
   },
   {
    "status_flag": null,
@@ -1820,7 +1934,8 @@
     "nature"
    ],
    "age_min": null,
-   "age_max": null
+   "age_max": null,
+   "reg_dates": null
   },
   {
    "status_flag": null,
@@ -1852,7 +1967,8 @@
     "day"
    ],
    "age_min": 9,
-   "age_max": 12
+   "age_max": 12,
+   "reg_dates": null
   },
   {
    "status_flag": null,
@@ -1884,7 +2000,8 @@
     "unusual"
    ],
    "age_min": 13,
-   "age_max": 15
+   "age_max": 15,
+   "reg_dates": null
   },
   {
    "status_flag": null,
@@ -1917,7 +2034,8 @@
     "unusual"
    ],
    "age_min": 5,
-   "age_max": 15
+   "age_max": 15,
+   "reg_dates": null
   },
   {
    "status_flag": null,
@@ -1950,7 +2068,8 @@
     "break"
    ],
    "age_min": 6,
-   "age_max": 14
+   "age_max": 14,
+   "reg_dates": null
   },
   {
    "status_flag": null,
@@ -1982,7 +2101,8 @@
     "unusual"
    ],
    "age_min": 8,
-   "age_max": 17
+   "age_max": 17,
+   "reg_dates": null
   },
   {
    "status_flag": null,
@@ -2027,7 +2147,8 @@
     "unusual"
    ],
    "age_min": 11,
-   "age_max": 17
+   "age_max": 17,
+   "reg_dates": null
   },
   {
    "status_flag": null,
@@ -2069,7 +2190,8 @@
     "day"
    ],
    "age_min": 7,
-   "age_max": 10
+   "age_max": 10,
+   "reg_dates": null
   },
   {
    "status_flag": null,
@@ -2105,7 +2227,8 @@
     "unusual"
    ],
    "age_min": 15,
-   "age_max": 17
+   "age_max": 17,
+   "reg_dates": null
   },
   {
    "status_flag": null,
@@ -2147,7 +2270,8 @@
     "day"
    ],
    "age_min": 9,
-   "age_max": 15
+   "age_max": 15,
+   "reg_dates": null
   },
   {
    "status_flag": null,
@@ -2179,7 +2303,8 @@
     "break"
    ],
    "age_min": 5,
-   "age_max": 12
+   "age_max": 12,
+   "reg_dates": null
   },
   {
    "name": "Ninja Quest Fitness Ninja & Parkour Camps",
@@ -2214,7 +2339,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Atlanta Parkour Camps",
@@ -2247,7 +2373,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Alliance Theatre Drama Camps (Midtown)",
@@ -2279,7 +2406,17 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": [
+    {
+     "date": "2027-01-13",
+     "label": "On sale (Early Access Week starts)"
+    },
+    {
+     "date": "2027-01-20",
+     "label": "One Day Sale (9 a.m.)"
+    }
+   ]
   },
   {
    "name": "Alliance Theatre Drama Camps (Marietta)",
@@ -2311,7 +2448,17 @@
    "hours_year": 2027,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": [
+    {
+     "date": "2027-01-13",
+     "label": "On sale (Early Access Week starts)"
+    },
+    {
+     "date": "2027-01-20",
+     "label": "One Day Sale (9 a.m.)"
+    }
+   ]
   },
   {
    "name": "Brittany Leazer Productions Theatre Camps (East Cobb)",
@@ -2343,7 +2490,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Jitterbug Performing Arts Camps (Smyrna)",
@@ -2377,7 +2525,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Spruill Center for the Arts Art Camps (Dunwoody)",
@@ -2409,7 +2558,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Chastain Arts Center KickstART Summer Camp",
@@ -2440,7 +2590,8 @@
    "hours_year": 2026,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Vinings School of Art Camps (Smyrna)",
@@ -2472,7 +2623,8 @@
    "hours_year": 2026,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "School of Rock East Cobb Music Camps",
@@ -2518,7 +2670,8 @@
     }
    ],
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Code Ninjas East Cobb Camps (Minecraft, Roblox, YouTube, Robotics)",
@@ -2551,7 +2704,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": true,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   },
   {
    "name": "Circus Camp (Decatur)",
@@ -2584,7 +2738,8 @@
    "hours_year": null,
    "sessions": null,
    "summer": false,
-   "overnight": false
+   "overnight": false,
+   "reg_dates": null
   }
  ]
 }

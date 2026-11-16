@@ -11,7 +11,7 @@ BASE="https://atlantakidscamps.com"
 def page(path,title,desc,body,extra=""):
     depth=path.count("/"); pre="../"*depth
     nav=f'''<header class="top"><div class="wrap nav"><a class="brand" href="{pre or './'}"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#f2a541"/><path d="M5 19 L11 10 L15 15 L18 11 L23 19Z" fill="#1f5f5b"/></svg><span>Atlanta Kids Camps</span></a>
-<nav aria-label="Main"><a href="{pre}#camps">Camps</a><a href="{pre}#deadlines">Deadlines</a><a href="{pre}#free">Free &amp; low-cost</a><a href="{pre}cobb/">Cobb</a><a href="{pre}featured/">For camps</a></nav></div></header>'''
+<nav aria-label="Main"><a href="{pre}#camps">Camps</a><a href="{pre}#deadlines">Deadlines</a><a href="{pre}#free">Free &amp; low-cost</a><a href="{pre}cobb/">Cobb</a><a href="{pre}account/">My calendar</a><a href="{pre}featured/">For camps</a></nav></div></header>'''
     foot=f'''<footer class="foot"><div class="wrap"><p><strong>Affiliate disclosure:</strong> some links may earn us a commission at no extra cost to you, and “Featured” listings are paid placements that are always labeled. Neither affects the facts we publish. <a href="{pre}privacy/">Privacy &amp; disclosures</a></p>
 <p>Facts come from each provider’s public page on the last-checked date (latest check {V}). Prices and dates change — always confirm with the provider. We have not inspected, licensed, or safety-vetted any program.</p><p>© 2026 Atlanta Kids Camps · <a href="{pre}featured/">List or feature your camp</a> · <a href="{pre}sitemap.xml">Sitemap</a></p></div></footer>'''
     url=BASE+"/"+path.replace("index.html","")

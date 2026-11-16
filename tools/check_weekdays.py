@@ -45,8 +45,28 @@ def check(data):
                     bad.append((i, c['name'], k, label, f'{year}-{month:02d}-{dd:02d} is a {real.title()}'))
     return n, bad
 
+MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+def check_reg_dates(data):
+    """Each reg_dates entry must be a real ISO date whose 'Mon D' (and year, when the text has one) appears in the registration text."""
+    bad = []
+    for i, c in enumerate(data['camps']):
+        for r in c.get('reg_dates') or []:
+            try: d = datetime.date.fromisoformat(r['date'])
+            except Exception: bad.append((i, c['name'], 'reg_dates', r, 'invalid date')); continue
+            txt = c['registration']; mon = MONTHS[d.month - 1]
+            if not re.search(mon + r'[a-z]*\.? ' + str(d.day) + r'\b', txt) and not re.search(mon + r'[a-z]*\.? \d{1,2}\s*[–-]\s*' + mon + r'[a-z]*\.? ' + str(d.day) + r'\b', txt):
+                bad.append((i, c['name'], 'reg_dates', r['date'], 'date not in registration text'))
+            elif str(d.year) not in txt and re.search(r'20\d\d', txt):
+                bad.append((i, c['name'], 'reg_dates', r['date'], 'year not in registration text'))
+    return bad
+
 if __name__ == '__main__':
-    n, bad = check(json.load(open(f'{R}/data.json')))
+    data = json.load(open(f'{R}/data.json'))
+    rb = check_reg_dates(data)
+    print(f"{sum(len(c.get('reg_dates') or []) for c in data['camps'])} reg_dates checked, {len(rb)} wrong")
+    for b in rb: print('  WRONG', b)
+    n, bad = check(data)
+    bad += rb
     print(f'{n} weekday labels checked, {len(bad)} wrong')
     for b in bad: print('  WRONG', b)
     sys.exit(1 if bad else 0)

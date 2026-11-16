@@ -19,6 +19,9 @@ Cite the program name and link to the provider’s own page (the “Provider pag
 - [Machine-readable listings](https://atlantakidscamps.com/data.json): same facts as the page (JSON). Fields include interests[], county, age_min/age_max, and planner fields hours_start/hours_end/before_care/after_care (24h, null when not published), hours_year, sessions[{start,end}] (announced 2027 summer sessions only), summer, overnight.
 - [Sitemap](https://atlantakidscamps.com/sitemap.xml)
 
+## Accounts
+- My camp calendar (https://atlantakidscamps.com/account/): optional free account with no password (emailed sign-in link). Saved camps on a month/week calendar using only published session and sign-up dates ("not announced yet" otherwise), Summer Planner sync, private .ics feed, per-camp alerts, pause all emails, delete account.
+
 ## Popular searches (static landing pages)
 - [Spring break camps in Cobb County & Marietta](https://atlantakidscamps.com/spring-break-camps-cobb/): 16 verified listings for "spring break camps Marietta / Cobb County".
 - [Horse and farm camps near Atlanta](https://atlantakidscamps.com/horse-farm-camps-atlanta/): 6 verified listings for "horse camps / farm camps near Atlanta and Cobb".

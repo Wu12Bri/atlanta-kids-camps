@@ -1,0 +1,83 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My camp calendar (free, optional account) — Atlanta Kids Camps</title><meta name="description" content="Optional free account with no password: save camps, see their published session weeks and sign-up dates on a calendar, sync your Summer Planner, export .ics and choose which alerts you get."><link rel="canonical" href="https://atlantakidscamps.com/account/">
+<meta property="og:type" content="website"><meta property="og:title" content="Privacy & Disclosures — Atlanta Kids Camps"><meta property="og:description" content="How Atlanta Kids Camps handles data, affiliate links and featured listings."><meta property="og:url" content="https://atlantakidscamps.com/privacy/"><meta property="og:image" content="https://atlantakidscamps.com/og.svg"><meta name="twitter:card" content="summary">
+<meta name="robots" content="noindex"><link rel="icon" href="../og.svg"><link rel="stylesheet" href="../styles.css"><script src="../config.js"></script><script>window.MOGUL_STATS={endpoint:(window.SITE_CONFIG&&window.SITE_CONFIG.statsEndpoint)||"",site:(window.SITE_CONFIG&&window.SITE_CONFIG.statsSite)||"kids-camps"};</script><script src="../stats.js" defer></script></head><body><a class="skip" href="#main">Skip to content</a><header class="top"><div class="wrap nav"><a class="brand" href="../"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#f2a541"/><path d="M5 19 L11 10 L15 15 L18 11 L23 19Z" fill="#1f5f5b"/></svg><span>Atlanta Kids Camps</span></a>
+<nav aria-label="Main"><a href="../#camps">Camps</a><a href="../planner/" class="nav-hot">Summer planner</a><a href="../account/" aria-current="page">My calendar</a><a href="../#deadlines">Deadlines</a><a href="../#free">Free &amp; low-cost</a><a href="../cobb/">Cobb</a><a href="../featured/">For camps</a></nav></div></header><main id="main" class="acct">
+<section class="wrap section" id="signin">
+<p class="eyebrow">Free · optional · no password</p>
+<h1>My camp calendar</h1>
+<p class="lede">Save the camps you’re considering and see their published session weeks and sign-up dates on one calendar, alongside your Summer Planner’s gap weeks.</p>
+<div class="acct-grid">
+<form id="login-form" class="acct-card" novalidate>
+<h2>Sign in or create your account</h2>
+<p>Enter your email and we’ll send a sign-in link. It works once and expires in 15 minutes. There’s no password to remember.</p>
+<label for="login-email">Email</label><input id="login-email" type="email" autocomplete="email" required placeholder="you@example.com">
+<p class="err" id="login-err" role="alert"></p>
+<button class="btn" id="login-btn" type="submit">Email me a sign-in link</button>
+<p class="small" id="login-msg" role="status" aria-live="polite"></p>
+</form>
+<div class="acct-card soft">
+<h2>What you get</h2>
+<ul class="ticks"><li>A month and week calendar of the camps you save, using only dates the camps have published. Anything else is marked <em>not announced yet</em>.</li>
+<li>Your Summer Planner’s covered and gap weeks, synced between devices.</li>
+<li>A private calendar feed (.ics) for Google, Apple or Outlook Calendar.</li>
+<li>Per-camp alerts for when sign-ups open, plus one-click <strong>Pause all emails</strong> and <strong>Delete my account</strong>.</li></ul>
+<p class="small">You don’t need an account to use the <a href="../planner/">Summer Planner</a> or get <a href="../#alerts">sign-up alerts</a>. See <a href="../privacy/#accounts">what we store</a>.</p>
+</div></div>
+</section>
+
+<section class="wrap section" id="app" hidden>
+<div class="acct-head"><div><p class="eyebrow">My camp calendar</p><h1>Your camps, week by week</h1><p class="small">Signed in as <strong id="me-email"></strong> · <button type="button" class="linkish" id="logout">Sign out</button></p></div>
+<p class="acct-status" id="pause-banner" hidden>Emails are paused. You won’t get any alerts until you resume them below.</p></div>
+<p id="app-msg" class="note" role="status" aria-live="polite" hidden></p>
+
+<div class="acct-card cal-card">
+<div class="cal-bar"><h2 id="cal-title">Calendar</h2>
+<div class="cal-ctl"><div class="seg" role="group" aria-label="Calendar view"><button type="button" id="v-month" aria-pressed="true">Month</button><button type="button" id="v-week" aria-pressed="false">Week</button></div>
+<button type="button" class="btn ghost sm" id="cal-prev" aria-label="Previous">‹</button><button type="button" class="btn ghost sm" id="cal-today">Today</button><button type="button" class="btn ghost sm" id="cal-next" aria-label="Next">›</button></div></div>
+<p class="legend"><span class="ev ev-session">Camp session (published)</span><span class="ev ev-signup">Sign-up date</span><span class="ev ev-gap">Planner gap week</span><span class="ev ev-cov">Planner: covered</span></p>
+<div id="cal" class="cal" aria-live="polite"></div>
+<div id="undated"></div>
+</div>
+
+<div class="acct-grid">
+<div class="acct-card">
+<h2>Saved camps <span class="small" id="saved-count"></span></h2>
+<form id="add-form" class="add-row"><label for="add-camp" class="sr">Add a camp</label><input id="add-camp" list="camp-list" placeholder="Add a camp by name…" autocomplete="off"><datalist id="camp-list"></datalist><button class="btn sm" type="submit">Save</button></form>
+<p class="small">Or tap <strong>☆ Save</strong> on any camp card in the <a href="../#camps">directory</a>.</p>
+<ul id="saved" class="saved"></ul>
+</div>
+<div class="acct-card">
+<h2>Calendar feed</h2>
+<p>Add your camp calendar to Google, Apple or Outlook Calendar. The feed updates when camps publish new dates.</p>
+<p><a class="btn sm" id="ics-sub" href="#">Subscribe in my calendar app</a> <button type="button" class="btn ghost sm" id="ics-dl">Download .ics</button></p>
+<label for="ics-url" class="small">Private feed link (anyone with it can see your saved camps)</label><div class="add-row"><input id="ics-url" readonly><button type="button" class="btn ghost sm" id="ics-copy">Copy</button></div>
+<h2>Summer Planner</h2>
+<p id="plan-status" class="small"></p>
+<p><a class="btn ghost sm" href="../planner/">Open the Summer Planner</a></p>
+</div>
+</div>
+
+<div class="acct-grid">
+<form id="alerts-form" class="acct-card">
+<h2>Email alerts</h2>
+<p class="small">Per-camp alerts are set on each saved camp above. These settings add alerts for whole categories. We only send alert emails after a person on our team reviews them.</p>
+<label for="al-area">Area</label><select id="al-area"><option value="">Anywhere in metro Atlanta</option><option>Cobb (Marietta, Smyrna, Kennesaw, East Cobb)</option><option>North Fulton (Roswell, Alpharetta)</option><option>Atlanta / DeKalb</option><option>Gwinnett</option></select>
+<fieldset><legend>Categories</legend><div id="al-cats" class="chk-grid"></div></fieldset>
+<fieldset><legend>Seasons</legend><div class="chk-grid"><label class="chk"><input type="checkbox" name="al-season" value="Spring break"> Spring break</label><label class="chk"><input type="checkbox" name="al-season" value="Summer"> Summer</label><label class="chk"><input type="checkbox" name="al-season" value="Fall/Winter break"> Fall / winter break</label></div><p class="small">Leave all unticked for any season.</p></fieldset>
+<button class="btn sm" type="submit">Save alert settings</button> <span class="small" id="al-msg" role="status"></span>
+</form>
+<div class="acct-card danger">
+<h2>Emails and your account</h2>
+<p><strong>Pause all emails</strong> stops every alert and reminder. Your saved camps and calendar stay.</p>
+<p><button type="button" class="btn ghost sm" id="pause-btn">Pause all emails</button></p>
+<p><strong>Delete my account</strong> permanently removes your account, saved camps, planner copy and sign-ins, and removes your address from our email list.</p>
+<p><button type="button" class="btn danger sm" id="delete-btn">Delete my account</button></p>
+<p class="small" id="danger-msg" role="status" aria-live="polite"></p>
+</div>
+</div>
+</section>
+
+<section class="wrap section" id="deleted" hidden><h1>Your account is deleted</h1><p id="deleted-detail"></p><p><a class="btn" href="../">Back to camps</a></p></section>
+</main><footer class="foot"><div class="wrap"><p><strong>Affiliate disclosure:</strong> some links may earn us a commission at no extra cost to you, and “Featured” listings are paid placements that are always labeled. Neither affects the facts we publish. <a href="../privacy/">Privacy &amp; disclosures</a></p>
+<p>Facts come from each provider’s public page on the last-checked date (latest check 2026-11-16). Prices and dates change — always confirm with the provider. We have not inspected, licensed, or safety-vetted any program.</p><p>© 2026 Atlanta Kids Camps · <a href="../featured/">List or feature your camp</a> · <a href="../sitemap.xml">Sitemap</a></p></div></footer><script src="../camps.embedded.js"></script><script src="account.js"></script></body></html>
