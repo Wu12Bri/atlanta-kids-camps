@@ -3,7 +3,7 @@
 Use this (not tools/build.py, which is an older full-page template that would strip
 the stats beacon, AI-friendly robots.txt and the newer alert dialog).
 
-Updates: camps.embedded.js, filter form + chips, ItemList JSON-LD, deadlines list,
+Also runs tools/build_landing.py (search landing pages). Updates: camps.embedded.js, filter form + chips, ItemList JSON-LD, deadlines list,
 free list, Cobb dialog (copied from home), counts/dates in footer, Cobb lede,
 llms.txt and sitemap lastmod.
 """
@@ -24,12 +24,12 @@ e = lambda s: html.escape(str(s if s is not None else ""), quote=True)
 
 open(f"{R}/camps.embedded.js", "w").write("window.CAMPS=" + json.dumps(C, ensure_ascii=False) + ";")
 
-ORDER = ["outdoor","tennis","farm","horse","nature","garden","survival","trades","unusual","art","theatre","dance","swim","sports","gym","stem","day","break","after","library","free"]
+ORDER = ["outdoor","ninja","tennis","farm","horse","nature","garden","survival","trades","unusual","art","theatre","music","dance","swim","sports","gym","stem","day","break","after","library","free"]
 def filters(home):
     opts = '<option value="all">All interests</option>' + "".join(f'<option value="{k}">{e(INTERESTS[k] if k!="free" else "Free programs")}</option>' for k in ORDER)
     ages = '<option value="">Any age</option><option value="0">Under 1</option>' + "".join(f'<option value="{i}">{i}</option>' for i in range(1, 19))
     area = ('<label>Area<select id="area"><option value="all">All areas</option>' + "".join(f'<option value="{k}">{e(v)}</option>' for k, v in COUNTY.items() if k != "metro") + '</select></label>') if home else ""
-    chips = [("outdoor","Outdoor & adventure"),("tennis","Tennis"),("farm","Farm & animals"),("horse","Horses"),("nature","Nature"),("unusual","Unusual & offbeat"),("art","Art"),("swim","Swim"),("dance","Dance"),("stem","LEGO / STEM"),("free","Free")]
+    chips = [("outdoor","Outdoor & adventure"),("tennis","Tennis"),("farm","Farm & animals"),("horse","Horses"),("nature","Nature"),("unusual","Unusual & offbeat"),("ninja","Ninja & parkour"),("theatre","Theater"),("art","Art"),("music","Rock band"),("swim","Swim"),("dance","Dance"),("stem","LEGO / STEM"),("free","Free")]
     return ('<form class="filters" id="filters" role="search" aria-label="Filter programs" onsubmit="return false"><label>Search<input id="q" type="search" placeholder="Tennis, farm, swim, Smyrna…"></label>\n'
             f'<label>Interest<select id="cat">{opts}</select></label>\n<label>Child’s age<select id="age">{ages}</select></label>\n{area}'
             '<label>Sort<select id="sort"><option value="name">Name A–Z</option><option value="price">Lowest listed price</option></select></label>\n'
@@ -115,3 +115,9 @@ p = f"{R}/sitemap.xml"; s = open(p).read()
 if "/planner/" not in s: s = s.replace(f"<url><loc>{BASE}/cobb/</loc>", f"<url><loc>{BASE}/planner/</loc><lastmod>{V}</lastmod></url><url><loc>{BASE}/cobb/</loc>")
 s = re.sub(r'<lastmod>[^<]+</lastmod>', f'<lastmod>{V}</lastmod>', s); open(p, "w").write(s)
 print("synced", len(C), "camps;", len(cobb_items), "on Cobb page")
+
+# ---- search-matching landing pages (+ sitemap, llms.txt, homepage "Popular searches")
+import importlib.util; sys.dont_write_bytecode = True
+_spec = importlib.util.spec_from_file_location("build_landing", f"{R}/tools/build_landing.py")
+_bl = importlib.util.module_from_spec(_spec); _spec.loader.exec_module(_bl)
+print("landing pages:"); _bl.build()

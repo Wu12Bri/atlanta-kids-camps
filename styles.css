@@ -69,3 +69,11 @@ details.maybe-group{margin-top:.5em}details.maybe-group summary{cursor:pointer;f
 .covlist{list-style:none;padding:0;margin:.4em 0;display:grid;gap:6px}.covlist li{display:flex;justify-content:space-between;gap:8px;align-items:center;border:1px solid var(--line);border-radius:10px;padding:6px 10px;font-size:.9rem}
 .pl-actions{display:flex;gap:8px;flex-wrap:wrap;margin:.8em 0}
 .pl-sum{font-weight:600}.pl-note{font-size:.85rem;color:var(--muted)}
+/* search landing pages + homepage popular searches */
+.crumbs{font-size:.9rem;color:var(--muted);padding-top:12px}.crumbs a{color:var(--teal)}
+.lp-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.lp-cta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:0 0 16px}.lp-cta p{margin:0;flex:1 1 260px}
+.lp-note{margin:.35em 0;font-size:.9rem;font-weight:600;color:var(--teal)}
+.lp-sub{margin-top:28px}.lp-more{margin-top:32px}.lp-more .chips{display:flex;flex-wrap:wrap;gap:8px}.lp-more a.chip{text-decoration:none}
+.popular{list-style:none;padding:0;margin:0;display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+.popular li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px}.popular a{font-weight:600;color:var(--teal)}
