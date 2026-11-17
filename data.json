@@ -71,7 +71,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Cobb PARKS Creative Art Camps",
@@ -103,7 +104,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Cobb PARKS Performing Arts Camps (Jennie T. Anderson Theatre)",
@@ -134,7 +136,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Cobb PARKS Tennis Camps",
@@ -166,7 +169,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Cobb PARKS Unlimited Gymnastics Camp",
@@ -198,7 +202,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Cobb PARKS Nature Camps (Green Meadows)",
@@ -230,7 +235,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "McCleskey-East Cobb Family YMCA Day Camp",
@@ -264,7 +270,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Northeast Cobb Family YMCA Day Camp",
@@ -298,7 +305,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Camp Smyrna Summer Camp",
@@ -330,7 +338,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Kennesaw Camp Venture Summer Day Camp",
@@ -361,7 +370,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Marietta PAL Summer Camp",
@@ -394,7 +404,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Salvation Army of Cobb Summer Day Camp",
@@ -425,7 +436,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Salvation Army of Cobb After School Program",
@@ -457,7 +469,8 @@
    "sessions": null,
    "summer": false,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Cobb County School District After School Program (ASP)",
@@ -488,7 +501,8 @@
    "sessions": null,
    "summer": false,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Girls Inc. of Greater Atlanta Break Camp",
@@ -520,7 +534,8 @@
    "sessions": null,
    "summer": false,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Bricks 4 Kidz Marietta–Smyrna LEGO Robotics STEAM Camps",
@@ -551,7 +566,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Snapology of Kennesaw STEM & Robotics Camps",
@@ -582,7 +598,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Marietta Cobb Museum of Art Youth Art Camps",
@@ -634,7 +651,8 @@
    ],
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "East Cobb Stables Summer Horse Camp",
@@ -667,7 +685,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Cobb Library “The Basics” Storytime",
@@ -699,7 +718,8 @@
    "sessions": null,
    "summer": false,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "class"
   },
   {
    "name": "Josh Powell Camp Summer Day Camp",
@@ -777,7 +797,8 @@
      "date": "2027-01-21",
      "label": "Classic registration opens (noon)"
     }
-   ]
+   ],
+   "type": "camp"
   },
   {
    "name": "iD Tech Summer Camps (Emory & Georgia Tech)",
@@ -808,7 +829,8 @@
    "sessions": null,
    "summer": true,
    "overnight": null,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Fernbank Museum Winter Break Camp",
@@ -846,7 +868,8 @@
      "date": "2026-11-03",
      "label": "Registration opened (12 p.m.)"
     }
-   ]
+   ],
+   "type": "camp"
   },
   {
    "name": "Cobb Library Family Storytime (Vinings)",
@@ -878,7 +901,8 @@
    "sessions": null,
    "summer": false,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "class"
   },
   {
    "name": "Cobb Library Prek Bilingual Storytime (Sibley)",
@@ -910,7 +934,8 @@
    "sessions": null,
    "summer": false,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "class"
   },
   {
    "name": "Cobb Library Baby Storytime (Mountain View)",
@@ -942,7 +967,8 @@
    "sessions": null,
    "summer": false,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "class"
   },
   {
    "name": "Zoo Atlanta Summer Safari Camp",
@@ -985,7 +1011,8 @@
      "date": "2027-01-22",
      "label": "Registration opens"
     }
-   ]
+   ],
+   "type": "camp"
   },
   {
    "name": "AYTEF Community Summer Tennis Camp (Fair Oaks Tennis Center)",
@@ -1017,7 +1044,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "ALTA Junior Tennis Leagues (Spring 2027)",
@@ -1058,7 +1086,8 @@
      "date": "2027-01-26",
      "label": "Spring roster registration closes"
     }
-   ]
+   ],
+   "type": "camp"
   },
   {
    "name": "Sandy Springs Racquet Center Junior Tennis Summer Camp",
@@ -1090,7 +1119,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Gwinnett Parks RNB Tennis",
@@ -1122,7 +1152,8 @@
    "sessions": null,
    "summer": false,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Hand, Hoof and Heart Summer Farm & Horse Camps",
@@ -1156,7 +1187,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Camp Kingfisher at the Chattahoochee Nature Center",
@@ -1203,7 +1235,8 @@
      "date": "2027-01-19",
      "label": "General registration opens (10 a.m.)"
     }
-   ]
+   ],
+   "type": "camp"
   },
   {
    "name": "Camp Kingfisher Survival & Grow Specialty Camps",
@@ -1252,7 +1285,8 @@
      "date": "2027-01-19",
      "label": "General registration opens (10 a.m.)"
     }
-   ]
+   ],
+   "type": "camp"
   },
   {
    "name": "Chastain Horse Park Horseback Basics Summer Camp",
@@ -1285,7 +1319,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Dunwoody Nature Center Summer Camp",
@@ -1321,7 +1356,8 @@
      "date": "2027-02-01",
      "label": "Summer registration opens"
     }
-   ]
+   ],
+   "type": "camp"
   },
   {
    "name": "Camp Autrey Mill (nature, history & live animals)",
@@ -1353,7 +1389,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Wylde Center Thanksgiving Week Nature Day Camp",
@@ -1387,7 +1424,8 @@
    "sessions": null,
    "summer": false,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Atlanta Botanical Garden Winter Break Garden Camps",
@@ -1425,7 +1463,8 @@
      "date": "2026-12-07",
      "label": "Registration deadline"
     }
-   ]
+   ],
+   "type": "camp"
   },
   {
    "name": "Callanwolde Intro/Intermediate Blacksmithing (Teens & Adults)",
@@ -1463,7 +1502,8 @@
      "date": "2026-11-16",
      "label": "Winter registration opens (9 a.m.)"
     }
-   ]
+   ],
+   "type": "camp"
   },
   {
    "name": "Cobb PARKS Swim Lessons",
@@ -1495,7 +1535,8 @@
    "sessions": null,
    "summer": false,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "class"
   },
   {
    "name": "YMCA of Metro Atlanta Swim Lessons",
@@ -1527,7 +1568,8 @@
    "sessions": null,
    "summer": false,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "class"
   },
   {
    "name": "Camp Acworth Summer Day Camp",
@@ -1559,7 +1601,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Smyrna Parks & Recreation Youth Classes",
@@ -1592,7 +1635,8 @@
    "sessions": null,
    "summer": false,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "class"
   },
   {
    "name": "Cobb Library LEGO Club (Sewell Mill)",
@@ -1625,7 +1669,8 @@
    "sessions": null,
    "summer": false,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "class"
   },
   {
    "name": "Cobb Library LEGO Club (Powder Springs)",
@@ -1658,7 +1703,8 @@
    "sessions": null,
    "summer": false,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "class"
   },
   {
    "status_flag": null,
@@ -1710,7 +1756,8 @@
    ],
    "age_min": 6,
    "age_max": 12,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "status_flag": null,
@@ -1753,7 +1800,8 @@
      "date": "2027-02-10",
      "label": "Registration opens"
     }
-   ]
+   ],
+   "type": "camp"
   },
   {
    "status_flag": null,
@@ -1795,7 +1843,8 @@
    ],
    "age_min": 9,
    "age_max": 18,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "status_flag": null,
@@ -1828,7 +1877,8 @@
    ],
    "age_min": 11,
    "age_max": 16,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "status_flag": null,
@@ -1861,7 +1911,8 @@
    ],
    "age_min": 6,
    "age_max": 10,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "status_flag": null,
@@ -1898,7 +1949,8 @@
    ],
    "age_min": null,
    "age_max": null,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "status_flag": null,
@@ -1935,7 +1987,8 @@
    ],
    "age_min": null,
    "age_max": null,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "status_flag": null,
@@ -1968,7 +2021,8 @@
    ],
    "age_min": 9,
    "age_max": 12,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "status_flag": null,
@@ -2001,7 +2055,8 @@
    ],
    "age_min": 13,
    "age_max": 15,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "status_flag": null,
@@ -2035,7 +2090,8 @@
    ],
    "age_min": 5,
    "age_max": 15,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "status_flag": null,
@@ -2069,7 +2125,8 @@
    ],
    "age_min": 6,
    "age_max": 14,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "status_flag": null,
@@ -2102,7 +2159,8 @@
    ],
    "age_min": 8,
    "age_max": 17,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "status_flag": null,
@@ -2148,7 +2206,8 @@
    ],
    "age_min": 11,
    "age_max": 17,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "status_flag": null,
@@ -2191,7 +2250,8 @@
    ],
    "age_min": 7,
    "age_max": 10,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "status_flag": null,
@@ -2228,7 +2288,8 @@
    ],
    "age_min": 15,
    "age_max": 17,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "status_flag": null,
@@ -2271,7 +2332,8 @@
    ],
    "age_min": 9,
    "age_max": 15,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "status_flag": null,
@@ -2304,7 +2366,8 @@
    ],
    "age_min": 5,
    "age_max": 12,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Ninja Quest Fitness Ninja & Parkour Camps",
@@ -2340,7 +2403,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Atlanta Parkour Camps",
@@ -2374,7 +2438,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Alliance Theatre Drama Camps (Midtown)",
@@ -2416,7 +2481,8 @@
      "date": "2027-01-20",
      "label": "One Day Sale (9 a.m.)"
     }
-   ]
+   ],
+   "type": "camp"
   },
   {
    "name": "Alliance Theatre Drama Camps (Marietta)",
@@ -2458,7 +2524,8 @@
      "date": "2027-01-20",
      "label": "One Day Sale (9 a.m.)"
     }
-   ]
+   ],
+   "type": "camp"
   },
   {
    "name": "Brittany Leazer Productions Theatre Camps (East Cobb)",
@@ -2491,7 +2558,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Jitterbug Performing Arts Camps (Smyrna)",
@@ -2526,7 +2594,8 @@
    "sessions": null,
    "summer": false,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Spruill Center for the Arts Art Camps (Dunwoody)",
@@ -2559,7 +2628,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Chastain Arts Center KickstART Summer Camp",
@@ -2591,7 +2661,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Vinings School of Art Camps (Smyrna)",
@@ -2624,7 +2695,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "School of Rock East Cobb Music Camps",
@@ -2671,7 +2743,8 @@
    ],
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Code Ninjas East Cobb Camps (Minecraft, Roblox, YouTube, Robotics)",
@@ -2705,7 +2778,8 @@
    "sessions": null,
    "summer": true,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
   },
   {
    "name": "Circus Camp (Decatur)",
@@ -2739,7 +2813,659 @@
    "sessions": null,
    "summer": false,
    "overnight": false,
-   "reg_dates": null
+   "reg_dates": null,
+   "type": "camp"
+  },
+  {
+   "price_low": null,
+   "price_note": "The county page does not list class fees; prices are in the Rec1 catalog.",
+   "status_flag": null,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "class",
+   "name": "The Art Place at Mountain View Arts Classes",
+   "provider": "Cobb County PARKS (The Art Place at Mountain View)",
+   "area": "3330 Sandy Plains Rd, Marietta, GA 30066",
+   "category": "Year-round visual and performing arts classes",
+   "ages": "See current catalog",
+   "age_min": null,
+   "age_max": null,
+   "price_week": "See current Cobb PARKS catalog",
+   "dates": "Year-round arts classes, including stained glass, painting, drawing, pottery, dance and drama. Term dates are in the current catalog (not posted on the center page).",
+   "registration": "Register through the Cobb PARKS Rec1 catalog linked from the Art Place page. No term registration date is posted on the center page; see the current catalog.",
+   "source_url": "https://www.cobbcounty.gov/art-place-mountain-view",
+   "county": "cobb",
+   "interests": [
+    "art",
+    "theatre",
+    "dance"
+   ]
+  },
+  {
+   "price_low": null,
+   "price_note": "The youth-classes page links a 2026 winter brochure and does not list fees on the page itself.",
+   "status_flag": null,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "class",
+   "name": "Mable House Arts Center Youth Classes",
+   "provider": "Cobb County PARKS (Mable House Arts Center)",
+   "area": "5239 Floyd Road, Mableton, GA 30126",
+   "category": "Youth visual arts classes",
+   "ages": "Children and teens (see current catalog)",
+   "age_min": null,
+   "age_max": null,
+   "price_week": "See current catalog or winter brochure",
+   "dates": "Ongoing youth classes for children and teens; see the current catalog or brochure for the open term (no term dates posted on the youth-classes page).",
+   "registration": "Register through the youth-classes page and the Cobb PARKS Rec1 catalog. No upcoming-term registration date is posted on the page.",
+   "source_url": "https://www.cobbcounty.gov/arts-center/youth-classes",
+   "county": "cobb",
+   "interests": [
+    "art"
+   ]
+  },
+  {
+   "price_low": null,
+   "price_note": "The center page does not list class fees.",
+   "status_flag": null,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "class",
+   "name": "The Art Station – Big Shanty Youth & Teen Art Classes",
+   "provider": "Cobb County PARKS (The Art Station – Big Shanty)",
+   "area": "2050 Kennesaw Due West Rd, Kennesaw, GA 30152",
+   "category": "Youth and teen visual arts classes (also pottery and private music lessons)",
+   "ages": "Youth and teen (see current catalog)",
+   "age_min": null,
+   "age_max": null,
+   "price_week": "See current Cobb PARKS catalog",
+   "dates": "Visual arts classes and workshops during fall, winter and spring. See the current Rec1 catalog for the open term (no specific session dates posted on the center page).",
+   "registration": "Register through the Cobb PARKS Rec1 catalog linked from the Art Station page. No term registration date is posted on the center page; see the current catalog.",
+   "source_url": "https://www.cobbcounty.gov/art-station-big-shanty",
+   "county": "cobb",
+   "interests": [
+    "art",
+    "music"
+   ]
+  },
+  {
+   "price_low": null,
+   "price_note": "The classes page lists studio offerings including youth classes and Sunday Art School; fees are on the individual class pages.",
+   "status_flag": null,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "class",
+   "name": "Marietta Cobb Museum of Art Studio & Youth Classes",
+   "provider": "Marietta Cobb Museum of Art",
+   "area": "30 Atlanta St SE, Marietta Square",
+   "category": "Studio art classes and Sunday Art School",
+   "ages": "Sunday Art School ages 7–12; other youth classes listed in the catalog",
+   "age_min": 7,
+   "age_max": 12,
+   "price_week": "See current class pages",
+   "dates": "Ongoing studio classes (clay, printmaking, stained glass, glass fusing, painting, drawing, digital art and youth classes). Term dates are on the class pages (not posted as a single 2027 calendar on the classes hub).",
+   "registration": "See the museum’s classes page and individual class listings. No single 2027 registration date is posted on the hub page.",
+   "source_url": "https://mariettacobbartmuseum.org/learn/classes",
+   "county": "cobb",
+   "interests": [
+    "art"
+   ]
+  },
+  {
+   "price_low": 20,
+   "price_note": "The classes page says all children’s group classes are $20 per hour, including supplies. Confirm the current schedule and any private-lesson rates with the school.",
+   "status_flag": null,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "class",
+   "name": "Vinings School of Art Children’s Classes (Smyrna)",
+   "provider": "Vinings School of Art",
+   "area": "Ivy Walk plaza #102, corner of Cumberland Parkway and South Atlanta Road, Smyrna",
+   "category": "Children’s art classes (drawing, painting and more)",
+   "ages": "4½–15",
+   "age_min": 4,
+   "age_max": 15,
+   "price_week": "$20 per hour (children’s group classes)",
+   "dates": "Ongoing children’s group art classes; see the current class schedule on the school’s classes page (do not rely on older summer-session dates that may still appear there).",
+   "registration": "Pay and register through the school’s classes page (child registration form and ProCare link for first-time students). No 2027 term registration date is posted as a single deadline.",
+   "source_url": "https://www.viningsschoolofart.com/classes.html",
+   "county": "cobb",
+   "interests": [
+    "art"
+   ]
+  },
+  {
+   "price_low": null,
+   "price_note": "The tennis pages do not list lesson fees; register and view fees in the Rec1 catalog linked from the tennis page.",
+   "status_flag": null,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "class",
+   "name": "Cobb PARKS Youth Tennis Lessons & Clinics",
+   "provider": "Cobb County PARKS",
+   "area": "Six tennis centers: Fair Oaks (1460 West Booth Road Ext. SW, Marietta 30008); Harrison (2653 Shallowford Road NE, Marietta 30066); Kennworth (3900 South Main Street NW, Acworth 30101); Lost Mountain (4845 Dallas Highway, Powder Springs 30127); Sweetwater (2447 Clay Road, Austell 30168); Terrell Mill (480 Terrell Mill Road, Marietta 30067)",
+   "category": "Youth tennis lessons, drills and clinics",
+   "ages": "3–17 (varies by center)",
+   "age_min": 3,
+   "age_max": 17,
+   "price_week": "See current Cobb PARKS tennis catalog",
+   "dates": "Youth lessons and clinics at Cobb’s six tennis centers. Harrison, Kennworth, Lost Mountain and Terrell Mill describe Youth Tennis for Littles ages 3–4 and older players; Sweetwater lists youth classes ages 4–14; Kennworth also offers homeschool tennis for ages 4–17. Session dates are in the current Rec1 catalog (the county’s Fall 2026 Activity Guide described classes at all six centers from September through early December, including Tots Tennis ages 4–6).",
+   "registration": "Register through the Cobb PARKS Rec1 catalog linked from the tennis centers page. No single 2027 term registration date is posted on the tennis pages; see the current catalog.",
+   "source_url": "https://www.cobbcounty.gov/parks/centers-facilities/tennis",
+   "county": "cobb",
+   "interests": [
+    "tennis",
+    "sports"
+   ]
+  },
+  {
+   "price_low": null,
+   "price_note": "Named programs on the classes page include Girls Gymnastics, Tumble Tots, Tumble Kids, Tiny Tumblers, Boys Gymnastics and specialty classes. Fees are in the Rec1 catalog.",
+   "status_flag": null,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "class",
+   "name": "Cobb Gymnastics Center Classes (Tumble Tots, Girls & Boys)",
+   "provider": "Cobb County PARKS (Cobb Gymnastics Center)",
+   "area": "542 Fairground Street SE, Marietta, GA 30060 (Larry Bell Fitness Complex, behind the Cobb Civic Center)",
+   "category": "Gymnastics classes for toddlers, youth, teens and adults",
+   "ages": "Toddlers, youth, teens and adults (see current catalog)",
+   "age_min": null,
+   "age_max": null,
+   "price_week": "See current Cobb PARKS gymnastics catalog",
+   "dates": "Winter session listed as Nov. 30–Feb. 26 (year not stated on the page). See the Rec1 catalog for the current/upcoming session calendar.",
+   "registration": "The gymnastics programs page says winter registration opens Nov. 17 at 6 p.m. (session Nov. 30–Feb. 26; year not stated). Register through the Cobb PARKS Rec1 gymnastics catalog.",
+   "source_url": "https://www.cobbcounty.gov/parks/programs/gymnastics",
+   "county": "cobb",
+   "interests": [
+    "gym",
+    "sports"
+   ]
+  },
+  {
+   "price_low": null,
+   "price_note": "The recreation centers page describes programs for all ages, including camps, homeschool classes and dance classes. Fees and ages are in the Rec1 catalog.",
+   "status_flag": null,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "class",
+   "name": "Cobb PARKS Recreation Center Youth & Homeschool Classes",
+   "provider": "Cobb County PARKS",
+   "area": "Fair Oaks, Fullers, Ron Anderson, South Cobb, Boots Ward, Milford rec centers, and Windy Hill Community Center (Smyrna)",
+   "category": "Recreation center classes (including homeschool and dance)",
+   "ages": "See current catalog",
+   "age_min": null,
+   "age_max": null,
+   "price_week": "See current Cobb PARKS catalog",
+   "dates": "Ongoing seasonal classes; see the current Rec1 catalog (no term dates posted on the centers page).",
+   "registration": "Register through the Cobb PARKS Rec1 catalog linked from the recreation centers page. No term registration date is posted on that page; see the current catalog.",
+   "source_url": "https://www.cobbcounty.gov/parks/centers-facilities/recreation",
+   "county": "cobb",
+   "interests": [
+    "dance",
+    "sports"
+   ]
+  },
+  {
+   "price_low": null,
+   "price_note": "The location page describes weekly group lessons or rehearsals by program; it does not list tuition.",
+   "status_flag": null,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "class",
+   "name": "School of Rock East Cobb Music Programs",
+   "provider": "School of Rock East Cobb",
+   "area": "2469 East Piedmont Road Suite 1101, Marietta, GA 30062",
+   "category": "Ongoing music programs (Little Wing, Rookies, Rock 101, Performance)",
+   "ages": "4–18 (Little Wing 4–5; Rookies 6–7; Rock 101 8–13; Performance 8–18)",
+   "age_min": 4,
+   "age_max": 18,
+   "price_week": "See School of Rock East Cobb",
+   "dates": "Ongoing programs. Little Wing is a weekly group lesson; Rookies leads into Rock 101, which includes a weekly group rehearsal. No term start dates are posted on the location page; see the school for current enrollment.",
+   "registration": "See the School of Rock East Cobb location page for current enrollment. No 2027 registration date is posted there.",
+   "source_url": "https://www.schoolofrock.com/locations/eastcobb",
+   "county": "cobb",
+   "interests": [
+    "music"
+   ]
+  },
+  {
+   "price_low": null,
+   "price_note": "The Marietta location page describes year-round programs and multi-week Academies; it does not list tuition.",
+   "status_flag": null,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "class",
+   "name": "Code Ninjas East Cobb Year-Round Coding Programs",
+   "provider": "Code Ninjas East Cobb",
+   "area": "Marietta (East Cobb)",
+   "category": "Year-round coding programs (JR, CREATE, Academies)",
+   "ages": "5–14 (JR 5–7; CREATE 8–14)",
+   "age_min": 5,
+   "age_max": 14,
+   "price_week": "See Code Ninjas East Cobb",
+   "dates": "Year-round programs, plus multi-week Academies in robotics, AI and more. Session dates are not posted as a single calendar on the location page; see the provider for current enrollment.",
+   "registration": "See the Code Ninjas Marietta (East Cobb) location page. No 2027 registration date is posted there.",
+   "source_url": "https://www.codeninjas.com/ga-marietta",
+   "county": "cobb",
+   "interests": [
+    "stem"
+   ]
+  },
+  {
+   "price_low": null,
+   "price_note": "The Custer Park page lists recreational and competitive youth sports classes, leagues and tournaments; fees and ages are in the city’s Rec1 catalog.",
+   "status_flag": null,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "class",
+   "name": "Marietta Custer Park Youth Sports Classes & Leagues",
+   "provider": "City of Marietta Parks, Recreation, and Facilities",
+   "area": "Custer Park Sports and Fitness Center, Marietta",
+   "category": "Youth sports classes, leagues and tournaments",
+   "ages": "See current catalog",
+   "age_min": null,
+   "age_max": null,
+   "price_week": "See City of Marietta recreation catalog",
+   "dates": "See the current City of Marietta Rec1 catalog (no term dates posted on the Custer Park page).",
+   "registration": "Register through the City of Marietta Parks Rec1 catalog. No term registration date is posted on the Custer Park page; see the current catalog.",
+   "source_url": "https://www.mariettaga.gov/1195/Custer-Park-Sports-and-Fitness-Center",
+   "county": "cobb",
+   "interests": [
+    "sports"
+   ]
+  },
+  {
+   "price_low": 65,
+   "price_note": "Fee as posted on the youth sports page; the page does not state a year for this fee.",
+   "status_flag": null,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "class",
+   "name": "Johnson Ferry Shine Bowling (Youth)",
+   "provider": "Johnson Ferry Baptist Church Sports & Fitness",
+   "area": "Games at Lucky Strike in Marietta; church campus 955 Johnson Ferry Road, Marietta, GA 30068",
+   "category": "Winter youth bowling league",
+   "ages": "1st grade–adult",
+   "age_min": 6,
+   "age_max": 18,
+   "price_week": "$65 per player",
+   "dates": "Season listed as January–February (year not stated on the page).",
+   "registration": "The youth sports page says registration opens in December (no specific date or year is posted).",
+   "source_url": "https://www.johnsonferry.org/youthsports/",
+   "county": "cobb",
+   "interests": [
+    "sports"
+   ]
+  },
+  {
+   "price_low": 130,
+   "price_note": "Posted as $130 with promo code EARLYBIRD until October 5, or $145 without the code or after Oct. 6. The page does not state a year for those dates.",
+   "status_flag": null,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "class",
+   "name": "Johnson Ferry Upward Basketball",
+   "provider": "Johnson Ferry Baptist Church Sports & Fitness",
+   "area": "955 Johnson Ferry Road, Marietta, GA 30068 (East Cobb)",
+   "category": "Youth basketball league",
+   "ages": "K5–5th grade",
+   "age_min": 5,
+   "age_max": 11,
+   "price_week": "$130 early bird / $145 after Oct. 6",
+   "dates": "Season listed as November–February (year not stated on the page). Practice once a week for one hour; games on Saturday.",
+   "registration": "The youth sports page says registration is now open (checked 2026-11-17). No separate 2027 opening date is posted.",
+   "source_url": "https://www.johnsonferry.org/youthsports/",
+   "county": "cobb",
+   "interests": [
+    "sports"
+   ]
+  },
+  {
+   "price_low": null,
+   "price_note": "No class fee is posted on the youth sports page for this program.",
+   "status_flag": null,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "class",
+   "name": "Johnson Ferry Worship Through Dance",
+   "provider": "Johnson Ferry Baptist Church Sports & Fitness",
+   "area": "955 Johnson Ferry Road, Marietta, GA 30068 (East Cobb)",
+   "category": "Worship dance classes",
+   "ages": "18 months–12th grade (fall session listed through high school)",
+   "age_min": 1,
+   "age_max": 18,
+   "price_week": "See youth sports page",
+   "dates": "A January–May season is listed, with registration shown as open. A fall season is listed as August–December, with registration opening in May. Years are not stated on the page.",
+   "registration": "The January–May season is listed as registration open now (checked 2026-11-17). The fall season is listed as registration opens in May (no specific date or year posted).",
+   "source_url": "https://www.johnsonferry.org/youthsports/",
+   "county": "cobb",
+   "interests": [
+    "dance"
+   ]
+  },
+  {
+   "price_low": null,
+   "price_note": "Posted fees: baseball and softball $130 early bird / $145 after January 31; girls volleyball $125 early bird / $140 after January 15; special needs basketball $65. Years are not stated on the page.",
+   "status_flag": null,
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": false,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "class",
+   "name": "Johnson Ferry Spring Youth Sports Leagues (Baseball, Softball, Volleyball, Special Needs Basketball)",
+   "provider": "Johnson Ferry Baptist Church Sports & Fitness",
+   "area": "955 Johnson Ferry Road, Marietta, GA 30068 (East Cobb)",
+   "category": "Spring youth sports leagues",
+   "ages": "Varies by league (baseball: boys 4 years–7th grade; softball: girls 4 years–5th grade; girls volleyball: 4th–9th grade; special needs basketball: 1st grade–25)",
+   "age_min": 4,
+   "age_max": 18,
+   "price_week": "See youth sports page (league fees posted there)",
+   "dates": "Baseball, softball and girls volleyball seasons are listed as February–May; special needs basketball as March–May. Years are not stated on the page.",
+   "registration": "The youth sports page says registration for these spring leagues opens in December (no specific date or year is posted).",
+   "source_url": "https://www.johnsonferry.org/youthsports/",
+   "county": "cobb",
+   "interests": [
+    "sports"
+   ]
+  },
+  {
+   "price_low": 125,
+   "price_note": "2026 fee was $125; all equipment was supplied. 2027 price not announced.",
+   "status_flag": "2027 dates not announced yet",
+   "hours_start": "08:30",
+   "hours_end": "12:00",
+   "before_care": null,
+   "after_care": null,
+   "hours_year": 2026,
+   "sessions": null,
+   "summer": true,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "camp",
+   "name": "Johnson Ferry Introductory Golf Camp",
+   "provider": "Johnson Ferry Baptist Church Sports & Fitness",
+   "area": "955 Johnson Ferry Road, Marietta, GA 30068 (East Cobb)",
+   "category": "Introductory golf camp",
+   "ages": "5–9",
+   "age_min": 5,
+   "age_max": 9,
+   "price_week": "2027 price not announced (2026 fee was $125)",
+   "dates": "2027 dates not announced yet. (2026 camp, prior season: June 15–18, 8:30 a.m.–noon.)",
+   "registration": "2027 dates not announced yet. Watch https://www.johnsonferry.org/youthsports/ for 2027 dates and registration. (The 2026 session was listed as full.)",
+   "source_url": "https://www.johnsonferry.org/youthsports/",
+   "county": "cobb",
+   "interests": [
+    "sports",
+    "day"
+   ]
+  },
+  {
+   "price_low": 150,
+   "price_note": "2026 fees were $150 (preschool, 9:30–11:30 a.m.) and $175 (elementary, 1–4 p.m.). 2027 prices not announced.",
+   "status_flag": "2027 dates not announced yet",
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "camp",
+   "name": "Johnson Ferry Dance Camps (Preschool & Elementary)",
+   "provider": "Johnson Ferry Baptist Church Sports & Fitness",
+   "area": "955 Johnson Ferry Road, Marietta, GA 30068 (East Cobb)",
+   "category": "Dance camp (ballet, jazz, tap and craft)",
+   "ages": "Preschool 3–5; elementary kindergarten–5th grade",
+   "age_min": 3,
+   "age_max": 11,
+   "price_week": "2027 price not announced (2026: preschool $150; elementary $175)",
+   "dates": "2027 dates not announced yet. (2026 camps, prior season: June 1–5.)",
+   "registration": "2027 dates not announced yet. Watch https://www.johnsonferry.org/youthsports/ for 2027 dates and registration.",
+   "source_url": "https://www.johnsonferry.org/youthsports/",
+   "county": "cobb",
+   "interests": [
+    "dance",
+    "day"
+   ]
+  },
+  {
+   "price_low": 220,
+   "price_note": "2026 fees were $295 full day (9 a.m.–4 p.m.) and $220 half day (9 a.m.–1 p.m.). 2027 prices not announced.",
+   "status_flag": "2027 dates not announced yet",
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "camp",
+   "name": "Johnson Ferry Rising Stars Basketball Camp",
+   "provider": "Johnson Ferry Baptist Church Sports & Fitness",
+   "area": "955 Johnson Ferry Road, Marietta, GA 30068 (East Cobb)",
+   "category": "Basketball camp",
+   "ages": "5–14",
+   "age_min": 5,
+   "age_max": 14,
+   "price_week": "2027 price not announced (2026: $295 full day / $220 half day)",
+   "dates": "2027 dates not announced yet. (2026 camp, prior season: June 8–11.)",
+   "registration": "2027 dates not announced yet. Watch https://www.johnsonferry.org/youthsports/ for 2027 dates and registration.",
+   "source_url": "https://www.johnsonferry.org/youthsports/",
+   "county": "cobb",
+   "interests": [
+    "sports",
+    "day"
+   ]
+  },
+  {
+   "price_low": 20,
+   "price_note": "2026: Crossover Flag Football Friday evening July 10, $20; Upward Flag Football Saturday morning July 11, $20. 2027 prices not announced. Ages were not posted on the youth sports camp listing.",
+   "status_flag": "2027 dates not announced yet",
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "camp",
+   "name": "Johnson Ferry Flag Football Camp",
+   "provider": "Johnson Ferry Baptist Church Sports & Fitness",
+   "area": "955 Johnson Ferry Road, Marietta, GA 30068 (East Cobb)",
+   "category": "Flag football camp",
+   "ages": "See provider page",
+   "age_min": null,
+   "age_max": null,
+   "price_week": "2027 price not announced (2026 sessions were $20 each)",
+   "dates": "2027 dates not announced yet. (2026 camp, prior season: July 10–11.)",
+   "registration": "2027 dates not announced yet. Watch https://www.johnsonferry.org/youthsports/ for 2027 dates and registration.",
+   "source_url": "https://www.johnsonferry.org/youthsports/",
+   "county": "cobb",
+   "interests": [
+    "sports",
+    "day"
+   ]
+  },
+  {
+   "price_low": null,
+   "price_note": "The youth sports page listed 2026 camp dates and said more information was coming soon; it did not post a 2026 or 2027 fee there.",
+   "status_flag": "2027 dates not announced yet",
+   "hours_start": null,
+   "hours_end": null,
+   "before_care": null,
+   "after_care": null,
+   "hours_year": null,
+   "sessions": null,
+   "summer": true,
+   "overnight": false,
+   "reg_dates": null,
+   "last_checked": "2026-11-17",
+   "free_low_cost": false,
+   "type": "camp",
+   "name": "Johnson Ferry Soccer Camp",
+   "provider": "Johnson Ferry Baptist Church Sports & Fitness",
+   "area": "955 Johnson Ferry Road, Marietta, GA 30068 (East Cobb)",
+   "category": "Soccer camp",
+   "ages": "See provider page",
+   "age_min": null,
+   "age_max": null,
+   "price_week": "2027 price not announced",
+   "dates": "2027 dates not announced yet. (2026 camp, prior season: July 20–24.)",
+   "registration": "2027 dates not announced yet. Watch https://www.johnsonferry.org/youthsports/ for 2027 dates and registration.",
+   "source_url": "https://www.johnsonferry.org/youthsports/",
+   "county": "cobb",
+   "interests": [
+    "sports",
+    "day"
+   ]
   }
  ]
 }

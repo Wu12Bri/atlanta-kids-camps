@@ -1,22 +1,23 @@
 # Atlanta Kids Camps
 
-> Independent directory of Atlanta-area kids’ summer, school-break, after-school, and free library/community programs. Facts (prices, ages, dates, registration status) are taken from each provider’s own public page and dated. Not a booking site; not affiliated with listed camps.
+> Independent directory of Atlanta-area kids’ summer, school-break, after-school, year-round classes, and free library/community programs. Facts (prices, ages, dates, registration status) are taken from each provider’s own public page and dated. Not a booking site; not affiliated with listed camps.
 
 Website: https://atlantakidscamps.com/
 Last verified listings: 2026-11-17
 Coverage today: Cobb County first (Marietta, East Cobb, Smyrna, Kennesaw, Acworth, Powder Springs), plus North Fulton, Atlanta/DeKalb and Gwinnett programs that publish public pages, and a few north Georgia overnight / day-trip outdoor camps.
-Listing count: 75 programs (day and overnight camps incl. outdoor & adventure, classes, swim lessons, tennis, farm/nature, filmmaking, cooking and free library programs)
+Listing count: 95 programs (71 camps, 24 classes; incl. outdoor & adventure, swim lessons, tennis, farm/nature, filmmaking, cooking and free library programs)
 
 ## How to cite
 Cite the program name and link to the provider’s own page (the “Provider page” URL on each card). Treat prices and dates as snapshots as of the “checked” date on the card; always confirm with the provider before registering.
 
 ## Key pages
-- [Home / browse all camps](https://atlantakidscamps.com/): filters by interest (outdoor & adventure, ninja & parkour, tennis, farm & animals, horses, nature, survival skills, unusual & offbeat, art, theatre/film, music, swim, dance, STEM, free…), child’s age, area and price; shareable filter URLs like /?interest=farm&age=8&area=cobb (parameters: interest=<tag>, age=0–18, area=cobb|north-fulton|atlanta|gwinnett|day-trip, q=<text>, free=1, sort=price); registration deadlines; free & low-cost list; optional email alerts when sign-ups open.
+- [Home / browse all camps and classes](https://atlantakidscamps.com/): filters by type (camp or class), interest (outdoor & adventure, ninja & parkour, tennis, farm & animals, horses, nature, survival skills, unusual & offbeat, art, theatre/film, music, swim, dance, STEM, free…), child’s age, area and price; shareable filter URLs like /?interest=farm&age=8&area=cobb&type=class (parameters: interest=<tag>, type=camp|class, age=0–18, area=cobb|north-fulton|atlanta|gwinnett|day-trip, q=<text>, free=1, sort=price); registration deadlines; free & low-cost list; optional email alerts when sign-ups open.
+- [Classes](https://atlantakidscamps.com/classes/): year-round and recurring kids’ classes (art, swim lessons, tennis clinics, music, coding, gymnastics, dance, youth sports leagues and free library programs), with the same age/interest/area filters. Not a booking site — families register with the provider.
 - [Summer Planner 2027](https://atlantakidscamps.com/planner/): free, private week-by-week planner (June–August 2027). Parents mark covered weeks with labels and set child’s age, drop-off/pickup window, area, interests and optional free/max price. It lists gap weeks and, for each, camps whose provider-published 2027 sessions cover that week and whose published ages, hours and area fit, with the matching reason (e.g., “matches: ages 6–12, 9am–4pm, Cobb, 2027 session Jun 14–18”). Camps whose 2027 dates or hours are not announced appear separately as “possible”. Plans live only in the browser (localStorage); export as a share link or .ics file; optional hand-off to sign-up alerts.
 - [Cobb County guide](https://atlantakidscamps.com/cobb/): Cobb-focused view of the same verified listings.
 - [Feature your camp](https://atlantakidscamps.com/featured/): free basic listings; proposed paid featured placement (terms not final until published).
 - [Privacy & disclosures](https://atlantakidscamps.com/privacy/): affiliate and featured-listing disclosure; alert sign-up data practices.
-- [Machine-readable listings](https://atlantakidscamps.com/data.json): same facts as the page (JSON). Fields include interests[], county, age_min/age_max, and planner fields hours_start/hours_end/before_care/after_care (24h, null when not published), hours_year, sessions[{start,end}] (announced 2027 summer sessions only), summer, overnight.
+- [Machine-readable listings](https://atlantakidscamps.com/data.json): same facts as the page (JSON). Fields include type (camp or class), interests[], county, age_min/age_max, and planner fields hours_start/hours_end/before_care/after_care (24h, null when not published), hours_year, sessions[{start,end}] (announced 2027 summer sessions only), summer, overnight.
 - [Sitemap](https://atlantakidscamps.com/sitemap.xml)
 
 ## Accounts
@@ -28,9 +29,10 @@ Cite the program name and link to the provider’s own page (the “Provider pag
 - [Free kids' programs in Cobb County](https://atlantakidscamps.com/free-kids-programs-cobb/): 7 verified listings + 12 low-cost/aid for "free kids activities / free programs Cobb County (libraries, community centers)".
 - [Full-day camps for working parents](https://atlantakidscamps.com/full-day-camps-working-parents/): 14 verified listings for "full-day summer camps for working parents (before- and after-care)".
 - [Outdoor and survival camps near Atlanta](https://atlantakidscamps.com/outdoor-survival-camps-atlanta/): 14 verified listings for "outdoor / survival / wilderness camps near Atlanta".
-- [Kids' tennis camps in Atlanta](https://atlantakidscamps.com/tennis-camps-atlanta/): 5 verified listings for "tennis camps for kids in Atlanta".
+- [Kids' tennis camps, lessons and clinics in Atlanta](https://atlantakidscamps.com/tennis-camps-atlanta/): 6 verified listings for "tennis camps for kids in Atlanta".
 - [Theater and acting camps for kids in Atlanta and Cobb](https://atlantakidscamps.com/theater-camps-atlanta/): 6 verified listings for "theater / musical theater / acting camps for kids in Atlanta, Marietta and East Cobb".
 - [Art camps for kids in Atlanta, Marietta and Smyrna](https://atlantakidscamps.com/art-camps-atlanta/): 6 verified listings for "art camps for kids in Atlanta, Marietta and Smyrna".
+- [Kids' art classes in Cobb County and Marietta](https://atlantakidscamps.com/kids-art-classes-cobb/): 5 verified listings for "kids art classes Cobb County / Marietta".
 
 ## Interest tags
 outdoor (Outdoor & adventure: bushcraft, wilderness, paddling, climbing, archery, fishing, mountain biking, scouting camps), ninja (Ninja & parkour: obstacle-course and parkour gyms), tennis, farm, horse, nature, garden, survival, trades, unusual (Unusual & offbeat, incl. filmmaking, cooking, circus and coding/game design), art, theatre (theater, musical theater, acting), music (rock band camps), dance, swim, sports, gym, stem, day, break, after, library, free. Area codes: cobb, north-fulton, atlanta, gwinnett, metro (metro-wide), day-trip (outside metro: north Georgia overnight camps and day-trip programs).

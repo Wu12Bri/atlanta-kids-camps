@@ -20,6 +20,8 @@ e = lambda s: html.escape(str(s if s is not None else ""), quote=True)
 NA = "not announced yet"
 
 def tags(c): return c.get("interests", [])
+def is_class(c): return c.get("type") == "class"
+def is_camp(c): return c.get("type", "camp") != "class"
 def t(v):  # "09:00" -> "9am", "16:30" -> "4:30pm"
     h, m = map(int, v.split(":")); ap = "am" if h < 12 else "pm"; h = h % 12 or 12
     return f"{h}{'' if m == 0 else ':%02d' % m}{ap}"
@@ -63,6 +65,7 @@ def card(c, extra=None):
     tg = [k for k in tags(c) if k not in ("free", "unusual")][:4]
     price = "Price: see site" if c["price_low"] is None else ("Free" if c["price_low"] == 0 else f"From ${c['price_low']}")
     b = f'<span class="badge price">{e(price)}</span><span class="badge">Ages {e(c["ages"])}</span>'
+    if c.get("type") == "class": b += '<span class="badge kind">Class</span>'
     if c["free_low_cost"]: b += '<span class="badge ok">Free/low-cost/aid</span>'
     if "unusual" in tags(c): b += '<span class="badge odd">Unusual</span>'
     cn = f' · <strong>{e(COUNTY.get(c["county"], ""))}</strong>' if c["county"] in COUNTY else ""
@@ -87,14 +90,15 @@ def spring_ok(c):
     """Cobb/metro camps that run school-break camps (tagged 'break', or 'school break(s)' / a spring break week in the dates)."""
     txt = c["dates"].lower()
     camp_like = "break" in tags(c) or "school break" in txt or bool(SPRING.search(c["dates"]))
-    return in_cobb(c) and camp_like and "after" not in tags(c) and "fall break)" not in txt
+    return is_camp(c) and in_cobb(c) and camp_like and "after" not in tags(c) and "fall break)" not in txt
 def full_day(c):
+    if not is_camp(c): return False
     if not (c.get("hours_start") and c.get("hours_end")): return False
     return mins(c["hours_start"]) <= 9 * 60 and mins(c["hours_end"]) >= 16 * 60
 def art_ok(c):
     """Visual-art camps: 'art' tag, minus filmmaking, blacksmithing and general day camps that merely include crafts."""
     cat = c["category"].lower()
-    return "art" in tags(c) and not any(w in (cat + " " + c["name"].lower()) for w in ("film", "blacksmith", "special effects", "day camp")) and "trades" not in tags(c)
+    return is_camp(c) and "art" in tags(c) and not any(w in (cat + " " + c["name"].lower()) for w in ("film", "blacksmith", "special effects", "day camp")) and "trades" not in tags(c)
 def free_ok(c): return c["price_low"] == 0 or "free" in tags(c) or "library" in tags(c)
 
 PAGES = [
@@ -113,7 +117,7 @@ PAGES = [
        desc="Horseback riding, barn and farm-animal summer camps around Atlanta, East Cobb, Marietta and North Fulton, with published prices, ages, hours and 2027 status.",
        intro=("Riding lessons, barn chores, goats and chickens: these are the horse and farm camps we've verified around metro Atlanta, including two in East Cobb and Marietta. "
               "Small barns fill early and many haven't posted 2027 dates yet, so they're marked “not announced yet”. Set an alert to hear when they open."),
-       filter=has("horse", "farm"), sort=lambda c: (0 if c["county"] == "cobb" else 1, c["name"]), extra=lambda c: [hours_line(c)],
+       filter=lambda c: is_camp(c) and has("horse", "farm")(c), sort=lambda c: (0 if c["county"] == "cobb" else 1, c["name"]), extra=lambda c: [hours_line(c)],
        directory="?interest=farm#camps", cta=dict(activity="Horse and farm camps", cat="horse", area="", seasons="Summer")),
   dict(slug="free-kids-programs-cobb", search="free kids activities / free programs Cobb County (libraries, community centers)",
        title="Free Kids' Programs in Cobb County: Library Storytimes, LEGO Clubs & More",
@@ -140,23 +144,23 @@ PAGES = [
        desc="Bushcraft, survival-skills, paddling, climbing, archery and scout camps around Atlanta and north Georgia, with published 2027 dates, prices and ages.",
        intro=("Shelter building, fire safety, paddling the Chattahoochee, climbing, archery and overnight wilderness weeks: these outdoor and survival camps are verified against each provider's page. "
               "Several have posted 2027 sessions already. The rest are marked “not announced yet”."),
-       filter=has("survival", "outdoor"), sort=lambda c: (0 if "survival" in tags(c) else 1, c["name"]), extra=lambda c: [hours_line(c) if c.get("hours_start") else None],
+       filter=lambda c: is_camp(c) and has("survival", "outdoor")(c), sort=lambda c: (0 if "survival" in tags(c) else 1, c["name"]), extra=lambda c: [hours_line(c) if c.get("hours_start") else None],
        directory="?interest=outdoor#camps", cta=dict(activity="Outdoor and survival camps", cat="survival", area="", seasons="Summer")),
   dict(slug="tennis-camps-atlanta", search="tennis camps for kids in Atlanta",
-       title="Kids' Tennis Camps & Junior Leagues in Atlanta — Atlanta Kids Camps",
-       h1="Kids’ tennis camps in Atlanta",
-       desc="Junior tennis camps and leagues around Atlanta, Cobb, Sandy Springs and Gwinnett, with published prices, ages, 2027 dates and the ALTA spring 2027 roster window.",
-       intro=("Summer tennis camps for beginners and junior league play around Atlanta, from Cobb's Fair Oaks courts to Sandy Springs and Gwinnett. "
-              "ALTA has published its spring 2027 junior league calendar. Camp providers that haven't posted 2027 dates are marked “not announced yet”."),
-       filter=has("tennis"), sort=lambda c: c["name"], extra=lambda c: [hours_line(c) if c.get("hours_start") else None],
-       directory="?interest=tennis#camps", cta=dict(activity="Tennis camps", cat="tennis", area="", seasons="Summer")),
+       title="Kids' Tennis Camps, Lessons & Clinics in Atlanta — Atlanta Kids Camps",
+       h1="Kids’ tennis camps, lessons and clinics in Atlanta",
+       desc="Junior tennis camps, lessons and clinics around Atlanta, Cobb, Sandy Springs and Gwinnett, including all six Cobb PARKS tennis centers, with published prices, ages and 2027 dates when posted.",
+       intro=("Summer tennis camps and year-round youth lessons around Atlanta. Cobb PARKS lists youth lessons and clinics at all six county tennis centers: Fair Oaks, Harrison, Kennworth, Lost Mountain, Sweetwater and Terrell Mill. "
+              "ALTA has published its spring 2027 junior league calendar. Camp providers that haven't posted 2027 dates are marked “not announced yet”. Lesson session dates are in the current county catalog."),
+       filter=has("tennis"), sort=lambda c: (0 if c.get("type")=="class" else 1, c["name"]), extra=lambda c: [hours_line(c) if c.get("hours_start") else None],
+       directory="?interest=tennis#camps", cta=dict(activity="Tennis camps and lessons", cat="tennis", area="", seasons="Summer")),
   dict(slug="theater-camps-atlanta", search="theater / musical theater / acting camps for kids in Atlanta, Marietta and East Cobb",
        title="Kids' Theater, Musical Theater & Acting Camps in Atlanta & Cobb — Atlanta Kids Camps",
        h1="Theater and acting camps for kids in Atlanta and Cobb",
        desc="Drama, musical theater and acting camps in Midtown, Marietta, East Cobb and Smyrna, with the Alliance Theatre's 2027 dates and on-sale day, prices, ages and hours.",
        intro=("Drama games, musical theater, acting and a showcase at the end of the week. The Alliance Theatre has published its 2027 spring break week (April 5–9) and its January 13, 2027 on-sale date; "
               "other theaters' 2027 summer camps are marked “not announced yet” until they post them."),
-       filter=has("theatre"), sort=lambda c: (0 if c["county"] == "cobb" else 1, c["name"]), extra=lambda c: [hours_line(c) if c.get("hours_start") else None],
+       filter=lambda c: is_camp(c) and has("theatre")(c), sort=lambda c: (0 if c["county"] == "cobb" else 1, c["name"]), extra=lambda c: [hours_line(c) if c.get("hours_start") else None],
        directory="?interest=theatre#camps", cta=dict(activity="Theater and acting camps", cat="theatre", area="", seasons="Summer")),
   dict(slug="art-camps-atlanta", search="art camps for kids in Atlanta, Marietta and Smyrna",
        title="Kids' Art Camps in Atlanta, Marietta & Smyrna (Summer & School Breaks) — Atlanta Kids Camps",
@@ -166,7 +170,17 @@ PAGES = [
               "Several run school-break camps this winter. Summer 2027 weeks that haven't been posted are marked “not announced yet”, and 2026 prices or hours are labeled as last year's."),
        filter=art_ok, sort=lambda c: (0 if c["county"] == "cobb" else 1, c["name"]), extra=lambda c: [hours_line(c) if c.get("hours_start") else None],
        directory="?interest=art#camps", cta=dict(activity="Art camps", cat="art", area="", seasons="Summer")),
+  dict(slug="kids-art-classes-cobb", search="kids art classes Cobb County / Marietta",
+       title="Kids' Art Classes in Cobb County & Marietta — Atlanta Kids Camps",
+       h1="Kids’ art classes in Cobb County and Marietta",
+       desc="Year-round kids’ art classes in Cobb County and Marietta — The Art Place at Mountain View, Mable House, The Art Station, the Marietta Cobb Museum of Art and Vinings School of Art — with facts from each provider’s page.",
+       intro=("Year-round painting, drawing, pottery, stained glass and other art classes at Cobb arts centers, the Marietta Cobb Museum of Art and Vinings School of Art in Smyrna. "
+              "Term dates and fees are in each provider’s current catalog when they aren’t posted on the center page. We don’t hold spots — you register with the provider."),
+       filter=lambda c: is_class(c) and "art" in tags(c) and in_cobb(c),
+       sort=lambda c: c["name"], extra=lambda c: [],
+       directory="classes/?interest=art", cta=dict(activity="Art classes", cat="art", area="Cobb", seasons="")),
 ]
+
 
 def itemlist(name, url, items):
     return {"@type": "ItemList", "name": name, "url": url, "numberOfItems": len(items),
@@ -192,7 +206,7 @@ def page_html(p, items, items2, dialog):
 <title>{e(p["title"])}</title><meta name="description" content="{e(p["desc"])}"><link rel="canonical" href="{url}">
 <meta property="og:type" content="website"><meta property="og:title" content="{e(p["title"])}"><meta property="og:description" content="{e(p["desc"])}"><meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}/og.svg"><meta name="twitter:card" content="summary">
 <link rel="icon" href="../og.svg"><link rel="stylesheet" href="../styles.css"><script src="../config.js"></script><script>window.MOGUL_STATS={{endpoint:(window.SITE_CONFIG&&window.SITE_CONFIG.statsEndpoint)||"",site:(window.SITE_CONFIG&&window.SITE_CONFIG.statsSite)||"kids-camps"}};</script><script src="../stats.js" defer></script><script src="../app.js" defer></script><script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script></head><body><a class="skip" href="#main">Skip to content</a><header class="top"><div class="wrap nav"><a class="brand" href="../"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#f2a541"/><path d="M5 19 L11 10 L15 15 L18 11 L23 19Z" fill="#1f5f5b"/></svg><span>Atlanta Kids Camps</span></a>
-<nav aria-label="Main"><a href="../#camps">Camps</a><a href="../planner/" class="nav-hot">Summer planner</a><a href="../account/">My calendar</a><a href="../#deadlines">Deadlines</a><a href="../#free">Free &amp; low-cost</a><a href="../cobb/">Cobb</a><a href="../featured/">For camps</a></nav></div></header><main id="main">
+<nav aria-label="Main"><a href="../#camps">Camps</a><a href="../classes/">Classes</a><a href="../planner/" class="nav-hot">Summer planner</a><a href="../account/">My calendar</a><a href="../#deadlines">Deadlines</a><a href="../#free">Free &amp; low-cost</a><a href="../cobb/">Cobb</a><a href="../featured/">For camps</a></nav></div></header><main id="main">
 <nav class="wrap crumbs" aria-label="Breadcrumb"><a href="../">Home</a> › <span aria-current="page">{e(p["h1"])}</span></nav>
 <section class="hero slim"><div class="wrap"><p class="eyebrow">Popular search</p><h1>{e(p["h1"])}</h1><p class="lede">{e(p["intro"])}{intro_link}</p>
 <p class="lp-actions"><a class="btn ghost" href="../{p["directory"]}">See these in the full directory</a> <a class="btn ghost" href="../planner/">Plan summer weeks in the Planner</a></p></div></section>

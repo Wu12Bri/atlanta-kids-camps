@@ -25,13 +25,14 @@ e = lambda s: html.escape(str(s if s is not None else ""), quote=True)
 open(f"{R}/camps.embedded.js", "w").write("window.CAMPS=" + json.dumps(C, ensure_ascii=False) + ";")
 
 ORDER = ["outdoor","ninja","tennis","farm","horse","nature","garden","survival","trades","unusual","art","theatre","music","dance","swim","sports","gym","stem","day","break","after","library","free"]
-def filters(home):
+def filters(home, page="home"):
     opts = '<option value="all">All interests</option>' + "".join(f'<option value="{k}">{e(INTERESTS[k] if k!="free" else "Free programs")}</option>' for k in ORDER)
     ages = '<option value="">Any age</option><option value="0">Under 1</option>' + "".join(f'<option value="{i}">{i}</option>' for i in range(1, 19))
     area = ('<label>Area<select id="area"><option value="all">All areas</option>' + "".join(f'<option value="{k}">{e(v)}</option>' for k, v in COUNTY.items() if k != "metro") + '</select></label>') if home else ""
+    typ = "" if page == "classes" else '<label>Type<select id="type"><option value="all">Camps &amp; classes</option><option value="camp">Camps</option><option value="class">Classes</option></select></label>\n'
     chips = [("outdoor","Outdoor & adventure"),("tennis","Tennis"),("farm","Farm & animals"),("horse","Horses"),("nature","Nature"),("unusual","Unusual & offbeat"),("ninja","Ninja & parkour"),("theatre","Theater"),("art","Art"),("music","Rock band"),("swim","Swim"),("dance","Dance"),("stem","LEGO / STEM"),("free","Free")]
     return ('<form class="filters" id="filters" role="search" aria-label="Filter programs" onsubmit="return false"><label>Search<input id="q" type="search" placeholder="Tennis, farm, swim, Smyrna…"></label>\n'
-            f'<label>Interest<select id="cat">{opts}</select></label>\n<label>Child’s age<select id="age">{ages}</select></label>\n{area}'
+            f'{typ}<label>Interest<select id="cat">{opts}</select></label>\n<label>Child’s age<select id="age">{ages}</select></label>\n{area}'
             '<label>Sort<select id="sort"><option value="name">Name A–Z</option><option value="price">Lowest listed price</option></select></label>\n'
             '<label class="chk"><input id="low" type="checkbox"> Free / low-cost / aid only</label><button type="button" id="reset" class="btn ghost">Reset</button></form>\n'
             '<div class="chips" role="group" aria-label="Popular interests">' + "".join(f'<button type="button" class="chip" data-cat="{k}">{e(l)}</button>' for k, l in chips) + '</div>\n')
@@ -45,8 +46,17 @@ def sub_once(pat, repl, s, flags=re.S):
     assert n[1] == 1, pat[:60]
     return n[0]
 
+
+def add_classes_nav(s, prefix):
+    """Insert a Classes nav link after Camps if it is not already there."""
+    if re.search(r'href="[^"]*classes/"[^>]*>Classes</a>', s):
+        return s
+    s2, n = re.subn(r'(<nav aria-label="Main"><a href="(?:\.\./)?#camps">Camps</a>)',
+                    rf'\1<a href="{prefix}classes/">Classes</a>', s, count=1)
+    return s2 if n else s
+
 home_items = C; cobb_items = [c for c in C if c["county"] in ("cobb", "metro")]
-DEADLINE_SKIP = {"Cobb Library “The Basics” Storytime","Cobb Library Family Storytime (Vinings)","Cobb Library Prek Bilingual Storytime (Sibley)","Cobb Library Baby Storytime (Mountain View)","Salvation Army of Cobb Summer Day Camp","Salvation Army of Cobb After School Program","Cobb County School District After School Program (ASP)","Girls Inc. of Greater Atlanta Break Camp","Bricks 4 Kidz Marietta–Smyrna LEGO Robotics STEAM Camps","Snapology of Kennesaw STEM & Robotics Camps","Cobb PARKS Creative Art Camps","Cobb PARKS Performing Arts Camps (Jennie T. Anderson Theatre)","Cobb PARKS Tennis Camps","Cobb PARKS Unlimited Gymnastics Camp","Cobb PARKS Nature Camps (Green Meadows)","YMCA of Metro Atlanta Swim Lessons","Smyrna Parks & Recreation Youth Classes","Cobb Library LEGO Club (Sewell Mill)","Cobb Library LEGO Club (Powder Springs)","Gwinnett Parks RNB Tennis","Sandy Springs Racquet Center Junior Tennis Summer Camp","AYTEF Community Summer Tennis Camp (Fair Oaks Tennis Center)","Camp Autrey Mill (nature, history & live animals)","Chastain Horse Park Horseback Basics Summer Camp","Camp Kingfisher Survival & Grow Specialty Camps","Camp Flix Filmmaking Camp (Emory)","Camp Flix Junior (animation filmmaking)","Atlanta Archery Club “Way of the Bow” Summer Camp","NOC Chattahoochee River Explorer Youth Day Camp (Roswell)","NOC Teen River Camps (Chattahoochee & Southeastern River Explorer)","Flour Power East Cobb Cooking Camps","Cherokee Outdoor YMCA Specialty Camps (Mountain Biking, Fishing, Water Sports)","Club SciKidz Special Effects & Filmmaking Camps","Central Rock Gym Climbing Day Camps (Kennesaw & Atlanta)"}
+DEADLINE_SKIP = {"Cobb Library “The Basics” Storytime","Cobb Library Family Storytime (Vinings)","Cobb Library Prek Bilingual Storytime (Sibley)","Cobb Library Baby Storytime (Mountain View)","Salvation Army of Cobb Summer Day Camp","Salvation Army of Cobb After School Program","Cobb County School District After School Program (ASP)","Girls Inc. of Greater Atlanta Break Camp","Bricks 4 Kidz Marietta–Smyrna LEGO Robotics STEAM Camps","Snapology of Kennesaw STEM & Robotics Camps","Cobb PARKS Creative Art Camps","Cobb PARKS Performing Arts Camps (Jennie T. Anderson Theatre)","Cobb PARKS Tennis Camps","Cobb PARKS Unlimited Gymnastics Camp","Cobb PARKS Nature Camps (Green Meadows)","YMCA of Metro Atlanta Swim Lessons","Smyrna Parks & Recreation Youth Classes","Cobb Library LEGO Club (Sewell Mill)","Cobb Library LEGO Club (Powder Springs)","Gwinnett Parks RNB Tennis","Sandy Springs Racquet Center Junior Tennis Summer Camp","AYTEF Community Summer Tennis Camp (Fair Oaks Tennis Center)","Camp Autrey Mill (nature, history & live animals)","Chastain Horse Park Horseback Basics Summer Camp","Camp Kingfisher Survival & Grow Specialty Camps","Camp Flix Filmmaking Camp (Emory)","Camp Flix Junior (animation filmmaking)","Atlanta Archery Club “Way of the Bow” Summer Camp","NOC Chattahoochee River Explorer Youth Day Camp (Roswell)","NOC Teen River Camps (Chattahoochee & Southeastern River Explorer)","Flour Power East Cobb Cooking Camps","Cherokee Outdoor YMCA Specialty Camps (Mountain Biking, Fishing, Water Sports)","Club SciKidz Special Effects & Filmmaking Camps","Central Rock Gym Climbing Day Camps (Kennesaw & Atlanta)","The Art Place at Mountain View Arts Classes","Mable House Arts Center Youth Classes","The Art Station – Big Shanty Youth & Teen Art Classes","Marietta Cobb Museum of Art Studio & Youth Classes","Vinings School of Art Children’s Classes (Smyrna)","Cobb PARKS Youth Tennis Lessons & Clinics","Cobb PARKS Recreation Center Youth & Homeschool Classes","School of Rock East Cobb Music Programs","Code Ninjas East Cobb Year-Round Coding Programs","Marietta Custer Park Youth Sports Classes & Leagues","Johnson Ferry Introductory Golf Camp","Johnson Ferry Dance Camps (Preschool & Elementary)","Johnson Ferry Rising Stars Basketball Camp","Johnson Ferry Flag Football Camp","Johnson Ferry Soccer Camp"}
 deadlines = '<ul class="deadlines">' + "".join(f'<li><strong>{e(c["name"])}</strong><span>{e(c["registration"])}</span></li>' for c in C if c["name"] not in DEADLINE_SKIP) + '</ul>'
 free = '<ul class="freelist">' + "".join(f'<li><a href="{e(c["source_url"])}" rel="noopener" target="_blank">{e(c["name"])}</a> <span class="small">{e(c["price_week"])}</span></li>' for c in C if c["free_low_cost"] or c["price_low"] == 0) + '</ul>'
 
@@ -55,6 +65,7 @@ def card(c, show_county=True):
     tg = [k for k in c.get("interests", []) if k not in ("free", "unusual")][:4]
     price = "Price: see site" if c["price_low"] is None else ("Free" if c["price_low"] == 0 else f"From ${c['price_low']}")
     b = f'<span class="badge price">{e(price)}</span><span class="badge">Ages {e(c["ages"])}</span>'
+    if c.get("type") == "class": b += '<span class="badge kind">Class</span>'
     if c["free_low_cost"]: b += '<span class="badge ok">Free/low-cost/aid</span>'
     if "unusual" in c.get("interests", []): b += '<span class="badge odd">Unusual</span>'
     cn = f' · <strong>{e(COUNTY.get(c["county"], ""))}</strong>' if show_county and c["county"] in COUNTY else ""
@@ -84,6 +95,22 @@ if 'data-interest="unusual"' not in s:
 open(p, "w").write(s)
 dialog = re.search(r'<dialog id="alert-dlg".*?</dialog>', s, re.S).group(0)
 
+# ---- classes
+class_items = [c for c in C if c.get("type") == "class"]
+p = f"{R}/classes/index.html"
+if os.path.exists(p):
+    s = open(p).read()
+    s = sub_once(r'<form class="filters" id="filters".*?</div>\n(?=<div id="act-alert")', filters(True, page="classes"), s)
+    s = sub_once(r'<script type="application/ld\+json">\{"@context": "https://schema.org", "@type": "ItemList".*?</script>', '<script type="application/ld+json">' + itemlist("Atlanta-area kids' classes and year-round programs", class_items) + '</script>', s)
+    s = sub_once(GRID_RE, static_grid(class_items), s)
+    s = re.sub(r'<p id="count" aria-live="polite">[^<]*</p>', f'<p id="count" aria-live="polite">{len(class_items)} programs</p>', s)
+    s = re.sub(r'— \d+ (?:classes|programs), each linked to its source\.', f'— {len(class_items)} classes, each linked to its source.', s)
+    VL = max(c["last_checked"] for c in class_items)
+    s = re.sub(r'\(latest check \d{4}-\d{2}-\d{2}\)', f'(latest check {VL})', s)
+    s = sub_once(r'<dialog id="alert-dlg".*?</dialog>', dialog.replace('href="privacy/', 'href="../privacy/'), s)
+    open(p, "w").write(s)
+
+
 # ---- cobb
 p = f"{R}/cobb/index.html"; s = open(p).read()
 s = sub_once(r'<form class="filters" id="filters".*?</div>\n(?=<div id="act-alert")', filters(False), s)
@@ -107,14 +134,23 @@ for f in ["featured/index.html", "privacy/index.html", "planner/index.html", "pr
 
 p = f"{R}/llms.txt"; s = open(p).read()
 s = re.sub(r'Last verified listings: .*', f'Last verified listings: {V}', s)
-s = re.sub(r'Listing count: .*', f'Listing count: {len(C)} programs (day and overnight camps incl. outdoor & adventure, classes, swim lessons, tennis, farm/nature, filmmaking, cooking and free library programs)', s)
+s = re.sub(r'Listing count: .*', f'Listing count: {len(C)} programs (' + str(sum(1 for c in C if c.get("type","camp")!="class")) + ' camps, ' + str(sum(1 for c in C if c.get("type")=="class")) + ' classes; incl. outdoor & adventure, swim lessons, tennis, farm/nature, filmmaking, cooking and free library programs)', s)
 s = re.sub(r'Coverage today: .*', 'Coverage today: Cobb County first (Marietta, East Cobb, Smyrna, Kennesaw, Acworth, Powder Springs), plus North Fulton, Atlanta/DeKalb and Gwinnett programs that publish public pages, and a few north Georgia overnight / day-trip outdoor camps.', s)
 s = s.replace('filters by type, age, price;', 'filters by interest (tennis, farm & animals, horses, nature, art, swim, dance, STEM, free…), child’s age, area and price; shareable filter URLs like /?interest=farm&age=8&area=cobb;')
 open(p, "w").write(s)
 p = f"{R}/sitemap.xml"; s = open(p).read()
 if "/planner/" not in s: s = s.replace(f"<url><loc>{BASE}/cobb/</loc>", f"<url><loc>{BASE}/planner/</loc><lastmod>{V}</lastmod></url><url><loc>{BASE}/cobb/</loc>")
+if "/classes/" not in s: s = s.replace(f"<url><loc>{BASE}/cobb/</loc>", f"<url><loc>{BASE}/classes/</loc><lastmod>{V}</lastmod></url><url><loc>{BASE}/cobb/</loc>")
 s = re.sub(r'<lastmod>[^<]+</lastmod>', f'<lastmod>{V}</lastmod>', s); open(p, "w").write(s)
 print("synced", len(C), "camps;", len(cobb_items), "on Cobb page")
+
+
+# ---- Classes nav link (home + subpages)
+p = f"{R}/index.html"; s = open(p).read(); open(p, "w").write(add_classes_nav(s, ""))
+for f in ["cobb/index.html", "classes/index.html", "featured/index.html", "privacy/index.html", "planner/index.html", "preferences/index.html", "account/index.html"]:
+    p = f"{R}/{f}"
+    if os.path.exists(p):
+        s = open(p).read(); open(p, "w").write(add_classes_nav(s, "../"))
 
 # ---- search-matching landing pages (+ sitemap, llms.txt, homepage "Popular searches")
 import importlib.util; sys.dont_write_bytecode = True

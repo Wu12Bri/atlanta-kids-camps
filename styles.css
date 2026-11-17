@@ -38,9 +38,9 @@ dl{margin:.6em 0;font-size:.9rem}dt{font-weight:700;color:var(--muted);font-size
 
 /* 2026-11-13: interest/age/area filters + tags */
 .filters{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.filters select,.filters input[type=search]{font-size:16px;min-height:40px;width:100%;min-width:0;max-width:100%;box-sizing:border-box}
-@media(min-width:900px){.filters{grid-template-columns:2fr repeat(4,minmax(120px,1fr));align-items:end}.filters .chk{grid-column:span 2}}
+@media(min-width:900px){.filters{grid-template-columns:minmax(160px,2fr) repeat(5,minmax(104px,1fr));align-items:end}.filters .chk{grid-column:span 2}}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 6px}.tag{font-size:.75rem;padding:2px 8px;border-radius:999px;background:#eef5f1;color:var(--teal);font-weight:600}
-.badge.odd{background:#fde7d9;color:#9a3d1f}
+.badge.odd{background:#fde7d9;color:#9a3d1f}.badge.kind{background:#e8eef8;color:#1e3a6e}
 .chips{overflow-x:auto;-webkit-overflow-scrolling:touch}
 /* 2026-11-13 QA: mobile header on one scrollable row, no hero art on phones, chips scroll instead of wrapping 3 rows */
 .nav-hot{color:var(--coral)!important;font-weight:700!important}
