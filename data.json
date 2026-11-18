@@ -1,7 +1,7 @@
 {
  "meta": {
   "title": "Atlanta-Area Kids' Camps, Classes & Free Programs",
-  "verified_date": "2026-11-17",
+  "verified_date": "2026-11-18",
   "disclaimer": "Facts come from each provider's own public page on the last-checked date. Prices, dates and availability change, and some entries show the prior season's published rate. Always confirm with the provider. Listing here is not an endorsement, and we have not inspected, licensed, or safety-vetted any program.",
   "geography_focus": "Metro Atlanta, Cobb County first (Marietta, East Cobb, Smyrna, Kennesaw, Acworth, Powder Springs), plus North Fulton, Atlanta/DeKalb and Gwinnett",
   "interest_tags": {
@@ -2532,14 +2532,14 @@
    "provider": "Brittany Leazer Productions",
    "area": "2863 Johnson Ferry Rd, Marietta (East Cobb)",
    "category": "Musical theater performance camp",
-   "ages": "not listed — see provider page",
+   "ages": "Rising K–9th grade",
    "price_week": "See provider page",
    "price_low": null,
    "price_note": "June Performance Camps put up a full musical in one week; July Triple Threat Camps (singing, acting, dancing) end in a showcase.",
-   "dates": "June Performance Camps and July Triple Threat Camps; summer 2027 dates not yet announced",
-   "registration": "Summer 2027 details and registration to be announced in January (provider page)",
+   "dates": "Summer 2027: Elementary Performance Camp (Frozen KIDS, rising K–5) June 7–11; Middle School Performance Camp (Alice in Wonderland JR., rising 6–9) June 14–18; Triple Threat Camp July 19–23 (Elementary rising K–5, 9:00am–12:30pm; Middle School rising 6–9, 1:30–5:30pm)",
+   "registration": "Registration for all 2027 summer camps opens Mon Dec 14, 2026 (provider page)",
    "source_url": "https://www.brittanyleazerproductions.com/copy-of-east-cobb-theatrical-501c3",
-   "last_checked": "2026-11-16",
+   "last_checked": "2026-11-18",
    "free_low_cost": false,
    "status_flag": null,
    "county": "cobb",
@@ -2548,17 +2548,35 @@
     "dance",
     "day"
    ],
-   "age_min": null,
-   "age_max": null,
+   "age_min": 5,
+   "age_max": 14,
    "hours_start": null,
    "hours_end": null,
    "before_care": null,
    "after_care": null,
    "hours_year": null,
-   "sessions": null,
+   "sessions": [
+    {
+     "start": "2027-06-07",
+     "end": "2027-06-11"
+    },
+    {
+     "start": "2027-06-14",
+     "end": "2027-06-18"
+    },
+    {
+     "start": "2027-07-19",
+     "end": "2027-07-23"
+    }
+   ],
    "summer": true,
    "overnight": false,
-   "reg_dates": null,
+   "reg_dates": [
+    {
+     "date": "2026-12-14",
+     "label": "2027 summer camp registration opens"
+    }
+   ],
    "type": "camp"
   },
   {
@@ -3187,7 +3205,7 @@
    "summer": false,
    "overnight": false,
    "reg_dates": null,
-   "last_checked": "2026-11-17",
+   "last_checked": "2026-11-18",
    "free_low_cost": false,
    "type": "class",
    "name": "Johnson Ferry Shine Bowling (Youth)",
@@ -3219,7 +3237,7 @@
    "summer": false,
    "overnight": false,
    "reg_dates": null,
-   "last_checked": "2026-11-17",
+   "last_checked": "2026-11-18",
    "free_low_cost": false,
    "type": "class",
    "name": "Johnson Ferry Upward Basketball",
@@ -3251,7 +3269,7 @@
    "summer": false,
    "overnight": false,
    "reg_dates": null,
-   "last_checked": "2026-11-17",
+   "last_checked": "2026-11-18",
    "free_low_cost": false,
    "type": "class",
    "name": "Johnson Ferry Worship Through Dance",
@@ -3283,7 +3301,7 @@
    "summer": false,
    "overnight": false,
    "reg_dates": null,
-   "last_checked": "2026-11-17",
+   "last_checked": "2026-11-18",
    "free_low_cost": false,
    "type": "class",
    "name": "Johnson Ferry Spring Youth Sports Leagues (Baseball, Softball, Volleyball, Special Needs Basketball)",
@@ -3315,7 +3333,7 @@
    "summer": true,
    "overnight": false,
    "reg_dates": null,
-   "last_checked": "2026-11-17",
+   "last_checked": "2026-11-18",
    "free_low_cost": false,
    "type": "camp",
    "name": "Johnson Ferry Introductory Golf Camp",
@@ -3348,7 +3366,7 @@
    "summer": true,
    "overnight": false,
    "reg_dates": null,
-   "last_checked": "2026-11-17",
+   "last_checked": "2026-11-18",
    "free_low_cost": false,
    "type": "camp",
    "name": "Johnson Ferry Dance Camps (Preschool & Elementary)",
@@ -3381,7 +3399,7 @@
    "summer": true,
    "overnight": false,
    "reg_dates": null,
-   "last_checked": "2026-11-17",
+   "last_checked": "2026-11-18",
    "free_low_cost": false,
    "type": "camp",
    "name": "Johnson Ferry Rising Stars Basketball Camp",
@@ -3414,7 +3432,7 @@
    "summer": true,
    "overnight": false,
    "reg_dates": null,
-   "last_checked": "2026-11-17",
+   "last_checked": "2026-11-18",
    "free_low_cost": false,
    "type": "camp",
    "name": "Johnson Ferry Flag Football Camp",
@@ -3447,7 +3465,7 @@
    "summer": true,
    "overnight": false,
    "reg_dates": null,
-   "last_checked": "2026-11-17",
+   "last_checked": "2026-11-18",
    "free_low_cost": false,
    "type": "camp",
    "name": "Johnson Ferry Soccer Camp",
