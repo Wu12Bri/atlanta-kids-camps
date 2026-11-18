@@ -158,8 +158,8 @@ PAGES = [
        title="Kids' Theater, Musical Theater & Acting Camps in Atlanta & Cobb — Atlanta Kids Camps",
        h1="Theater and acting camps for kids in Atlanta and Cobb",
        desc="Drama, musical theater and acting camps in Midtown, Marietta, East Cobb and Smyrna, with the Alliance Theatre's 2027 dates and on-sale day, prices, ages and hours.",
-       intro=("Drama games, musical theater, acting and a showcase at the end of the week. The Alliance Theatre has published its 2027 spring break week (April 5–9) and its January 13, 2027 on-sale date; "
-              "other theaters' 2027 summer camps are marked “not announced yet” until they post them."),
+       intro=("Drama games, musical theater, acting and a showcase at the end of the week. The Alliance Theatre has published its 2027 spring break week (April 5–9) and its January 13, 2027 on-sale date. "
+              "The Center for Puppetry Arts has posted its 2027 Puppet Camp calendar (registration information coming soon). Other theaters’ 2027 summer camps are marked “not announced yet” until they post them."),
        filter=lambda c: is_camp(c) and has("theatre")(c), sort=lambda c: (0 if c["county"] == "cobb" else 1, c["name"]), extra=lambda c: [hours_line(c) if c.get("hours_start") else None],
        directory="?interest=theatre#camps", cta=dict(activity="Theater and acting camps", cat="theatre", area="", seasons="Summer")),
   dict(slug="art-camps-atlanta", search="art camps for kids in Atlanta, Marietta and Smyrna",
@@ -179,6 +179,15 @@ PAGES = [
        filter=lambda c: is_class(c) and "art" in tags(c) and in_cobb(c),
        sort=lambda c: c["name"], extra=lambda c: [],
        directory="classes/?interest=art", cta=dict(activity="Art classes", cat="art", area="Cobb", seasons="")),
+  dict(slug="unique-camps-atlanta", search="unique camps / hidden gem camps near Atlanta",
+       title="Unique & Offbeat Kids' Camps near Atlanta (Hidden Gems) — Atlanta Kids Camps",
+       h1="Unique and offbeat camps near Atlanta",
+       desc="Offbeat and lesser-known kids’ camps around Atlanta and Cobb — puppetry, historical fencing, model trains, farm art, aviation, sailing, historic farms and more — with published prices, ages and 2027 dates when posted.",
+       intro=("These are the unusual camps in our directory: puppetry, historical fencing, model trains, farm-and-animal art, aviation, sailing, historic-house history and other programs that sit outside the usual sports-and-rec list. "
+              "Facts come from each provider’s official page. 2027 dates that have not been posted are marked “not announced yet”. We don’t hold spots — families register with the camp themselves."),
+       filter=lambda c: is_camp(c) and "unusual" in tags(c),
+       sort=lambda c: (0 if c["county"] == "cobb" else 1, c["name"]), extra=lambda c: [hours_line(c) if c.get("hours_start") else None],
+       directory="?interest=unusual#camps", cta=dict(activity="Unusual and offbeat camps", cat="unusual", area="", seasons="Summer")),
 ]
 
 

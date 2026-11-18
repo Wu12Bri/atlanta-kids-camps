@@ -102,3 +102,7 @@ details.maybe-group{margin-top:.5em}details.maybe-group summary{cursor:pointer;f
 .undated{padding-left:1.1em}.undated li{margin:.35em 0;font-size:.9rem}
 .cal-agenda{list-style:none;padding:0;margin:10px 0 0;display:none}.cal-agenda li{display:flex;gap:8px;align-items:baseline;border-top:1px solid var(--line);padding:6px 0}.cal-agenda .when{flex:0 0 92px;font-size:.8rem;font-weight:700}.cal-agenda .ev{white-space:normal;font-size:.85rem;flex:1}
 @media(max-width:699px){.cal-agenda{display:block}.cal-ctl{gap:4px}.cal-ctl .btn.sm{padding:5px 11px}.seg button{padding:5px 11px}.cal-bar h2{width:100%}}
+
+/* wrap long registration URLs and landing-search chips on small screens */
+.card dd,.card .lp-note,.deadlines li,.deadlines li span{overflow-wrap:anywhere;word-break:break-word}
+.lp-more a.chip{white-space:normal;max-width:100%;overflow-wrap:anywhere}
