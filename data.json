@@ -1,7 +1,7 @@
 {
  "meta": {
   "title": "Atlanta-Area Kids' Camps, Classes & Free Programs",
-  "verified_date": "2026-11-18",
+  "verified_date": "2026-11-23",
   "disclaimer": "Facts come from each provider's own public page on the last-checked date. Prices, dates and availability change, and some entries show the prior season's published rate. Always confirm with the provider. Listing here is not an endorsement, and we have not inspected, licensed, or safety-vetted any program.",
   "geography_focus": "Metro Atlanta, Cobb County first (Marietta, East Cobb, Smyrna, Kennesaw, Acworth, Powder Springs), plus North Fulton, Atlanta/DeKalb and Gwinnett",
   "interest_tags": {
@@ -3300,8 +3300,13 @@
    "sessions": null,
    "summer": false,
    "overnight": false,
-   "reg_dates": null,
-   "last_checked": "2026-11-18",
+   "reg_dates": [
+    {
+     "date": "2026-12-01",
+     "label": "Upward Baseball and Upward Softball registration opens"
+    }
+   ],
+   "last_checked": "2026-11-23",
    "free_low_cost": false,
    "type": "class",
    "name": "Johnson Ferry Spring Youth Sports Leagues (Baseball, Softball, Volleyball, Special Needs Basketball)",
@@ -3313,7 +3318,7 @@
    "age_max": 18,
    "price_week": "See youth sports page (league fees posted there)",
    "dates": "Baseball, softball and girls volleyball seasons are listed as February–May; special needs basketball as March–May. Years are not stated on the page.",
-   "registration": "The youth sports page says registration for these spring leagues opens in December (no specific date or year is posted).",
+   "registration": "The official youth sports page now lists Upward Baseball and Upward Softball registration as “Opens Dec 1!” (checked Mon Nov 23, 2026; the page does not print a year next to Dec 1). Girls volleyball and special needs basketball still say registration opens in December, with no specific date.",
    "source_url": "https://www.johnsonferry.org/youthsports/",
    "county": "cobb",
    "interests": [
@@ -3619,15 +3624,15 @@
    "area": "Acworth, on Lake Allatoona (Atlanta Yacht Club)",
    "category": "Youth sailing camp",
    "ages": "Saturday program: 6 years and up (must be 6 by September 1; parent or guardian must stay on site). Weekday sail camp: 9 years and up (must be 9 by September 1). All participants must be able to swim 25 yards; a swim test is given the first day.",
-   "price_week": "2027 price not announced (2026 weekday camp was $400 members / $550 non-members per week)",
-   "price_low": null,
-   "price_note": "Most recently posted (2026) weekday camp: AYC member $400 / non-member $550 per week, with a 10% early-registration discount until February 28, 2026. Saturday program: AYC member $175 / non-member $400. No 2027 prices announced. Hours on the 2026 page were 9:30am–4:00pm (weekday) and 9:00am–12:00pm (Saturday).",
-   "dates": "2027 dates not announced yet. (2026 weekday weeks, prior season: June 8–12, 15–19, 22–26 and July 6–10, 13–17, 20–24, 9:30am–4:00pm. Saturday 2026 dates were June 13, 20, 27 and July 11, 18, 9:00am–12:00pm; the 2026 Saturday class was listed as full.)",
-   "registration": "2027 dates not announced yet. Watch the official page for 2027 dates and registration.",
+   "price_week": "$400 AYC members / $550 non-members per weekday week; Saturday program $175 members / $400 non-members",
+   "price_low": 175,
+   "price_note": "Official 2027 fees on the provider page (checked 2026-11-23): weekday camp AYC member $400 / non-member $550 per week; Saturday program AYC member $175 / non-member $400. Hours: weekday 9:30am–4:00pm; Saturday 9:00am–12:00pm. The page still shows leftover “Class is Full” labels next to the 2027 weekday weeks; the official 2027 status is “Registration will open soon,” so those weeks are not recorded as full.",
+   "dates": "Saturday Youth Sailing 2027: May 15, 22, June 5, 19 and 26, 2027, 9:00am–12:00pm. Weekday Youth Sail Camp 2027: June 14–18, June 21–25, June 28–July 2, July 12–16, July 19–23 and July 26–30, 2027, 9:30am–4:00pm. At Atlanta Yacht Club, Acworth (Lake Allatoona).",
+   "registration": "The official page says “Registration will open soon” for both the Saturday program and weekday sail camp (checked Mon Nov 23, 2026). No registration-open date is posted.",
    "source_url": "https://www.sailatl.org/youthprograms",
-   "last_checked": "2026-11-17",
+   "last_checked": "2026-11-23",
    "free_low_cost": false,
-   "status_flag": "2027 dates not announced yet",
+   "status_flag": "Registration will open soon",
    "county": "cobb",
    "interests": [
     "sports",
@@ -3637,12 +3642,37 @@
    ],
    "age_min": 6,
    "age_max": 18,
-   "hours_start": null,
-   "hours_end": null,
+   "hours_start": "09:30",
+   "hours_end": "16:00",
    "before_care": null,
    "after_care": null,
    "hours_year": null,
-   "sessions": null,
+   "sessions": [
+    {
+     "start": "2027-06-14",
+     "end": "2027-06-18"
+    },
+    {
+     "start": "2027-06-21",
+     "end": "2027-06-25"
+    },
+    {
+     "start": "2027-06-28",
+     "end": "2027-07-02"
+    },
+    {
+     "start": "2027-07-12",
+     "end": "2027-07-16"
+    },
+    {
+     "start": "2027-07-19",
+     "end": "2027-07-23"
+    },
+    {
+     "start": "2027-07-26",
+     "end": "2027-07-30"
+    }
+   ],
    "summer": true,
    "overnight": false,
    "reg_dates": null,
@@ -3654,13 +3684,13 @@
    "area": "Roswell (AJRA Boathouse at Roswell River Landing, 245 Azalea Drive)",
    "category": "Learn-to-row camp",
    "ages": "Learn-to-Row general sessions: rising 7th–12th grade (no experience required). A high-school-only Learn-to-Row option is listed for rising 9th–12th.",
-   "price_week": "$275 per Learn-to-Row session (year not stated on the page)",
+   "price_week": "2027 price not announced",
    "price_low": null,
-   "price_note": "$275 per Learn-to-Row session (year not stated on the official page). Returning-rower technical punch card is listed at $185 for 10 practices. No 2027 price is specified as such.",
-   "dates": "2027 dates not announced yet. The official page lists June and July session dates and marks some sessions “now full” but does not print a year, so those dates are not recorded as 2027 dates.",
-   "registration": "2027 dates not announced yet. Watch the official page for 2027 dates and registration.",
+   "price_note": "2027 pricing is not posted yet. Earlier unlabeled fees were removed from this listing when the official page replaced them with the coming-soon note.",
+   "dates": "The official page now says 2027 dates, times, pricing and registration are coming soon (checked Mon Nov 23, 2026). No 2027 session dates are posted.",
+   "registration": "The official page says “2027 Dates, Times, Pricing & Registration Coming Soon!” (checked Mon Nov 23, 2026).",
    "source_url": "https://www.atlantajuniors.com/summer-camps",
-   "last_checked": "2026-11-17",
+   "last_checked": "2026-11-23",
    "free_low_cost": false,
    "status_flag": "2027 dates not announced yet",
    "county": "north-fulton",

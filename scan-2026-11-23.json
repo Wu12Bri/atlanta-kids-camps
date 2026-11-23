@@ -1,0 +1,30 @@
+{
+  "scanned_at": "2026-11-23",
+  "something_new": true,
+  "changes": [
+    {
+      "name": "SailATL Weekday Youth Sail Camp and Saturday Youth Sailing",
+      "source_url": "https://www.sailatl.org/youthprograms",
+      "what": "Official page now lists 2027 Saturday dates (May 15, 22, June 5, 19, 26) and weekday weeks (June 14-18, June 21-25, June 28-July 2, July 12-16, July 19-23, July 26-30). Registration will open soon; no opening date posted. 2027 fees posted.",
+      "alert_queued": true,
+      "matched_subscribers": 1,
+      "next_send": "9 AM ET weekdays"
+    },
+    {
+      "name": "Johnson Ferry Spring Youth Sports Leagues (Baseball, Softball, Volleyball, Special Needs Basketball)",
+      "source_url": "https://www.johnsonferry.org/youthsports/",
+      "what": "Upward Baseball and Upward Softball now say registration Opens Dec 1! (no year printed). Volleyball and special needs basketball still say opens in December with no specific date. Shine Bowling unchanged. No 2027 camp dates (golf still 2026 FULL).",
+      "alert_queued": false,
+      "matched_subscribers": 0,
+      "reason": "The one non-test subscriber's preferred_seasons is Summer only, so the spring-league announcement did not match."
+    },
+    {
+      "name": "Atlanta Juniors Learn-to-Row Summer Camps",
+      "source_url": "https://www.atlantajuniors.com/summer-camps",
+      "what": "Page no longer shows unlabeled June/July dates; it now says 2027 Dates, Times, Pricing & Registration Coming Soon. Listing text updated; not treated as a new date announcement.",
+      "alert_queued": false,
+      "matched_subscribers": 0
+    }
+  ],
+  "notes": "Checked all 141 live listings (114 camps / 27 classes, commit 8a82035 at start of scan) plus the watch list (126 unique URLs). Curl fetched 109 pages at HTTP 200; Playwright retried failures and thin/JS pages using system Chrome. Johnson Ferry golf camp still lists 2026 dates as FULL; no 2027 camp dates. Shine Bowling still says REGISTRATION OPENS IN DECEMBER with no specific date. Cobb PARKS news has no summer-camp registration post (Holiday Artisan Market Dec 4-6, 2026; Bring One for the Chipper through Jan 10, 2027; Dig'n The Dirt Grant closes Dec 14, 2026). YMCA day camp still says the 2027 on-sale date is coming soon. Fernbank www camps page has no summer 2027 dates (learn/ and /summer-camp URLs 404). Atlanta History Center heading still mentions Summer Camp 2027 but body still has prior-year language — not recorded as new 2027 dates. Galloway, Woodward, Bricks 4 Kidz, Snapology, Art Barn (2027 TBD), Walker (opens early 2027, no specific date), Mt Bethel (unlabeled-year schedule), and library summer-reading pages (Cobb/Fulton/Gwinnett/DeKalb) show no new 2027 program announcement. Camp Smyrna camps page verified via Playwright: winter Feb 15-19 and spring Apr 5-9 2027 already on the live listing; summer catalog still 2026. Camp Sparkles Smyrna still shows Winter 2027 registration opens 12/4/26 (already recorded). Could not verify today (still blocked or unreachable after Playwright; did not attempt to bypass bot protection): Zoo Atlanta (403), Kennesaw Camp Venture (HTTP2 error after robot challenge), East Cobb Stables (202), Club SciKidz (202), Sandy Springs tennis (failed to load), Chastain Arts KickstART and Southern Museum (202 robot challenge), Gwinnett Parks department URL (404)."
+}
