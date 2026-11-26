@@ -63,7 +63,7 @@ Resend has no public browser signup endpoint (no CORS; API key must stay server-
    - `watched_camp` equals the camp `name` (by-name match: always alert), OR
    - the camp's category maps to a topic the contact opted into (STEM / LEGO / coding, Sports and outdoors, Arts and theatre, Day camps, Free library and community, School-break camps) **and** the event's season is in `preferred_seasons` (blank = any) **and** the camp's county matches `preferred_area` ("Anywhere" or blank = all; metro-wide providers match every area).
    Interest tag → topic: stem→STEM; sports/tennis/swim/gym/outdoor/nature/horse/farm/survival→Sports and outdoors; art/theatre/dance→Arts and theatre; day→Day camps; library/free→Free library and community; break→School-break camps.
-   Area → county: "Cobb (Marietta, Smyrna, Kennesaw, East Cobb)"→cobb; "North Fulton"→north-fulton; metro and day-trip camps match every area; "Atlanta / DeKalb"→atlanta; "Gwinnett"→gwinnett.
+   Area → county: "Cobb (Marietta, Smyrna, Kennesaw, East Cobb)"→cobb; "North Fulton"→north-fulton; metro and day-trip camps match every area; "Atlanta / DeKalb"→atlanta.
 3. **Draft** one email per contact (or a broadcast to a filtered segment) listing only that contact's matches, with official source links.
 4. **Bri approves** the draft (no standing send permission yet).
 5. **Send** from `Atlanta Kids Camps Alerts <alerts@atlantakidscamps.com>` with `{{{RESEND_UNSUBSCRIBE_URL}}}` or List-Unsubscribe + the preferences link.

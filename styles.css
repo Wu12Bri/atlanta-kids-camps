@@ -106,3 +106,33 @@ details.maybe-group{margin-top:.5em}details.maybe-group summary{cursor:pointer;f
 /* wrap long registration URLs and landing-search chips on small screens */
 .card dd,.card .lp-note,.deadlines li,.deadlines li span{overflow-wrap:anywhere;word-break:break-word}
 .lp-more a.chip{white-space:normal;max-width:100%;overflow-wrap:anywhere}
+
+/* 2026-11-26 fixes: WCAG AA text contrast for orange labels (was #e76f51 ≈3:1 on white) */
+:root{--coral-ink:#b03f1c}
+.eyebrow{color:var(--coral-ink)}.nav-hot{color:var(--coral-ink)!important}
+/* mobile nav: wrap every link onto visible rows (no hidden off-screen links) */
+@media(max-width:699px){.top{position:static}nav[aria-label=Main]{flex-wrap:wrap;overflow:visible;white-space:normal;gap:2px 16px;-webkit-mask-image:none;mask-image:none;padding-right:0}nav[aria-label=Main] a{font-size:.92rem;padding:4px 0;line-height:1.3}}
+/* card title links to the camp's own page */
+.card h3 a{color:inherit;text-decoration:none}.card h3 a:hover,.card h3 a:focus-visible{text-decoration:underline;color:var(--teal)}
+/* last-season (2026) notes are muted so they don't read as 2027 status */
+.flag.past{background:#f1efea;color:#5b6b69}
+/* next sign-up dates strip */
+.nextdl{margin-top:18px;background:#fff;border:1px solid var(--line);border-left:6px solid var(--sun);border-radius:14px;padding:12px 16px}
+.nd-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}.nd-head h2{font-size:1.25rem;margin:0}.nd-head a{font-size:.9rem}
+.nd-list{list-style:none;margin:8px 0 4px;padding:0;display:grid;gap:6px}@media(min-width:900px){.nd-list{grid-template-columns:repeat(5,1fr);gap:12px}}
+.nd-list li{display:flex;flex-direction:column;font-size:.9rem;line-height:1.35;overflow-wrap:anywhere}.nd-list time{font-weight:700;color:var(--coral-ink);font-size:.82rem;text-transform:uppercase;letter-spacing:.04em}.nd-list a{font-weight:600;text-decoration:none}.nd-list a:hover{text-decoration:underline}.nd-list span{color:var(--muted);font-size:.85rem}
+@media(max-width:899px){.nd-list li{display:grid;grid-template-columns:78px 1fr;column-gap:8px}.nd-list li span{grid-column:2}}
+/* per-camp pages */
+.camp-facts{display:grid;gap:0;background:#fff;border:1px solid var(--line);border-radius:14px;padding:6px 16px;margin:0}
+.camp-facts>div{display:grid;grid-template-columns:150px 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--line)}.camp-facts>div:first-child{border-top:0}
+.camp-facts dt{font-size:.78rem}.camp-facts dd{margin:0;overflow-wrap:anywhere}
+@media(max-width:599px){.camp-facts>div{grid-template-columns:1fr;gap:2px}}
+.camp-grid{display:grid;gap:22px}@media(min-width:900px){.camp-grid{grid-template-columns:2fr 1fr;align-items:start}}
+.camp-side{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}.camp-side h2{font-size:1.15rem;margin:.2em 0 .5em}
+.camp-side ul{padding-left:1.1em;margin:.3em 0 1em}.camp-side li{margin:.25em 0}
+.sessions{padding-left:1.1em;margin:.2em 0}.sessions li{margin:.15em 0}
+.notice{background:#fffaf1;border:1px solid #f3dfb8;border-radius:10px;padding:10px 14px;font-size:.92rem}
+.related{list-style:none;padding:0;display:grid;gap:8px}@media(min-width:700px){.related{grid-template-columns:1fr 1fr}}.related li{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+.related a{font-weight:600;text-decoration:none}.related span{display:block;font-size:.82rem;color:var(--muted)}
+.towns{display:flex;flex-wrap:wrap;gap:8px;margin:.4em 0}
+.tchip{display:inline-block;font-size:.9rem;padding:6px 14px;border-radius:999px;border:1px solid #cfc6b6;background:#fff;color:var(--teal);font-weight:600;text-decoration:none}.tchip:hover{border-color:var(--teal)}

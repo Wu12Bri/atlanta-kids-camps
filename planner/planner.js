@@ -6,7 +6,7 @@ var C=(window.CAMPS||[]).filter(function(c){return c.summer});
 var KEY="akc_planner_v1";
 var INT=[["outdoor","Outdoor & adventure"],["nature","Nature"],["farm","Farm & animals"],["horse","Horses"],["survival","Survival skills"],["tennis","Tennis"],["swim","Swim"],["sports","Sports"],["gym","Gymnastics"],["ninja","Ninja & parkour"],["art","Art"],["theatre","Theatre & film"],["dance","Dance"],["music","Music & rock band"],["stem","STEM / LEGO"],["unusual","Unusual & offbeat"],["day","Classic day camp"]];
 var CAT={stem:"STEM / LEGO / coding",art:"Arts and theatre",theatre:"Arts and theatre",dance:"Arts and theatre",sports:"Sports and outdoors",tennis:"Sports and outdoors",horse:"Sports and outdoors",swim:"Sports and outdoors",gym:"Sports and outdoors",nature:"Sports and outdoors",farm:"Sports and outdoors",survival:"Sports and outdoors",outdoor:"Sports and outdoors",unusual:"Sports and outdoors",ninja:"Sports and outdoors",music:"Arts and theatre",day:"Day camps"};
-var COUNTY={cobb:"Cobb","north-fulton":"North Fulton",atlanta:"Atlanta / DeKalb",gwinnett:"Gwinnett",metro:"Metro-wide","day-trip":"Outside metro (day trip)"};
+var COUNTY={cobb:"Cobb","north-fulton":"North Fulton",atlanta:"Atlanta / DeKalb",metro:"Metro-wide","day-trip":"Outside metro (day trip)"};
 var MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 function $(i){return document.getElementById(i)}
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(m){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]})}

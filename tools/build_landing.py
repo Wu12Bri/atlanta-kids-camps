@@ -19,6 +19,24 @@ CAT_KEY_ORDER = ["tennis", "horse", "farm", "survival", "outdoor", "nature", "ni
 e = lambda s: html.escape(str(s if s is not None else ""), quote=True)
 NA = "not announced yet"
 
+def slugify(name):
+    s = name.lower().replace("&", " and ").replace("’", "").replace("'", "")
+    s = re.sub(r"[^a-z0-9]+", "-", s).strip("-")
+    s = re.sub(r"-{2,}", "-", s)
+    if len(s) > 60: s = s[:60].rsplit("-", 1)[0]
+    return s.strip("-")
+def camp_url(c): return f"/camps/{c['slug']}/" if c.get("slug") else c["source_url"]
+def ages_label(c):
+    a = str(c.get("ages") or "").strip()
+    if not a: return "Ages: see site"
+    if re.match(r"(?i)ages?\b", a): return a[0].upper() + a[1:]
+    return ("Ages " + a) if a[:1].isdigit() or a[:1] in "<" else (a[0].upper() + a[1:] if a else "Ages: see site")
+def flag_html(c):
+    f = c.get("status_flag")
+    if not f: return ""
+    past = ("2026" in f and "2027" not in f) or f.lower().startswith("last season")
+    return f'<p class="flag{" past" if past else ""}">{e(f)}</p>'
+
 def tags(c): return c.get("interests", [])
 def is_class(c): return c.get("type") == "class"
 def is_camp(c): return c.get("type", "camp") != "class"
@@ -64,23 +82,23 @@ def season_line(c):
 def card(c, extra=None):
     tg = [k for k in tags(c) if k not in ("free", "unusual")][:4]
     price = "Price: see site" if c["price_low"] is None else ("Free" if c["price_low"] == 0 else f"From ${c['price_low']}")
-    b = f'<span class="badge price">{e(price)}</span><span class="badge">Ages {e(c["ages"])}</span>'
+    b = f'<span class="badge price">{e(price)}</span><span class="badge">{e(ages_label(c))}</span>'
     if c.get("type") == "class": b += '<span class="badge kind">Class</span>'
     if c["free_low_cost"]: b += '<span class="badge ok">Free/low-cost/aid</span>'
     if "unusual" in tags(c): b += '<span class="badge odd">Unusual</span>'
     cn = f' · <strong>{e(COUNTY.get(c["county"], ""))}</strong>' if c["county"] in COUNTY else ""
     tgs = ('<p class="tags">' + "".join(f'<span class="tag">{e(LAB.get(k, k))}</span>' for k in tg) + '</p>') if tg else ""
-    flag = f'<p class="flag">{e(c["status_flag"])}</p>' if c.get("status_flag") else ""
+    flag = flag_html(c)
     notes = [x for x in (extra(c) if extra else []) if x]
     sl = season_line(c)
     if sl and sl not in notes: notes.append(sl)
     nt = "".join(f'<p class="lp-note">{e(n)}</p>' for n in notes)
     ck = next((k for k in CAT_KEY_ORDER if k in tags(c)), (tags(c) or [""])[0])
     area = COUNTY[c["county"]] if c["county"] in COUNTY and c["county"] not in ("metro", "day-trip") else ""
-    return (f'<article class="card"><div class="badges">{b}</div><h3>{e(c["name"])}</h3><p class="meta">{e(c["category"])} · {e(c["area"])}{cn}</p>{tgs}{flag}{nt}'
+    return (f'<article class="card"><div class="badges">{b}</div><h3><a href="{e(camp_url(c))}">{e(c["name"])}</a></h3><p class="meta">{e(c["category"])} · {e(c["area"])}{cn}</p>{tgs}{flag}{nt}'
             f'<dl><dt>Price</dt><dd>{e(c["price_week"])}' + (f' <span class="small">{e(c["price_note"])}</span>' if c["price_note"] else "") +
             f'</dd><dt>Dates</dt><dd>{e(c["dates"])}</dd><dt>Sign-up</dt><dd>{e(c["registration"])}</dd></dl>'
-            f'<p class="src"><a href="{e(c["source_url"])}" target="_blank" rel="noopener">Provider page ↗</a> <span class="small">checked {e(c["last_checked"])}</span></p>'
+            f'<p class="src"><a href="{e(camp_url(c))}">Full details</a> · <a href="{e(c["source_url"])}" target="_blank" rel="noopener">Provider page ↗</a> <span class="small">checked {e(c["last_checked"])}</span></p>'
             f'<div class="card-actions"><button type="button" class="btn ghost sm alert-open" data-camp="{e(c["name"])}" data-activity="{e(c["category"])}" data-cat="{e(ck)}" data-area="{e(area)}">🔔 Email me when sign-ups open</button><button type="button" class="btn ghost sm save-camp" data-camp="{e(c["name"])}" aria-label="Save {e(c["name"])} to my camp calendar">☆ Save</button></div></article>')
 
 # ---------------------------------------------------------------- page definitions
@@ -149,7 +167,7 @@ PAGES = [
   dict(slug="tennis-camps-atlanta", search="tennis camps for kids in Atlanta",
        title="Kids' Tennis Camps, Lessons & Clinics in Atlanta — Atlanta Kids Camps",
        h1="Kids’ tennis camps, lessons and clinics in Atlanta",
-       desc="Junior tennis camps, lessons and clinics around Atlanta, Cobb, Sandy Springs and Gwinnett, including all six Cobb PARKS tennis centers, with published prices, ages and 2027 dates when posted.",
+       desc="Junior tennis camps, lessons and clinics around Atlanta, Cobb and Sandy Springs, including all six Cobb PARKS tennis centers, with published prices, ages and 2027 dates when posted.",
        intro=("Summer tennis camps and year-round youth lessons around Atlanta. Cobb PARKS lists youth lessons and clinics at all six county tennis centers: Fair Oaks, Harrison, Kennworth, Lost Mountain, Sweetwater and Terrell Mill. "
               "ALTA has published its spring 2027 junior league calendar. Camp providers that haven't posted 2027 dates are marked “not announced yet”. Lesson session dates are in the current county catalog."),
        filter=has("tennis"), sort=lambda c: (0 if c.get("type")=="class" else 1, c["name"]), extra=lambda c: [hours_line(c) if c.get("hours_start") else None],
@@ -193,7 +211,7 @@ PAGES = [
 
 def itemlist(name, url, items):
     return {"@type": "ItemList", "name": name, "url": url, "numberOfItems": len(items),
-            "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": c["name"], "url": c["source_url"]} for i, c in enumerate(items)]}
+            "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": c["name"], "url": BASE + camp_url(c) if c.get("slug") else c["source_url"]} for i, c in enumerate(items)]}
 
 def page_html(p, items, items2, dialog):
     url = f"{BASE}/{p['slug']}/"; V = newest(items + items2)
@@ -213,7 +231,7 @@ def page_html(p, items, items2, dialog):
     others = "".join(f'<a class="chip" href="../{q["slug"]}/">{e(q["h1"])}</a>' for q in PAGES if q["slug"] != p["slug"])
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(p["title"])}</title><meta name="description" content="{e(p["desc"])}"><link rel="canonical" href="{url}">
-<meta property="og:type" content="website"><meta property="og:title" content="{e(p["title"])}"><meta property="og:description" content="{e(p["desc"])}"><meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}/og.svg"><meta name="twitter:card" content="summary">
+<meta property="og:type" content="website"><meta property="og:title" content="{e(p["title"])}"><meta property="og:description" content="{e(p["desc"])}"><meta property="og:url" content="{url}"><meta property="og:image" content="{BASE}/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Atlanta Kids Camps: summer camps 2027 in Atlanta and Cobb"><meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../og.svg"><link rel="stylesheet" href="../styles.css"><script src="../config.js"></script><script>window.MOGUL_STATS={{endpoint:(window.SITE_CONFIG&&window.SITE_CONFIG.statsEndpoint)||"",site:(window.SITE_CONFIG&&window.SITE_CONFIG.statsSite)||"kids-camps"}};</script><script src="../stats.js" defer></script><script src="../app.js" defer></script><script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script></head><body><a class="skip" href="#main">Skip to content</a><header class="top"><div class="wrap nav"><a class="brand" href="../"><svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="13" fill="#f2a541"/><path d="M5 19 L11 10 L15 15 L18 11 L23 19Z" fill="#1f5f5b"/></svg><span>Atlanta Kids Camps</span></a>
 <nav aria-label="Main"><a href="../#camps">Camps</a><a href="../classes/">Classes</a><a href="../planner/" class="nav-hot">Summer planner</a><a href="../account/">My calendar</a><a href="../#deadlines">Deadlines</a><a href="../#free">Free &amp; low-cost</a><a href="../cobb/">Cobb</a><a href="../featured/">For camps</a></nav></div></header><main id="main">
 <nav class="wrap crumbs" aria-label="Breadcrumb"><a href="../">Home</a> › <span aria-current="page">{e(p["h1"])}</span></nav>
