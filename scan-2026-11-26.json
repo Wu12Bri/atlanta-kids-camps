@@ -1,0 +1,25 @@
+{
+  "scanned_at": "2026-11-26",
+  "something_new": true,
+  "changes": [
+    {
+      "camp": "Josh Powell Camp Summer Day Camp",
+      "source": "https://www.joshpowellcamp.com/summer-camp-atlanta",
+      "what": "Provider announcement bar changed: JPC Outpost (ages 9-12) early registration closes December 1 (recorded as Tuesday, December 1, 2026); Summer 2027 registration for all campers opens Thursday, January 21, 2027 at noon. Previous bar said Outpost registration was open now and Classic opened January 21 at noon."
+    },
+    {
+      "camp": "Center for Puppetry Arts Puppet Camp",
+      "source": "https://puppet.org/workshops-classes/puppet-camp/",
+      "what": "Official 2027 session/age assignments were revised. Registration is still 'coming soon.' June 14-18 is now rising middle school 6-8 and rising 4-5 (was middle school only); June 21-July 2 now also lists a middle school performance camp alongside the two-week high school intensive; the standalone June 28-July 2 rising 4-5 week was removed; adult camp changed from July 5-9 to a July 9-11 weekend; July 12-16 is now rising middle school 6-8 and rising 4-5 (was rising 2-3); July 19-23 is now rising 2-3 (was middle school)."
+    }
+  ],
+  "alerts_queued": [
+    {
+      "alert": "joshpowell-20261126",
+      "matched_subscriber_count": 1,
+      "e2e_excluded": true,
+      "send_window": "9 AM ET weekdays"
+    }
+  ],
+  "notes": "Checked all 141 live listings (114 camps / 27 classes, commit 8d7aeb63, live sitemap lastmod 2026-11-23) plus the watch list (126 unique URLs). Curl fetched 109 pages at HTTP 200; Playwright retried failures, thin/JS, and priority watch pages using system Chrome (54 URLs: most OK; several still blocked). Two verified listing updates vs the live site and vs the 11/25 page captures: Josh Powell announcement bar (Outpost early registration closes December 1; all-camper Summer 2027 registration opens January 21 at noon) and Center for Puppetry Arts 2027 week/age revisions (registration still coming soon). Josh Powell alert queued for 1 matched subscriber (category + summer + Cobb); Puppet Camp is Midtown Atlanta / DeKalb so it did not match the Cobb-area subscriber; no exact watched_camp match. E2E Test contact excluded. Johnson Ferry golf camp still lists 2026 dates as FULL; no 2027 camp dates. Shine/Special Needs Bowling still says REGISTRATION OPENS IN DECEMBER with no specific date. Upward Baseball/Softball still say Opens Dec 1! (already recorded 11/23). Volleyball and special needs basketball still say opens in December. Cobb PARKS news has no summer-camp registration post (Nov 24 items include water/sewer rates effective Jan 1, 2027; Keep Cobb Beautiful Associate Board; Water Matters newsletter). YMCA day camp still says the 2027 on-sale date is coming soon. Fernbank www camps page still has only 2026 Winter Break Camp (learn/ and /summer-camp URLs 404). Atlanta History Center heading still mentions Summer Camp 2027 but body still has 2025-2026 grade language and weeks 1-3 sold out \u2014 not recorded as new 2027 dates. Galloway still Register for Summer Camps 2026. Woodward has no 2027 dates. Bricks 4 Kidz bookable widget lists Dec 21-24 and Dec 28-31 2026 holiday camps plus Jan 4 and Mar 1, 2027 one-day sessions; consistent with prior scans, not treated as a new 2027 summer program announcement. Snapology JS calendar still lists school-break workshops (Jan, Feb 15-19, Apr 5-9 2027); summer 2027 weekly dates are not posted. Art Barn (2027 TBD), Walker (opens early 2027, no specific date), Mt Bethel (registration closed), Atlanta Juniors (2027 dates coming soon), SailATL (2027 dates already recorded; registration still will open soon). Library pages (Cobb/Fulton/Gwinnett/DeKalb) show no new 2027 summer-reading announcement. Camp Smyrna camps page: winter Feb 15-19 and spring Apr 5-9 2027 already recorded; summer catalog still 2026. Camp Sparkles still shows Winter 2027 registration opens 12/4/26. Elachee loaded today (still 2026 themes and dates; no 2027 dates). Premier Fencing Alliance page changed unlabeled session dates and the price (still no year), so 2027 dates were not recorded. MCMA preschool (June 1-4) and teen (June 7-11) 2027 sessions have been on the provider page since at least 11/23 and were not treated as newly announced today. Could not verify today (still blocked or unreachable after Playwright; did not attempt to bypass bot protection): Zoo Atlanta (403), Kennesaw Camp Venture (202), East Cobb Stables (202 robot challenge), Club SciKidz (202), Sandy Springs tennis (HTTP failure), Chastain Arts KickstART and Southern Museum (202 robot challenge), EK's Art Barn summer camp page (connection closed; classes page fetched), Dunwoody Preservation Trust camp page (connection closed), Marietta PAL (connection closed), Cobb County library hub (Playwright timeout; curl earlier in the run returned 200 with no new 2027 summer-reading announcement), Gwinnett Parks department URL (404)."
+}
